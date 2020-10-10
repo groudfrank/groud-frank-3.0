@@ -1,4 +1,3 @@
-$(document).ready(function(){
-
-
-}); //Document
+document.addEventListener("DOMContentLoaded", function(){
+//  alert('It works!');
+}); //document
