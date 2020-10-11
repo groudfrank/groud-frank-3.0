@@ -29,6 +29,8 @@ body{
     --txt-color-secondary: #333;
     --txt-color-tertiary: #C0C0C0;
     --main-bg-color: #fff;
+    --bg-color-primary: #111;
+    --bg-colo-secondar:#333;
 }
 
 a{
@@ -57,6 +59,7 @@ h1{
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    height: 40px;
     margin: 15px 25px;
     position: absolute;
     top: 20px;
@@ -69,13 +72,30 @@ h1{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    min-width: 35px;
+    min-height: 20px;
     position: relative;
     margin: 10px;
+    padding: 5px;
+}
+
+#top-nav-menu-btn-line{
+    transition-property: background, width, margin, transform;
+    transition-duration: 0.16s;
+    transition-timing-function: ease-in;
+}
+
+#bottom-nav-menu-btn-line{
+    transition-property: background, width, margin, transform;
+    transition-duration: 0.16s;
+    transition-delay: 0.16s;
 }
 
 #nav-menu-label{
     font-size: 1.6rem;
     color: var(--txt-color-primary);
+    transition-duration: 0.3s;
+    transition-property: opacity, transform;
 }
 
 .nav-menu-btn-lines{
@@ -85,20 +105,14 @@ h1{
     margin: 4px 0px;
 }
 
-#nav-menu-btn:hover .nav-menu-btn-lines{
-    background: var(--accent-color-primary) !important;
-}
-
 #nav-menu-wrapper{
-    display: none;
-    width: 500px;
+    min-width: 435px;
     min-height: 500px;
     position: absolute;
     z-index: 10;
     top: 20px;
     right: 35px;
-    box-shadow: 0 52px 74px rgba(0,21,64,0.2);
-    border-radius: 10px;
+    box-shadow: 0 52px 74px rgba(0,21,64,0.25);
     overflow: hidden;
     background: black;
 }
@@ -142,7 +156,7 @@ h1{
 }
 
 .nav-contact{
-    font-size: 2.4rem;
+    font-size: 2.1rem;
     font-weight: 300;
     margin: 0px 0px 10px 0px
 }
@@ -217,7 +231,49 @@ h1{
 
 
 
+/*----------Transitions & Animations----------*/
+.fade-in-nav-bar{
+    animation-name: fade-in-nav-bar;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    pointer-events: all;
+}
 
+@keyframes fade-in-nav-bar {
+    0% {opacity: 0; right: 60px;}
+    100% {opacity: 1; right: 40px}
+}
+
+.fade-out-nav-bar{
+    animation-name: fade-out-nav-bar;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    pointer-events: none;
+}
+
+@keyframes fade-out-nav-bar{
+    0% {opacity: 1; right: 40px;}
+    100% {opacity: 0; right: 60px}
+}
+
+.hidden{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.top-nav-btn-icon-transition{
+    background: #fff;
+    width: 25px;
+    margin: -1px -1px;
+    transform: rotate(45deg);
+}
+
+.bottom-nav-btn-icon-transition{
+    background: #fff;
+    width: 25px;
+    margin: 0px 0px;
+    transform: rotate(-45deg);
+}
 
 
 
