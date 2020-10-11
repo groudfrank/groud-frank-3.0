@@ -1,3 +1,9 @@
 document.addEventListener("DOMContentLoaded", function(){
-//  alert('It works!');
+
+var NavMenuBtnWrapper = document.getElementById('nav-menu-btn-wrapper');
+
+NavMenuBtnWrapper.addEventListener('click', () =>{
+    alert('clicked');
+});
+
 }); //document
