@@ -59,11 +59,11 @@ h1{
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    height: 40px;
-    margin: 15px 25px;
+    height: 4rem;
+    margin: 1.5rem 2.5rem;
     position: absolute;
-    top: 20px;
-    right: 26px;
+    top: 2rem;
+    right: 2.6rem;
     z-index: 11;
 }
 
@@ -72,11 +72,11 @@ h1{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-width: 35px;
-    min-height: 20px;
+    min-width: 3.5rem;
+    min-height: 2rem;
     position: relative;
-    margin: 10px;
-    padding: 5px;
+    margin: 1rem;
+    padding: 0.5rem;
 }
 
 #top-nav-menu-btn-line{
@@ -99,20 +99,20 @@ h1{
 }
 
 .nav-menu-btn-lines{
-    width: 35px;
-    height: 2px;
+    width: 3.5rem;
+    height: 0.2rem;
     background: #111;
-    margin: 4px 0px;
+    margin: 0.4rem 0rem;
 }
 
 #nav-menu-wrapper{
-    min-width: 435px;
-    min-height: 500px;
+    min-width: 43.5rem;
+    min-height: 50rem;
     position: absolute;
     z-index: 10;
-    top: 20px;
-    right: 35px;
-    box-shadow: 0 52px 74px rgba(0,21,64,0.25);
+    top: 2rem;
+    right: 3.5rem;
+    box-shadow: 0 5.2rem 7.4rem rgba(0,21,64,0.25);
     overflow: hidden;
     background: black;
 }
@@ -120,14 +120,14 @@ h1{
 #nav-menu{
     width: 100%;
     height: 100%;
-    padding: 70px 0px 46px 50px;
+    padding: 5rem 0rem 4.6rem 5rem;
     box-sizing: border-box;
     position: absolute;
     z-index: 9;
 }
 
 #nav-menu-tabs-wrapper-top{
-    margin: 0px 0px 60px 0px;
+    margin: 0rem 0rem 6rem 0rem;
 
 }
 
@@ -138,8 +138,38 @@ h1{
     justify-content: right;
     align-items: center;
     width: 100%;
-    height: 70px;
+    height: 6.5rem;
+    position: relative;
 
+}
+
+.nav-menu-tab a{
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.hover-highlightable-nav-menu::after{
+    display: block;
+    position: absolute;
+    bottom: 0;
+    content: '';
+    width: 0%;
+    height: 0.4rem;
+    background: #fff;
+    transition-property: width;
+    transition-duration: 0.1s;
+    transition-timing-function: ease-in-out;
+}
+
+.hover-highlightable-nav-menu:hover::after{
+width: 100%;
+}
+
+#nav-menu-mode-switcher-wrapper{
+    width: 20rem;
+    height: 10rem;
+    margin: 20rem;
+    border: solid white 1 px
 }
 
 #nav-contact-info{
@@ -158,7 +188,40 @@ h1{
 .nav-contact{
     font-size: 2.1rem;
     font-weight: 300;
-    margin: 0px 0px 10px 0px
+    margin: 0rem 0rem 1rem 0rem;
+}
+
+#nav-social{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: 'lobster', cursive;
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+    margin-top: 4rem;
+}
+
+#nav-social a{
+    position: relative;
+    padding: 1rem 0rem;
+    margin: 0rem 0.1rem;
+}
+
+#nav-social span{
+    margin: 0rem 1rem;
+}
+
+/* .nav-menu-social-link::before{
+    content: '~~';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+} */
+
+#nav-social a:first-child{
+    margin-left: 0rem;
+    padding-left: 0rem;
 }
 
 #hero-intro{
@@ -179,7 +242,7 @@ h1{
     font-size: 12.8rem;
     color: var(--txt-color-secondary);
     font-weight: bold;
-    letter-spacing: 6px;
+    letter-spacing: 0.6rem;
     margin: 0em;
 }
 
@@ -240,8 +303,8 @@ h1{
 }
 
 @keyframes fade-in-nav-bar {
-    0% {opacity: 0; right: 60px;}
-    100% {opacity: 1; right: 40px}
+    0% {opacity: 0; right: 6rem;}
+    100% {opacity: 1; right: 4rem}
 }
 
 .fade-out-nav-bar{
@@ -252,8 +315,8 @@ h1{
 }
 
 @keyframes fade-out-nav-bar{
-    0% {opacity: 1; right: 40px;}
-    100% {opacity: 0; right: 60px}
+    0% {opacity: 1; right: 4rem;}
+    100% {opacity: 0; right: 6rem}
 }
 
 .hidden{
@@ -263,15 +326,15 @@ h1{
 
 .top-nav-btn-icon-transition{
     background: #fff;
-    width: 25px;
-    margin: -1px -1px;
+    width: 2.5rem;
+    margin: -0.1rem -0.1rem;
     transform: rotate(45deg);
 }
 
 .bottom-nav-btn-icon-transition{
     background: #fff;
-    width: 25px;
-    margin: 0px 0px;
+    width: 2.5rem;
+    margin: 0rem 0rem;
     transform: rotate(-45deg);
 }
 
@@ -287,8 +350,9 @@ h1{
 and (max-device-width: 500px) 
 and (orientation: portrait) {
     #nav-menu-btn-wrapper{
-        top: 5px;
-        left: 10px;
+        top: 0.5rem;
+        right: 0rem;
+        left: unset;
     }
 }
 
@@ -297,8 +361,70 @@ and (orientation: portrait) {
 and (max-device-width: 900px) 
 and (orientation: landscape) {
     #nav-menu-btn-wrapper{
-        top: 5px;
-        left: 10px;
+        top: 0.5rem;
+        left: unset;
+    }
+}
+
+/*PORTRAIT: Super HiDPI tablets e.g. Ipad Pro Kindle Fire HD */
+@media (max-device-width: 1400px)
+and (orientation: portrait){
+    #nav-menu-wrapper {
+    width: 60rem;
+    height: 60rem;
+        }
+    }
+
+/* LANDSCAPE: HD + QHD Phablet(should cover tall aspect ratios also) */
+@media only screen 
+and (max-device-width: 900px) 
+and (orientation: landscape) {
+    #nav-menu-wrapper{
+        width: 100vw;
+        height: 100vh;
+        min-width: unset;
+        min-height: unset;
+        top: unset;
+        left: unset;
+    }
+}
+
+/* LANDSCAPE: HD + QHD Phablet(should cover tall aspect ratios also) */
+@media only screen 
+and (max-device-width: 900px) 
+and (orientation: landscape) {
+    @keyframes fade-in-nav-bar {
+        0% {opacity: 0; right: 6rem;}
+        100% {opacity: 1; right: 0rem}
+    }
+}
+
+/* LANDSCAPE: HD + QHD Phablet(should cover tall aspect ratios also) */
+@media only screen 
+and (max-device-width: 900px) 
+and (orientation: landscape) {
+    @keyframes fade-out-nav-bar {
+        0% {opacity: 1; right: 0rem;}
+        100% {opacity: 0; right: 6rem}
+    }
+}
+
+/* LANDSCAPE: HD + QHD Phablet(should cover tall aspect ratios also) */
+@media only screen 
+and (max-device-width: 900px) 
+and (orientation: landscape) {
+    .nav-menu-tab {
+        height: auto;
+    }
+}
+
+/* PORTRAIT: HD + QHD Phablet(should cover tall aspect ratios also) */
+@media only screen 
+and (max-device-width: 500px) 
+and (orientation: portrait) {
+    #nav-social a:nth-child(1){
+        margin-left: 0rem;
+        padding-left: 0rem;
     }
 }
 
@@ -340,7 +466,8 @@ and (orientation: landscape){
 and (max-device-width: 500px) 
 and (orientation: portrait) {
     #hero-intro-txt-wrapper h1{
-        font-size: 4.0rem;
+        font-size: 4rem;
+        line-height: 4.8rem;
     }
 }
 
@@ -372,67 +499,33 @@ and (orientation: landscape) {
 
 }
 
-/*Landscape for phones*/
+/* PORTRAIT: HD + QHD Phablet(should cover tall aspect ratios also) */
 @media only screen 
-and (max-device-width: 900px) 
-and (orientation: landscape) {
-    p{
-        font-size: 17px;
+and (max-device-width: 500px) 
+and (orientation: portrait) {
+    #nav-menu-wrapper{
+        width: 100vw;
+        height: 100vh;
+        min-width: 100vw;
+        top: 0rem;
     }
-
 }
 
-/*Super HiDPI tablets e.g. Ipad Pro Kindle Fire HD*/
-@media (max-device-width: 1100px)
-and (orientation: portrait){
-    p {
-        font-size: 30px;
-            }
-        }
-
-/*Smaller tablets e.g. Ipad*/
-@media (max-device-width: 800px)
-and (orientation: portrait){
-p {
-    font-size: 19px;
-        }
+/* PORTRAIT: HD + QHD Phablet(should cover tall aspect ratios also) */
+@media only screen 
+and (max-device-width: 500px) 
+and (orientation: portrait) {
+    @keyframes fade-in-nav-bar {
+        0% {opacity: 0; right: 6rem;}
+        100% {opacity: 1; right: 0rem}
     }
+}
 
-/*HD + QHD Phablet(should cover tall aspect ratios also)*/
-@media (max-device-width: 500px)
-and (orientation: portrait){
-p {
-    font-size: 17px;
-    word-spacing: 1px;
-        }
+@media only screen 
+and (max-device-width: 500px) 
+and (orientation: portrait) {
+    @keyframes fade-out-nav-bar{
+        0% {opacity: 1; right: 0rem;}
+        100% {opacity: 0; right: 6rem}
     }
-
-/*qHD sub 5" phones e.g. iPhone 8 */
-@media (max-device-width: 400px)
-and (orientation: portrait){
-    p {
-        font-size: 15px;
-            }
-        }
-
-/* Low px density sub 4" phone e.g. iPhone SE phone */
-@media (max-device-width: 360px)
-and (orientation: portrait){
-    p {
-        font-size: 15px;
-            }
-        }
-
-/*2K laptops*/
-@media only screen  and (min-width : 2000px) {
-    p {
-        font-size: calc(16px * 1.3);
-        }
-    }
-
-/*4K laptops*/
-@media only screen  and (min-width : 3000px) {
-    p {
-        font-size: calc(16px * 2.4);
-        }
-    }
+}
