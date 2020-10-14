@@ -2,8 +2,8 @@ document.addEventListener("DOMContentLoaded", function(){
 
 var NavMenuBtn = document.getElementById('nav-menu-btn');
 var NavMenuWrapper = document.getElementById('nav-menu-wrapper');
-var TopNavMenuBtnLine = document.getElementById('top-nav-menu-btn-line');
-var BottomNavMenuBtnLine = document.getElementById('bottom-nav-menu-btn-line');
+var NavMenuBtnLineTop = document.getElementById('nav-menu-btn-line-top');
+var NavMenuBtnLineBottom = document.getElementById('nav-menu-btn-line-bottom');
 var NavMenuLabel = document.getElementById('nav-menu-label');
 
 // var addPropertyValue = (el, property, value) =>{
@@ -18,13 +18,13 @@ NavMenuBtn.addEventListener('click', () =>{
         NavMenuWrapper.classList.add('fade-in-nav-bar');
 
         // Transitions the navigation menu lines to an X.
-        if(TopNavMenuBtnLine.classList.contains('off-state')){
-            TopNavMenuBtnLine.classList.remove('off-state');
-            TopNavMenuBtnLine.classList.add('top-nav-btn-icon-transition');
+        if(NavMenuBtnLineTop.classList.contains('off-state')){
+            NavMenuBtnLineTop.classList.remove('off-state');
+            NavMenuBtnLineTop.classList.add('top-nav-btn-icon-transition');
         }
-        if(BottomNavMenuBtnLine.classList.contains('off-state')){
-            BottomNavMenuBtnLine.classList.remove('off-state');
-            BottomNavMenuBtnLine.classList.add('bottom-nav-btn-icon-transition');
+        if(NavMenuBtnLineBottom.classList.contains('off-state')){
+            NavMenuBtnLineBottom.classList.remove('off-state');
+            NavMenuBtnLineBottom.classList.add('bottom-nav-btn-icon-transition');
         }
         // add transition styles for the navigation menu label
         NavMenuLabel.style.opacity = '0';
@@ -35,14 +35,14 @@ NavMenuBtn.addEventListener('click', () =>{
         NavMenuWrapper.classList.add('fade-out-nav-bar');
         NavMenuWrapper.classList.remove('fade-in-nav-bar');
 
-        if(TopNavMenuBtnLine.classList.contains('off-state') == false){
-            TopNavMenuBtnLine.classList.add('off-state');
-            TopNavMenuBtnLine.classList.remove('top-nav-btn-icon-transition');
+        if(NavMenuBtnLineTop.classList.contains('off-state') == false){
+            NavMenuBtnLineTop.classList.add('off-state');
+            NavMenuBtnLineTop.classList.remove('top-nav-btn-icon-transition');
         }
 
-        if(BottomNavMenuBtnLine.classList.contains('off-state') == false){
-            BottomNavMenuBtnLine.classList.add('off-state');
-            BottomNavMenuBtnLine.classList.remove('bottom-nav-btn-icon-transition');
+        if(NavMenuBtnLineBottom.classList.contains('off-state') == false){
+            NavMenuBtnLineBottom.classList.add('off-state');
+            NavMenuBtnLineBottom.classList.remove('bottom-nav-btn-icon-transition');
         }
         // add transition styles for the navigation menu label
         NavMenuLabel.style.opacity = '1';
