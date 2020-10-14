@@ -107,7 +107,7 @@ h1{
 }
 
 #nav-menu-wrapper{
-    min-width: 43.5rem;
+    min-width: 48.5rem;
     min-height: 60rem;
     position: absolute;
     z-index: 10;
@@ -118,22 +118,38 @@ h1{
     background: black;
 }
 
-#nav-menu-wrapper hr{
-    margin: 3rem 0rem 7rem 0rem;
-}
-
 #nav-menu{
     width: 100%;
     height: 100%;
-    padding: 5rem 5rem 4.6rem 5rem;
+    padding: 6.5rem 5rem 4.6rem 5rem;
     box-sizing: border-box;
     position: relative;
     z-index: 9;
 }
 
 #nav-menu-sections-wrapper{
-    margin: 0rem 0rem 3rem 0rem;
+    position: relative;
+}
 
+.nav-menu-sub-section-style{
+    position: relative;
+    padding: 2rem;
+    margin: 0rem 0rem 2rem 0rem;
+    border: solid 0.1rem grey;
+    border-radius: 1rem;
+}
+
+.nav-menu-sub-section-style::after{
+    content: '';
+    position: absolute;
+    z-index: -3;
+    top: 0rem;
+    bottom: 0rem;
+    left: 0rem;
+    right: 0rem;
+    background: rgba(0, 0, 0, 0.2);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    border-radius: inherit;
 }
 
 .nav-menu-tab{
@@ -201,7 +217,6 @@ width: 100%;
     margin: auto 0rem;
     border: #fff solid 0.28rem;
     border-radius: 0.5rem;
-    background:#7a85ab;
     box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
 
@@ -252,8 +267,6 @@ width: 100%;
     width: auto;
     height: auto;
     padding: 0.7rem 0.7rem 0.7rem 0rem;
-    /* margin: 0rem 0rem 3rem 0rem; */
-
 }
 
 #nav-menu-accent-switcher-wrapper::before{
@@ -275,7 +288,6 @@ width: 100%;
     margin: 1rem auto;
     position: relative;
     border-radius: 50%;
-    /* border: solid 2px black; */
 }
 
 .nav-menu-theme-option::before{
@@ -297,10 +309,6 @@ width: 100%;
     background: rgba(255,255,255, 0.3);
     border-radius: inherit;
 }
-
-/* #nav-menu-contacts-wrapper{
-    margin-bottom: 7rem;
-} */
 
 #nav-contact-info{
     display: block;
@@ -327,7 +335,7 @@ width: 100%;
     align-items: center;
     /* font-family: 'lobster', cursive; */
     font-size: 1.5rem;
-    letter-spacing: 0.16rem;
+    letter-spacing: 0.19rem;
     margin-top: 2rem;
 }
 
@@ -340,14 +348,6 @@ width: 100%;
 #nav-social span{
     margin: 0rem 1rem;
 }
-
-/* .nav-menu-social-link::before{
-    content: '~~';
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-} */
 
 #nav-social a:first-child{
     margin-left: 0rem;
