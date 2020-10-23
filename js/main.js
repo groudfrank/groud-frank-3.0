@@ -1,10 +1,12 @@
 document.addEventListener("DOMContentLoaded", function(){
 
+var root = document.querySelector(':root');
 var NavMenuBtn = document.getElementById('nav-menu-btn');
 var NavMenuWrapper = document.getElementById('nav-menu-wrapper');
 var NavMenuBtnLineTop = document.getElementById('nav-menu-btn-line-top');
 var NavMenuBtnLineBottom = document.getElementById('nav-menu-btn-line-bottom');
 var NavMenuLabel = document.getElementById('nav-menu-label');
+var ColorBar = document.querySelectorAll('.color-bar');
 
 // var addPropertyValue = (el, property, value) =>{
 //     el.style.property = value;
@@ -48,6 +50,15 @@ NavMenuBtn.addEventListener('click', () =>{
         NavMenuLabel.style.opacity = '1';
         NavMenuLabel.style.transform = 'translateX(0px)';
     }
+});
+
+ColorBar.forEach(el =>{
+    el.addEventListener('click', () =>{
+        var styles = getComputedStyle(el);
+        var color = styles.backgroundColor
+        // console.log(color);
+        root.style.setProperty('--accent-color-primary', color);
+    })
 });
 
 }); //document

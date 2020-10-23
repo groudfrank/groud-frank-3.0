@@ -12,7 +12,7 @@ body{
     max-width: 100%;
     height: auto;
     margin: 0rem;
-    background: var(--bg-color-light);
+    background-color: var(--bg-color-light);
 }
 
 :root{
@@ -25,7 +25,7 @@ body{
     --purple: #9DABDD;
     --green: #38908F;
     --blue: #8AC0DE;
-    --organe: #FB8E7E;
+    --orange: #FB8E7E;
     --brown: #AA7B6F;
     --yellow: #E6B655;
     --accent-color-primary: #9DABDD;
@@ -79,7 +79,7 @@ p a::after{
     left: 1rem;
     right: 0rem;
     opacity: 0.4;
-    background: var(--accent-color-primary);
+    background-color: var(--accent-color-primary);
     transition-property: height, left;
     transition-duration: 0.3s;
     transition-timing-function: cubic-bezier(0.25, 0.1, 0, 2.05);
@@ -138,13 +138,13 @@ section{
 }
 
 #nav-menu-btn-line-top{
-    transition-property: background, width, margin, transform;
+    transition-property: background-color, width, margin, transform;
     transition-duration: 0.16s;
     transition-timing-function: ease-in;
 }
 
 #nav-menu-btn-line-bottom{
-    transition-property: background, width, margin, transform;
+    transition-property: background-color, width, margin, transform;
     transition-duration: 0.16s;
     transition-delay: 0.16s;
 }
@@ -152,7 +152,7 @@ section{
 .nav-menu-btn-lines{
     width: 3.5rem;
     height: 0.2rem;
-    background: #111;
+    background-color: #111;
     margin: 0.4rem 0rem;
 }
 
@@ -220,7 +220,7 @@ section{
     content: '';
     width: 0%;
     height: 0.4rem;
-    background: #fff;
+    background-color: #fff;
     transition-property: width;
     transition-duration: 0.3s;
     transition-timing-function: cubic-bezier(0.25, 0.1, 0, 2.05);;
@@ -374,14 +374,14 @@ width: 100%;
     width: 16rem;
     height: 3.5rem;
     margin: 0rem 2rem 8rem 2rem;
-    border-radius: 10rem;
+    border-radius: 0.5rem;
     transition-property: transform;
     transition-duration: 0.2s;
     transition-timing-function: cubic-bezier(0.25, 0.1, 0, 2.05);
 }
 
 .color-bar:hover{
-    transform: translateY(-1rem);
+    transform: scale(1.1);
 }
 
 .color-bar p{
@@ -399,6 +399,7 @@ width: 100%;
 .color-bar:hover p{
     opacity: 1;
     transform: translateY(0rem);
+    user-select: none;
 }
 
 .color-bar::before{
@@ -458,7 +459,7 @@ width: 100%;
     left: -0.6rem;
     right: -0.6rem;
     opacity: 0.4;
-    background: inherit;
+    background-color: inherit;
     border-radius: inherit;
 }
 
@@ -467,19 +468,19 @@ width: 100%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 60rem;
+    width: 65rem;
     height: auto;
     min-height: 73rem;
     padding: 3rem;
     margin: 0rem 4rem;
     border-radius: 1rem;
-    background: var(--bg-color-dark);
+    background-color: var(--bg-color-dark);
 }
 
 .exibition-block-partition{
     width: 40%;
     height: 0.1rem;
-    background: var(--txt-color-dark);
+    background-color: var(--txt-color-dark);
     margin: 2rem 0rem;
     border: none;
     border-radius: 1rem;
@@ -502,7 +503,7 @@ width: 100%;
     width: 6rem;
     height: 6rem;
     margin: 1rem auto 4rem auto;
-    background: var(--accent-color-primary);
+    background-color: var(--accent-color-primary);
     border-radius: 50%;
 }
 
@@ -581,7 +582,7 @@ width: 100%;
     padding: 2rem;
     margin: 0rem auto;
     border-radius: 1rem;
-    background: var(--bg-color-dark-contrast);
+    background-color: var(--bg-color-dark-contrast);
 }
 
 .exibition-social-icons-wrapper:hover i{
@@ -626,7 +627,7 @@ width: 100%;
     height: 4rem;
     padding-left: 0.5rem;
     margin: 0.5rem 0rem 2rem 0rem;
-    background: var(--bg-color-dark-contrast);
+    background-color: var(--bg-color-dark-contrast);
     border: solid 2px var(--accent-color-primary);
     border-radius: 0.5rem;
 }
@@ -634,7 +635,7 @@ width: 100%;
 #exibition-form input[type=text]:focus{
     border: solid #c0c0c0 2px;
     outline: none;
-    background: var(--bg-color-dark-contrast);
+    background-color: var(--bg-color-dark-contrast);
 }
 
 
@@ -643,7 +644,7 @@ width: 100%;
     color: var(--txt-color-lighter);
     width: 15.5rem;
     height: 4rem;
-    background: var(--accent-color-primary);
+    background-color: var(--accent-color-primary);
     border: unset;
     border-radius: 0.5rem;
 }
@@ -668,7 +669,7 @@ width: 100%;
     padding: 2rem;
     margin: 0rem 1rem 5rem 1rem;
     border-radius: 1rem;
-    background: var(--bg-color-light-contrasted);
+    background-color: var(--bg-color-light-contrasted);
 }
 
 .theme-icon-wrapper::after{
@@ -678,6 +679,13 @@ width: 100%;
     bottom: -2.5rem;
     left: 0rem;
     right: 0rem;
+    transition-property: color;
+    transition-duration: 0.3s;
+    transition-timing-function: cubic-bezier(0.25, 0.1, 0, 2.05);
+}
+
+.theme-icon-wrapper:hover::after{
+    color: var(--accent-color-primary);
 }
 
 #theme-icon-light::after{
@@ -727,7 +735,7 @@ width: 100%;
 }
 
 .accent-bg-color{
-    background: var(--accent-color-primary);
+    background-color: var(--accent-color-primary);
 }
 
 .pink-txt{
@@ -751,7 +759,7 @@ width: 100%;
 }
 
 .orange-txt{
-    color: var(--organe);
+    color: var(--orange);
 }
 
 .brown-txt{
@@ -763,35 +771,35 @@ width: 100%;
 }
 
 .pink-bg{
-    background: var(--pink);
+    background-color: var(--pink);
 }
 
 .grey-bg{
-    background: var(--grey);
+    background-color: var(--grey);
 }
 
 .purple-bg{
-    background: var(--purple);
+    background-color: var(--purple);
 }
 
 .green-bg{
-    background: var(--green);
+    background-color: var(--green);
 }
 
 .blue-bg{
-    background: var(--blue);
+    background-color: var(--blue);
 }
 
 .orange-bg{
-    background: var(--organe);
+    background-color: var(--orange);
 }
 
 .brown-bg{
-    background: var(--brown);
+    background-color: var(--brown);
 }
 
 .yellow-bg{
-    background: var(--yellow);
+    background-color: var(--yellow);
 }
 
 
@@ -827,14 +835,14 @@ width: 100%;
 }
 
 .top-nav-btn-icon-transition{
-    background: #fff;
+    background-color: #fff;
     width: 2.5rem;
     margin: -0.1rem -0.1rem;
     transform: rotate(45deg);
 }
 
 .bottom-nav-btn-icon-transition{
-    background: #fff;
+    background-color: #fff;
     width: 2.5rem;
     margin: 0rem 0rem;
     transform: rotate(-45deg);
