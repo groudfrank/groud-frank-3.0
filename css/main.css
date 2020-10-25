@@ -859,7 +859,10 @@ width: 100%;
     transform: rotate(-45deg);
 }
 
-
+/*----------Misc----------*/
+.nav-menu-elements-scaler{
+    font-size: unset;
+}
 
 /*----------Media Queries----------*/
 
@@ -868,7 +871,7 @@ width: 100%;
 and (max-device-width: 1400px) 
 and (orientation: landscape) {
     html{
-        font-size: 50%; /*8px*/
+        font-size: 8px; /*50%*/
     }
 }
 
@@ -876,7 +879,7 @@ and (orientation: landscape) {
 @media (max-device-width: 1400px)
 and (orientation: portrait){
     html {
-    font-size: 75%; /*12px*/
+    font-size: 12px; /*75%*/
         }
     }
 
@@ -884,7 +887,7 @@ and (orientation: portrait){
 @media (max-device-width: 800px)
 and (orientation: portrait){
     html {
-        font-size: 62.5%;
+        font-size: 10px; /*62.5%*/
         }
     }
 
@@ -892,16 +895,43 @@ and (orientation: portrait){
 @media (max-device-width: 1100px)
 and (orientation: landscape){
     html {
-        font-size: 43.75%; /*7px*/
+        font-size: 7px; /*43.75%*/
         }
     }
+
+/* PORTRAIT: HD + QHD Phablet(should cover tall aspect ratios also) */
+@media only screen 
+and (max-device-width: 500px) 
+and (orientation: portrait) {
+    html{
+        font-size: 6px; /*37.5%*/
+    }
+}
+
+/* LANDSCAPE: HD + QHD Phablet(should cover tall aspect ratios also) */
+@media only screen 
+and (max-device-width: 900px) 
+and (orientation: landscape) {
+    html{
+        font-size: 9px; /*56.25%*/
+    }
+}
+
+/* LANDSCAPE: Small phones like iPhone SE */
+@media only screen 
+and (max-device-width: 600px) 
+and (orientation: landscape) {
+    html{
+        font-size: 6px;
+    }
+}
 
 /*LANDSCAPE: Super HiDPI tablets e.g. Ipad Pro Kindle Fire HD*/
 @media only screen 
 and (max-device-width: 1400px) 
 and (orientation: landscape) {
     body{
-        padding: 5.25rem; /*42px*/
+        padding: 0rem 5.25rem; /*42px*/
     }
 }
 
@@ -925,9 +955,18 @@ and (orientation: portrait){
 @media (max-device-width: 1100px)
 and (orientation: landscape){
     body{
-        padding: 6rem; /*42px*/
+        padding: 0rem 6rem; /*42px*/
         }
     }
+
+/* PORTRAIT: HD + QHD Phablet(should cover tall aspect ratios also) */
+@media only screen 
+and (max-device-width: 500px) 
+and (orientation: portrait) {
+    body{
+        padding: 1rem;
+    }
+}
 
 /*()||||||+++++NAVIGATION BUTTON+++++|||||()*/
 
@@ -990,7 +1029,8 @@ and (orientation: landscape) {
         height: auto;
         min-width: unset;
         min-height: 100vh;
-        top: unset;
+        top: 0rem;
+        bottom: 0rem;
         left: unset;
     }
 }
@@ -1142,8 +1182,8 @@ and (orientation: landscape){
 and (max-device-width: 500px) 
 and (orientation: portrait) {
     #hero-intro-txt-wrapper h1{
-        font-size: 4rem;
-        line-height: 4.8rem;
+        font-size: 8rem;
+        text-align: center;
     }
 }
 
@@ -1203,6 +1243,24 @@ and (orientation: portrait){
         }
     }
 
+/* LANDSCAPE: HD + QHD Phablet(should cover tall aspect ratios also) */
+@media only screen 
+and (max-device-width: 900px) 
+and (orientation: landscape) {
+    #customize{
+        flex-direction: column;
+    }
+}
+
+/* LANDSCAPE: Small phones like iPhone SE */
+@media only screen 
+and (max-device-width: 600px) 
+and (orientation: landscape) {
+    #customize{
+        flex-direction: column;
+    }
+}
+
 /*PORTRAIT: Super HiDPI tablets e.g. Ipad Pro Kindle Fire HD */
 @media (max-device-width: 1400px)
 and (orientation: portrait){
@@ -1225,3 +1283,37 @@ and (orientation: landscape){
         font-size: 1.8rem;
         }
     }
+
+/*PORTRAIT: Super HiDPI tablets e.g. Ipad Pro Kindle Fire HD */
+@media (max-device-width: 1400px)
+and (orientation: portrait){
+    #theme-switcher-wrapper {
+    margin-bottom: 2.5rem;
+        }
+    }
+
+@media only screen 
+and (max-device-width: 500px) 
+and (orientation: portrait) {
+    .exibition-block{
+        width: auto;
+    }
+}
+
+@media only screen 
+and (max-device-width: 500px) 
+and (orientation: portrait) {
+    .exibition-social-icons-wrapper{
+        width: 7.7rem;
+        height: 7.7rem;
+    }
+}
+
+@media only screen 
+and (max-device-width: 500px) 
+and (orientation: portrait) {
+    .nav-menu-elements-scaler{
+        font-size: 10px;
+    }
+}
+
