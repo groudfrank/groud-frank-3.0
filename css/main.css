@@ -577,7 +577,7 @@ width: 100%;
 
 .exibition-txt-wrapper p{
     color: var(--txt-color-lighter);
-    font-size: 1.6rem;
+    font-size: 1.6em;
     line-height: 1.5;
     margin: 0rem;
 }
@@ -602,14 +602,13 @@ width: 100%;
     background-color: var(--bg-color-dark-contrast);
     border: solid 2px var(--accent-color-primary);
     border-radius: 0.5rem;
-    transition-property: width;
+    transition-property: height;
     transition-duration: 0.3s;
     transition-timing-function: var(--bouncy-trans);
 }
 
 #exibition-form input[type=text]:focus{
-    /* border-radius: 0rem 2rem 2rem 0rem; */
-    width: 50rem;
+    height: 5.5rem;
     outline: none;
     background-color: var(--bg-color-dark-contrast);
 }
@@ -651,6 +650,7 @@ width: 100%;
 
 .theme-icon-wrapper::after{
     font-size: 1.5rem;
+    color: var(--txt-color-light);
     text-align: center;
     position: absolute;
     bottom: -2.5rem;
@@ -860,7 +860,7 @@ width: 100%;
 }
 
 /*----------Misc----------*/
-.nav-menu-elements-scaler{
+.p-scaler{
     font-size: unset;
 }
 
@@ -978,6 +978,7 @@ and (orientation: portrait) {
         top: 0.5rem;
         right: 0rem;
         left: unset;
+        margin-right: 5rem;
     }
 }
 
@@ -990,6 +991,28 @@ and (orientation: landscape) {
         left: unset;
     }
 }
+
+/* PORTRAIT: HD + QHD Phablet(should cover tall aspect ratios also) */
+@media only screen 
+and (max-device-width: 500px) 
+and (orientation: portrait) {
+    #nav-menu-label{
+        font-size: 2.6rem;
+    }
+}
+
+/* PORTRAIT: HD + QHD Phablet(should cover tall aspect ratios also) */
+@media only screen 
+and (max-device-width: 500px) 
+and (orientation: portrait) {
+    .nav-menu-btn-lines{
+        width: 5.5rem;
+        height: 0.3rem;
+        background-color: var(--bg-color-light);
+        /* margin: 0.7rem 0rem; */
+    }
+}
+
 
 /*()||||||+++++NAVIGATION MENU+++++|||||()*/
 
@@ -1081,18 +1104,18 @@ and (orientation: portrait) {
 and (max-device-width: 500px) 
 and (orientation: portrait) {
     #nav-menu{
-        padding: 8rem 1.9rem 4rem 4rem;
+        padding: 60% 1.9rem 4rem 4rem;
     }
 }
 
 /* PORTRAIT: Small phones like iPhone SE */
-@media only screen 
+/* @media only screen 
 and (max-device-width: 400px) 
 and (orientation: portrait) {
     #nav-menu{
         padding: 8rem 2rem 1rem 2rem;
     }
-}
+} */
 
 /* LANDSCAPE: HD + QHD Phablet(should cover tall aspect ratios also) */
 @media only screen 
@@ -1126,6 +1149,16 @@ and (orientation: landscape) {
 @media only screen 
 and (max-device-width: 500px) 
 and (orientation: portrait) {
+    .nav-menu-site-link{
+        font-size: 4.2rem;
+        padding: 2rem;
+    }
+}
+
+/* PORTRAIT: HD + QHD Phablet(should cover tall aspect ratios also) */
+@media only screen 
+and (max-device-width: 500px) 
+and (orientation: portrait) {
     #nav-social a:nth-child(1){
         margin-left: 0rem;
         padding-left: 0rem;
@@ -1136,9 +1169,26 @@ and (orientation: portrait) {
 @media only screen 
 and (max-device-width: 500px) 
 and (orientation: portrait) {
-    .nav-menu-theme-option{
-        width: 1.4rem;
-        height: 1.4rem;
+    #nav-call-to-action{
+        font-size: 2.6rem;
+    }
+}
+
+/* PORTRAIT: HD + QHD Phablet(should cover tall aspect ratios also) */
+@media only screen 
+and (max-device-width: 500px) 
+and (orientation: portrait) {
+    .nav-contact{
+        font-size: 3rem;
+    }
+}
+
+/* PORTRAIT: HD + QHD Phablet(should cover tall aspect ratios also) */
+@media only screen 
+and (max-device-width: 500px) 
+and (orientation: portrait) {
+    #nav-social{
+        font-size: 2.5rem;
     }
 }
 
@@ -1276,6 +1326,8 @@ and (orientation: landscape){
         margin-right: 0rem;
         }
     }
+
+
 /*LANDSCAPE: Smaller tablets e.g. Ipad*/
 @media (max-device-width: 1100px)
 and (orientation: landscape){
@@ -1292,14 +1344,26 @@ and (orientation: portrait){
         }
     }
 
+/* PORTRAIT: HD + QHD Phablet(should cover tall aspect ratios also) */
+@media only screen 
+and (max-device-width: 500px) 
+and (orientation: portrait) {
+    .exibition-block-wrapper{
+        padding: 0rem;
+    }
+}
+
+/* PORTRAIT: HD + QHD Phablet(should cover tall aspect ratios also) */
 @media only screen 
 and (max-device-width: 500px) 
 and (orientation: portrait) {
     .exibition-block{
         width: auto;
+        padding: 0rem;
     }
 }
 
+/* PORTRAIT: HD + QHD Phablet(should cover tall aspect ratios also) */
 @media only screen 
 and (max-device-width: 500px) 
 and (orientation: portrait) {
@@ -1309,11 +1373,29 @@ and (orientation: portrait) {
     }
 }
 
+/* PORTRAIT: HD + QHD Phablet(should cover tall aspect ratios also) */
 @media only screen 
 and (max-device-width: 500px) 
 and (orientation: portrait) {
     .nav-menu-elements-scaler{
         font-size: 10px;
+    }
+}
+
+/*PORTRAIT: Super HiDPI tablets e.g. Ipad Pro Kindle Fire HD */
+@media (max-device-width: 1400px)
+and (orientation: portrait){
+    .p-scaler {
+        font-size: 2.3rem !important;
+        }
+    }
+
+/* PORTRAIT: HD + QHD Phablet(should cover tall aspect ratios also) */
+@media only screen 
+and (max-device-width: 500px) 
+and (orientation: portrait) {
+    .p-scaler{
+        font-size: 2.3rem !important;
     }
 }
 

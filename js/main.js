@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function(){
 
 var root = document.querySelector(':root');
-var NavMenuBtn = document.getElementById('nav-menu-btn');
+var NavMenuBtnWrapper = document.getElementById('nav-menu-btn-wrapper');
 var NavMenuWrapper = document.getElementById('nav-menu-wrapper');
 var NavMenuBtnLineTop = document.getElementById('nav-menu-btn-line-top');
 var NavMenuBtnLineBottom = document.getElementById('nav-menu-btn-line-bottom');
@@ -12,7 +12,7 @@ var ColorBar = document.querySelectorAll('.color-bar');
 //     el.style.property = value;
 // }
 
-NavMenuBtn.addEventListener('click', () =>{
+NavMenuBtnWrapper.addEventListener('click', () =>{
     if(NavMenuWrapper.classList.contains('hidden')){
         // Fades in the navigation bar
         NavMenuWrapper.classList.remove('hidden');
