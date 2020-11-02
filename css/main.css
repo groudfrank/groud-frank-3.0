@@ -15,19 +15,13 @@ body{
 }
 
 :root{
-    /* font-size: 16px; */
-    font-family: 'Ubuntu', 'Trebuchet', 'Verdana', 'Tahoma',
+    font-family: 'Inconsolata', 'Trebuchet', 'Verdana', 'Tahoma',
     'Arial Narrow', 'Helvetica', 'Geneva', sans-serif;
-    /* --pink: #F6A7C1; */
     --pink: #FF4081;
     --grey: #89AEB2;
-    /* --grey: #909090; */
-    /* --purple: #9DABDD; */
     --purple: #7C4DFF;
     --green: #38908F;
     --blue: #1E90FF;
-    /* --blue: #8AC0DE; */
-    /* --orange: #FB8E7E; */
     --orange: #F44336;
     --brown: #AA7B6F;
     --yellow: #E6B655;
@@ -43,8 +37,8 @@ body{
     --ripple-size-small: 1.1rem;
     --std-box-shadow: 0 5.2rem 7.4rem rgba(0,0,0, 0.8);
     --border-radius-sm: 1rem;
-    /* --std-box-shadow: 0 5.2rem 7.4rem rgba(0,21,64,0.2); */
     --bouncy-trans: cubic-bezier(0.25, 0.1, 0, 2.05);
+    --heading-txt-m: 6rem; 
 }
 
 
@@ -574,7 +568,7 @@ width: 100%;
 }
 
 .exibition-txt-wrapper h1{
-    font-size: 8rem;
+    font-size: var(--heading-txt-m);
     color: var(--accent-color-primary);
     margin: 0rem;
 }
@@ -700,6 +694,7 @@ width: 100%;
 
 .work-display{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     position: relative;
@@ -709,11 +704,49 @@ width: 100%;
     border-radius: var(--border-radius-sm);
     box-shadow: var(--std-box-shadow);
     background-color: #2f4353;
-    background-image: linear-gradient(315deg, #202930 0%, var(--bg-color-dark) 74%);
+    /* background-image: linear-gradient(315deg, #202930 0%, var(--bg-color-dark) 74%); */
+    background-image: linear-gradient(to right, #202930, var(--bg-color-dark));
+}
+
+.work-display h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--heading-txt-m);
+    color: var(--accent-color-primary);
+    position: relative;
+    padding: 0rem 5rem 0rem 5rem;
+    margin: 4rem 15rem 6rem auto;
+    border-top: dashed 1px var(--accent-color-primary);
+    border-bottom: dashed 1px var(--accent-color-primary);
+}
+
+.work-display h1::before{
+    content: '';
+    position: absolute;
+    left: 1.3rem;
+    width: 2rem;
+    height: 165%;
+    border-left: dashed 1px var(--accent-color-primary);
+    border-right: dashed 1px var(--accent-color-primary);
+    transform: rotate(180deg);
+}
+
+.work-display h1::after{
+    content: '';
+    position: absolute;
+    right: 3.3rem;
+    width: 0.1rem;
+    height: 68%;
+    border-left: dashed 1px var(--accent-color-primary);
+    transform: rotate(180deg);
+    bottom: -33%;
 }
 
 .work-display img{
-    transform: scale(0.7);
+    width: 110.2rem;
+    height: 80.4rem;
+    filter: grayscale(100%);
     border-radius: inherit;
 }
 
