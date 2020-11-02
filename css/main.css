@@ -17,6 +17,7 @@ body{
 :root{
     font-family: 'Inconsolata', 'Trebuchet', 'Verdana', 'Tahoma',
     'Arial Narrow', 'Helvetica', 'Geneva', sans-serif;
+    color: var(--txt-color-light);
     --pink: #FF4081;
     --grey: #89AEB2;
     --purple: #7C4DFF;
@@ -699,7 +700,7 @@ width: 100%;
     align-items: center;
     position: relative;
     width: 160rem;
-    height: 100rem;
+    min-height: 100rem;
     margin: 2rem 2rem 13rem 2rem;
     border-radius: var(--border-radius-sm);
     box-shadow: var(--std-box-shadow);
@@ -750,19 +751,29 @@ width: 100%;
     border-radius: inherit;
 }
 
-/* .work-display::after{
+.work-display p{
+    position: relative;
+    padding: 0rem 5rem 0rem 5rem;
+    margin: 4rem auto 6rem auto;
+    width: 50%;
+    color: #fff;
+}
+
+.work-display p::first-letter{
+    color: var(--accent-color-primary) !important;
+}
+
+.work-display p::before{
     content: '';
     position: absolute;
-    z-index: -1;
-    top: -2rem;
-    bottom: -2rem;
-    left: -2rem;
-    right: -2rem;
-    border: solid 3px var(--accent-color-primary);
-    border-radius: inherit;
-    transform: rotate(3deg);
-    opacity: 0.3;
-} */
+    top: -1rem;
+    bottom: -1rem;
+    left: 2.5rem;
+    width: 1rem;
+    background-color: var(--accent-color-primary);
+    border-radius: 1rem;
+}
+
 
 /*----------Colors----------*/
 .hero-txt-highlight{
