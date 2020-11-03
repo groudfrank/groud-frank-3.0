@@ -713,10 +713,20 @@ width: 100%;
     content: '';
     position: absolute;
     bottom: 0rem;
-    left: -52%;
+    left: -62%;
     width: 100%;
     height: 100%;
     border: solid 12rem var(--accent-color-primary);
+    border-radius: 50%;
+}
+
+.work-canvas::after{
+    content: '';
+    position: absolute;
+    right: -10%;
+    width: 30rem;
+    height: 30rem;
+    background-color: var(--accent-color-primary);
     border-radius: 50%;
 }
 
@@ -756,6 +766,8 @@ width: 100%;
 }
 
 .work-canvas img{
+    position: relative;
+    z-index: 2;
     width: 110.2rem;
     height: 80.4rem;
     filter: grayscale(100%);
@@ -765,14 +777,11 @@ width: 100%;
 .work-canvas p{
     font-weight: 600;
     position: relative;
+    z-index: 2;
     padding: 0rem 5rem 0rem 5rem;
     margin: 4rem auto 6rem auto;
     width: 50%;
     color: #fff;
-}
-
-.work-canvas p::first-letter{
-    color: var(--accent-color-primary) !important;
 }
 
 .work-canvas p::before{
@@ -781,7 +790,7 @@ width: 100%;
     top: -1rem;
     bottom: -1rem;
     right: 2.5rem;
-    width: 1rem;
+    width: 0.7rem;
     background-color: var(--accent-color-primary);
     border-radius: 1rem;
 }
@@ -1514,8 +1523,9 @@ and (orientation: landscape) {
 @media (max-device-width: 1400px)
 and (orientation: portrait){
     .work-canvas::before {
-        width: 40rem;
-        height: 40rem;
+        width: 60rem;
+        height: 60rem;
+        left: -55%;
         border: solid 9rem var(--accent-color-primary);
         }
     }
@@ -1535,8 +1545,16 @@ and (orientation: landscape) {
 /*PORTRAIT: Super HiDPI tablets e.g. Ipad Pro Kindle Fire HD */
 @media (max-device-width: 1400px)
 and (orientation: portrait){
+    .work-canvas::after {
+        right: -20%;
+        }
+    }
+
+/*PORTRAIT: Super HiDPI tablets e.g. Ipad Pro Kindle Fire HD */
+@media (max-device-width: 1400px)
+and (orientation: portrait){
     .work-canvas h1{
-        margin: 1rem auto 6rem auto;
+        margin: 1rem 3rem 6rem auto;
         }
     }
 
