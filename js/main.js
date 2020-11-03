@@ -7,6 +7,14 @@ var NavMenuBtnLineTop = document.getElementById('nav-menu-btn-line-top');
 var NavMenuBtnLineBottom = document.getElementById('nav-menu-btn-line-bottom');
 var NavMenuLabel = document.getElementById('nav-menu-label');
 var ColorBar = document.querySelectorAll('.color-bar');
+var WorkCanvasImg = document.querySelectorAll('.work-canvas img');
+var WindowWidth = 0;
+var WindowHeight = 0;
+
+window.addEventListener('resize', () =>{
+    WindowWidth = innerWidth;
+    WindowHeight = innerHeight;
+})
 
 // var addPropertyValue = (el, property, value) =>{
 //     el.style.property = value;
@@ -52,13 +60,35 @@ NavMenuBtnWrapper.addEventListener('click', () =>{
     }
 });
 
-ColorBar.forEach(el =>{
+ColorBar.forEach((el)=>{
     el.addEventListener('click', () =>{
         var styles = getComputedStyle(el);
         var color = styles.backgroundColor
         // console.log(color);
         root.style.setProperty('--accent-color-primary', color);
     })
+});
+
+var isInViewport = (target) => {
+    var bounding = target.getBoundingClientRect();
+    return (
+        bounding.top >= 0 &&
+        bounding.left >= 0 &&
+        bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        bounding.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+};
+
+window.addEventListener('scroll', () =>{
+    WorkCanvasImg.forEach(img =>{
+        if(isInViewport(img)){
+            img.classList.remove('animate-img-out');
+            img.classList.add('animate-img-in');
+        }else{
+            img.classList.remove('animate-img-in');
+            img.classList.add('animate-img-out');
+        }
+    });
 });
 
 }); //document
