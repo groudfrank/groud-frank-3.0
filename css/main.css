@@ -686,14 +686,14 @@ width: 100%;
     transition-timing-function: var(--bouncy-trans);
 }
 
-.work-display-wrapper{
+.work-canvas-wrapper{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.work-display{
+.work-canvas{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -705,11 +705,22 @@ width: 100%;
     border-radius: var(--border-radius-sm);
     box-shadow: var(--std-box-shadow);
     background-color: #2f4353;
-    /* background-image: linear-gradient(315deg, #202930 0%, var(--bg-color-dark) 74%); */
     background-image: linear-gradient(to right, #202930, var(--bg-color-dark));
+    overflow: hidden;
 }
 
-.work-display h1{
+.work-canvas::before{
+    content: '';
+    position: absolute;
+    bottom: 0rem;
+    left: -52%;
+    width: 100%;
+    height: 100%;
+    border: solid 12rem var(--accent-color-primary);
+    border-radius: 50%;
+}
+
+.work-canvas h1{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -722,7 +733,7 @@ width: 100%;
     border-bottom: dashed 1px var(--accent-color-primary);
 }
 
-.work-display h1::before{
+.work-canvas h1::before{
     content: '';
     position: absolute;
     left: 1.3rem;
@@ -733,7 +744,7 @@ width: 100%;
     transform: rotate(180deg);
 }
 
-.work-display h1::after{
+.work-canvas h1::after{
     content: '';
     position: absolute;
     right: 3.3rem;
@@ -744,14 +755,15 @@ width: 100%;
     bottom: -33%;
 }
 
-.work-display img{
+.work-canvas img{
     width: 110.2rem;
     height: 80.4rem;
     filter: grayscale(100%);
     border-radius: inherit;
 }
 
-.work-display p{
+.work-canvas p{
+    font-weight: 600;
     position: relative;
     padding: 0rem 5rem 0rem 5rem;
     margin: 4rem auto 6rem auto;
@@ -759,16 +771,16 @@ width: 100%;
     color: #fff;
 }
 
-.work-display p::first-letter{
+.work-canvas p::first-letter{
     color: var(--accent-color-primary) !important;
 }
 
-.work-display p::before{
+.work-canvas p::before{
     content: '';
     position: absolute;
     top: -1rem;
     bottom: -1rem;
-    left: 2.5rem;
+    right: 2.5rem;
     width: 1rem;
     background-color: var(--accent-color-primary);
     border-radius: 1rem;
@@ -969,7 +981,7 @@ and (orientation: landscape) {
 and (max-device-width: 1400px) 
 and (orientation: landscape) {
     html{
-        font-size: 9px; /*56.25%*/
+        font-size: 8px;
     }
 }
 
@@ -977,7 +989,7 @@ and (orientation: landscape) {
 @media (max-device-width: 1400px)
 and (orientation: portrait){
     html {
-    font-size: 12px; /*75%*/
+    font-size: 10px; /*762.5*/
         }
     }
 
@@ -1065,6 +1077,14 @@ and (orientation: portrait) {
         padding: 1rem;
     }
 }
+
+/*PORTRAIT: Super HiDPI tablets e.g. Ipad Pro Kindle Fire HD */
+@media (max-device-width: 1400px)
+and (orientation: portrait){
+    :root {
+    --heading-txt-m: 4rem;
+        }
+    }
 
 /*()||||||+++++NAVIGATION BUTTON+++++|||||()*/
 
@@ -1433,15 +1453,6 @@ and (orientation: landscape){
         }
     }
 
-
-/*LANDSCAPE: Smaller tablets e.g. Ipad*/
-@media (max-device-width: 1100px)
-and (orientation: landscape){
-    .p-scaler{
-        font-size: 2.1rem;
-        }
-    }
-
 /*PORTRAIT: Super HiDPI tablets e.g. Ipad Pro Kindle Fire HD */
 @media (max-device-width: 1400px)
 and (orientation: portrait){
@@ -1479,6 +1490,74 @@ and (orientation: portrait) {
     }
 }
 
+/*PORTRAIT: Super HiDPI tablets e.g. Ipad Pro Kindle Fire HD */
+@media (max-device-width: 1400px)
+and (orientation: portrait){
+    .work-canvas {
+        width: 100%;
+        min-height:auto;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+        }
+    }
+
+/*LANDSCAPE: Super HiDPI tablets e.g. Ipad Pro Kindle Fire HD*/
+@media only screen 
+and (max-device-width: 1400px) 
+and (orientation: landscape) {
+    .work-canvas{
+        width: 100%;
+    }
+}
+
+/*PORTRAIT: Super HiDPI tablets e.g. Ipad Pro Kindle Fire HD */
+@media (max-device-width: 1400px)
+and (orientation: portrait){
+    .work-canvas::before {
+        width: 40rem;
+        height: 40rem;
+        border: solid 9rem var(--accent-color-primary);
+        }
+    }
+
+/*LANDSCAPE: Super HiDPI tablets e.g. Ipad Pro Kindle Fire HD*/
+@media only screen 
+and (max-device-width: 1400px) 
+and (orientation: landscape) {
+    .work-canvas::before{
+        left: -47%;
+        width: 90rem;
+        height: 90rem;
+        border-width: 15rem;
+    }
+}
+
+/*PORTRAIT: Super HiDPI tablets e.g. Ipad Pro Kindle Fire HD */
+@media (max-device-width: 1400px)
+and (orientation: portrait){
+    .work-canvas h1{
+        margin: 1rem auto 6rem auto;
+        }
+    }
+
+/*PORTRAIT: Super HiDPI tablets e.g. Ipad Pro Kindle Fire HD */
+@media (max-device-width: 1400px)
+and (orientation: portrait){
+    .work-canvas img{
+        width: 59rem;
+        height: 43.7rem;
+        }
+    }
+
+/*PORTRAIT: Super HiDPI tablets e.g. Ipad Pro Kindle Fire HD */
+@media (max-device-width: 1400px)
+and (orientation: portrait){
+    .work-canvas p{
+        width: 85%;
+        margin-bottom: 2rem;
+        }
+    }
+
 /* PORTRAIT: HD + QHD Phablet(should cover tall aspect ratios also) */
 @media only screen 
 and (max-device-width: 500px) 
@@ -1492,7 +1571,24 @@ and (orientation: portrait) {
 @media (max-device-width: 1400px)
 and (orientation: portrait){
     .p-scaler {
-        font-size: 2.3rem;
+        font-size: 1.4rem;
+        }
+    }
+
+/*LANDSCAPE: Super HiDPI tablets e.g. Ipad Pro Kindle Fire HD*/
+@media only screen 
+and (max-device-width: 1400px) 
+and (orientation: landscape) {
+    .p-scaler{
+        font-size: 2rem
+    }
+}
+
+/*LANDSCAPE: Smaller tablets e.g. Ipad*/
+@media (max-device-width: 1100px)
+and (orientation: landscape){
+    .p-scaler{
+        font-size: 2.1rem;
         }
     }
 
