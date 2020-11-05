@@ -358,6 +358,7 @@ width: 100%;
 .color-bar p{
     font-size: 1.4rem;
     color: #fff;
+    font-weight: 900;
     padding: 0rem;
     margin: 0rem;
     opacity: 0;
@@ -778,7 +779,7 @@ width: 100%;
 }
 
 .work-canvas p{
-    font-weight: 600;
+    font-weight: 900;
     position: relative;
     z-index: 2;
     padding: 0rem 5rem 0rem 5rem;
@@ -972,7 +973,7 @@ width: 100%;
 
 .animate-img-out{
     animation-name: animate-img-out;
-    animation-duration: 1s;
+    animation-duration: 2s;
     animation-fill-mode: forwards;
 }
 
@@ -1523,6 +1524,15 @@ and (orientation: portrait){
         }
     }
 
+/* PORTRAIT: HD + QHD Phablet(should cover tall aspect ratios also) */
+@media only screen 
+and (max-device-width: 500px) 
+and (orientation: portrait) {
+    .work-canvas {
+        width: 95%;
+    }
+}
+
 /*LANDSCAPE: Super HiDPI tablets e.g. Ipad Pro Kindle Fire HD*/
 @media only screen 
 and (max-device-width: 1400px) 
@@ -1608,6 +1618,26 @@ and (orientation: portrait){
         height: 43.7rem;
         }
     }
+
+/* PORTRAIT: HD + QHD Phablet(should cover tall aspect ratios also) */
+@media only screen 
+and (max-device-width: 500px) 
+and (orientation: portrait) {
+    .work-canvas img{
+        width: 55rem;
+        height: 40.15rem;
+    }
+}
+
+/* PORTRAIT: HD + QHD Non-Phablet(should cover tall aspect ratios also) */
+@media only screen 
+and (max-device-width: 400px) 
+and (orientation: portrait) {
+    .work-canvas img{
+        width: 47rem;
+        height: 34.3rem;
+    }
+}
 
 @media only screen 
 and (max-device-width: 900px) 
