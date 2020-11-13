@@ -55,6 +55,10 @@ a:active{
     text-decoration: none;
 }
 
+p{
+    color: var(--txt-color-lighter);
+}
+
 p a{
     color: var(--accent-color-primary);
     font-weight: bold;
@@ -82,13 +86,10 @@ p a:hover::after{
     left: 0rem;
 }
 
-p{
-
-}
 
 h1{
     font-family: 'Lato';
-    color: var(--txt-color-light);
+    color: var(--txt-color-lighter);
 }
 
 ::placeholder{
@@ -779,7 +780,6 @@ width: 100%;
 }
 
 .work-canvas p{
-    font-weight: 900;
     position: relative;
     z-index: 2;
     padding: 0rem 5rem 0rem 5rem;
@@ -799,6 +799,46 @@ width: 100%;
     border-radius: 1rem;
 }
 
+.contact-content-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10rem;
+}
+
+.contact-info-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 65rem;
+    margin: 0rem  10rem 0rem 0rem;
+}
+
+.contact-info-wrapper h1{
+    font-size: var(--heading-txt-m);
+}
+
+.contact-info-wrapper p a{
+    margin-right: 2rem;
+}
+
+.contact-info-alt-contact{
+    color: var(--accent-color-primary);
+    font-weight: 600;
+    letter-spacing: 0.3rem;
+    margin-top: 0rem;
+}
+
+.logo-wrapper{
+    width: auto;
+    height: auto;
+}
+
+.logo-wrapper img{
+    width: 40rem;
+    height: 40rem;
+}
 
 /*----------Colors----------*/
 .hero-txt-highlight{
@@ -984,7 +1024,7 @@ width: 100%;
 
 /*----------Misc----------*/
 .p-scaler{
-    font-size: 1.6em;
+    font-size: 1.75em;
     line-height: 1.5;
 }
 
@@ -1643,8 +1683,8 @@ and (orientation: portrait) {
 and (max-device-width: 900px) 
 and (orientation: landscape) {
     .work-canvas img{
-        width: 72.2rem;
-        height: 53rem;
+        width: 58rem;
+        height: 42rem;
     }
 }
 
@@ -1652,7 +1692,6 @@ and (orientation: landscape) {
 @media (max-device-width: 1400px)
 and (orientation: portrait){
     .work-canvas p{
-        font-weight: bold;
         width: 85%;
         margin-bottom: 2rem;
         }
@@ -1663,10 +1702,84 @@ and (orientation: portrait){
 and (max-device-width: 900px) 
 and (orientation: landscape) {
     .work-canvas p{
-        font-weight: bold;
         width: 85%;
     }
 }
+
+/*PORTRAIT: Super HiDPI tablets e.g. Ipad Pro Kindle Fire HD */
+@media (max-device-width: 1400px)
+and (orientation: portrait){
+    .contact-info-wrapper{
+        width: 50%;
+        margin-right: 0rem;
+        }
+    }
+
+/* PORTRAIT: HD + QHD Phablet(should cover tall aspect ratios also) */
+@media only screen 
+and (max-device-width: 500px) 
+and (orientation: portrait) {
+    .contact-content-wrapper{
+        flex-direction: column-reverse;
+    }
+}
+
+/* PORTRAIT: HD + QHD Phablet(should cover tall aspect ratios also) */
+@media only screen 
+and (max-device-width: 500px) 
+and (orientation: portrait) {
+    .contact-info-wrapper{
+        width: 80%;
+    }
+}
+
+/*LANDSCAPE: Super HiDPI tablets e.g. Ipad Pro Kindle Fire HD*/
+@media only screen 
+and (max-device-width: 1400px) 
+and (orientation: landscape) {
+    .contact-info-wrapper{
+        width: 45%;
+        margin: 0rem;
+    }
+}
+
+/* LANDSCAPE: HD + QHD Phablet(should cover tall aspect ratios also) */
+@media only screen 
+and (max-device-width: 900px) 
+and (orientation: landscape) {
+    .contact-info-wrapper{
+        width: 60%;
+    }
+}
+
+/*PORTRAIT: Super HiDPI tablets e.g. Ipad Pro Kindle Fire HD */
+@media (max-device-width: 1400px)
+and (orientation: portrait){
+    .logo-wrapper img{
+        width: 30rem;
+        height: 30rem;
+    }
+}
+
+/* PORTRAIT: HD + QHD Phablet(should cover tall aspect ratios also) */
+@media only screen 
+and (max-device-width: 500px) 
+and (orientation: portrait) {
+    .logo-wrapper img{
+        margin-bottom: 3rem;
+    }
+}
+
+/* LANDSCAPE: HD + QHD Phablet(should cover tall aspect ratios also) */
+@media only screen 
+and (max-device-width: 900px) 
+and (orientation: landscape) {
+    .logo-wrapper img{
+        width: 30rem;
+        height: 30rem;
+    }
+}
+ 
 
 /* PORTRAIT: HD + QHD Phablet(should cover tall aspect ratios also) */
 @media only screen 
@@ -1681,7 +1794,7 @@ and (orientation: portrait) {
 @media (max-device-width: 1400px)
 and (orientation: portrait){
     .p-scaler {
-        font-size: 1.4rem;
+        font-size: 1.7rem;
         }
     }
 
@@ -1690,7 +1803,16 @@ and (orientation: portrait){
 and (max-device-width: 1400px) 
 and (orientation: landscape) {
     .p-scaler{
-        font-size: 2rem
+        font-size: 2rem;
+    }
+}
+
+/*LANDSCAPE: Super HiDPI tablets e.g. Ipad Pro Kindle Fire HD*/
+@media only screen 
+and (max-device-width: 1400px) 
+and (orientation: landscape) {
+    .p-scaler{
+        font-size: 2.2rem;
     }
 }
 
@@ -1707,7 +1829,6 @@ and (orientation: landscape){
 and (max-device-width: 500px) 
 and (orientation: portrait) {
     .p-scaler{
-        font-size: 2.3rem;
+        font-size: 2.7rem;
     }
 }
-
