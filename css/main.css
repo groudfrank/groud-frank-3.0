@@ -74,7 +74,7 @@ p a::after{
     bottom: -0.3rem;
     left: 1rem;
     right: 0rem;
-    opacity: 0.4;
+    opacity: 0.35;
     background-color: var(--accent-color-primary);
     transition-property: height, left;
     transition-duration: 0.3s;
@@ -588,19 +588,19 @@ width: 100%;
     border: solid 0.2rem var(--accent-color-primary);
 }
 
-.exibition-shape:nth-child(4){
+.exibition-shape:nth-child(3){
     background-color: var(--accent-color-primary);
 }
 
-.exibition-shape:nth-child(3){
+.exibition-shape:nth-child(4){
     border: unset;
     overflow: hidden;
     background-color: var(--accent-color-primary);
-    border-right: dashed 0.4rem var(--accent-color-primary);
-    border-top: dashed 0.4rem var(--accent-color-primary);
+    border-right: solid 0.4rem var(--accent-color-primary);
+    border-top: solid 0.4rem var(--accent-color-primary);
 }
 
-.exibition-shape:nth-child(3)::after{
+.exibition-shape:nth-child(4)::after{
     content: '';
     position: absolute;
     width: 210%;
@@ -842,6 +842,10 @@ width: 100%;
     margin: 4rem auto 6rem auto;
     width: 50%;
     color: #fff;
+    box-shadow: var(--std-box-shadow);
+    padding: 2rem 4rem;
+    background: rgba(0,0,0, 0.6);
+    border-radius: var(--border-radius-sm);
 }
 
 .work-canvas p::before{
@@ -849,7 +853,7 @@ width: 100%;
     position: absolute;
     top: -1rem;
     bottom: -1rem;
-    right: 2.5rem;
+    right: 0rem;
     width: 0.7rem;
     background-color: var(--accent-color-primary);
     border-radius: 1rem;
@@ -887,11 +891,43 @@ width: 100%;
 }
 
 .logo-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
     width: auto;
     height: auto;
 }
 
+.logo-wrapper::before{
+    content: '';
+    position: absolute;
+    top: -22%;
+    right: -16%;
+    width: 80%;
+    height: 80%;
+    box-shadow: var(--std-box-shadow);
+    /* opacity: 0.4; */
+    /* background-color: var(--accent-color-primary); */
+    border: dashed 0.5rem var(--accent-color-primary);
+    border-radius: 50%;
+}
+
+.logo-wrapper::after{
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 6%;
+    right: 14%;
+    width: 80%;
+    height: 80%;
+    opacity: 0.4;
+    background-color: var(--accent-color-primary);
+    /* border-radius: 50%; */
+}
+
 .logo-wrapper img{
+    position: relative;
     width: 40rem;
     height: 40rem;
 }
