@@ -570,6 +570,62 @@ width: 100%;
     transition-timing-function: var(--bouncy-trans);
 }
 
+.exibition-shape{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 8rem;
+    height: 8rem;
+    margin: 0rem 3rem;
+    position: relative;
+}
+
+.exibition-shape:nth-child(1){
+    border: dashed 0.3rem var(--accent-color-primary);
+}
+
+.exibition-shape:nth-child(2){
+    border: solid 0.2rem var(--accent-color-primary);
+}
+
+.exibition-shape:nth-child(4){
+    background-color: var(--accent-color-primary);
+}
+
+.exibition-shape:nth-child(3){
+    border: unset;
+    overflow: hidden;
+    background-color: var(--accent-color-primary);
+    border-right: dashed 0.4rem var(--accent-color-primary);
+    border-top: dashed 0.4rem var(--accent-color-primary);
+}
+
+.exibition-shape:nth-child(3)::after{
+    content: '';
+    position: absolute;
+    width: 210%;
+    height: 210%;
+    bottom: -50%;
+    left: -50%;
+    border-radius: 40%;
+    animation-name: spin;
+    animation-duration: 6s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    /* animation: spin 6s ease-in-out infinite; */
+    background: var(--bg-color-dark);
+}
+
+@keyframes spin{
+    0%{
+        transform: translateY(0%) rotate(0deg);
+    }
+    100%{
+        transform: translateY(-100%) rotate(500deg);
+    }
+}
+
 .exibition-txt-wrapper h1{
     font-size: var(--heading-txt-m);
     color: var(--accent-color-primary);
@@ -1492,6 +1548,27 @@ and (orientation: landscape) {
     }
 }
 
+/* PORTRAIT: HD + QHD Phablet(should cover tall aspect ratios also) */
+@media only screen 
+and (max-device-width: 400px) 
+and (orientation: portrait) {
+    #theme-switcher-wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/* PORTRAIT: HD + QHD Phablet(should cover tall aspect ratios also) */
+@media only screen 
+and (max-device-width: 400px) 
+and (orientation: portrait) {
+    .color-bar{
+        width: 12rem;
+    }
+}
+
 /*PORTRAIT: Super HiDPI tablets e.g. Ipad Pro Kindle Fire HD */
 @media (max-device-width: 1400px)
 and (orientation: portrait){
@@ -1499,6 +1576,19 @@ and (orientation: portrait){
         margin: 0rem 0rem 6rem 0rem;
         }
     }
+
+/* PORTRAIT: HD + QHD Phablet(should cover tall aspect ratios also) */
+@media only screen 
+and (max-device-width: 400px) 
+and (orientation: portrait) {
+    .customizations-btn-wrapper{
+        width: 95%;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+}
 
 /*LANDSCAPE: Super HiDPI tablets e.g. Ipad Pro Kindle Fire HD */
 @media (max-device-width: 1400px)
