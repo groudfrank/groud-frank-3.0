@@ -39,7 +39,8 @@ body{
     --std-box-shadow: 0 5.2rem 7.4rem rgba(0,0,0, 0.8);
     --border-radius-sm: 1rem;
     --bouncy-trans: cubic-bezier(0.25, 0.1, 0, 2.05);
-    --heading-txt-m: 6rem; 
+    --heading-txt-m: 6rem;
+    --heading-txt-sm: 3.5rem;
 }
 
 
@@ -106,9 +107,19 @@ h1{
 }
 
 section{
+    position: relative;
     width: 100%;
+    padding-top: 10rem;
     margin: 0rem 0rem 4rem 0rem;
-    /* border: solid black 3px; */
+}
+
+.section-heading{
+    font-size: var(--heading-txt-sm);
+    text-align: center;
+    position: absolute;
+    top: 0rem;
+    right: 0rem;
+    left: 0rem;
 }
 
 /*()||||||+++++NAVIGATION MENU BOTTON+++++|||||()*/
@@ -346,7 +357,7 @@ width: 100%;
     width: 16rem;
     height: 3.5rem;
     margin: 0rem 4rem 8rem 4rem;
-    border-radius: 0.5rem;
+    border-radius: 0.2rem;
     transition-property: transform;
     transition-duration: 0.2s;
     transition-timing-function: var(--bouncy-trans);
@@ -373,6 +384,13 @@ width: 100%;
     opacity: 1;
     transform: translateY(0rem);
     user-select: none;
+}
+
+.color-bar:hover::after{
+    top: -0.6rem;
+    bottom: -0.6rem;
+    left: -0.6rem;
+    right: -0.6rem;
 }
 
 .color-bar::before{
@@ -427,10 +445,10 @@ width: 100%;
     color: #fff;
     position: absolute;
     z-index: -3;
-    top: -0.6rem;
-    bottom: -0.6rem;
-    left: -0.6rem;
-    right: -0.6rem;
+    top: 0rem;
+    bottom: 0rem;
+    left: 0rem;
+    right: 0rem;
     opacity: 0.4;
     background-color: inherit;
     border-radius: inherit;
@@ -468,44 +486,16 @@ width: 100%;
     padding: 2rem;
 }
 
-.exibition-shaded-shapes{
+.exibition-shaded-shapes-wrapper{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     position: relative;
-    width: 6rem;
-    height: 6rem;
     margin: 1rem auto 4rem auto;
-    background-color: var(--accent-color-primary);
-    border-radius: 50%;
 }
 
-
-.exibition-shaded-shapes:nth-child(1){
-    opacity: 0.1;
-}
-
-.exibition-shaded-shapes:nth-child(2){
-    opacity: 0.2;
-}
-
-.exibition-shaded-shapes:nth-child(3){
-    opacity: 0.4;
-}
-
-.exibition-shaded-shapes:nth-child(4){
-    opacity: 0.6;
-}
-
-.exibition-shaded-shapes:nth-child(5){
-    opacity: 0.8;
-}
-
-.exibition-shaded-shapes:nth-child(6){
-    opacity: 1;
-}
-
-.exibition-shaded-shapes::after{
+.exibition-shaded-shapes-wrapper p{
     font-family: 'Lato';
     color: #fff;
     font-size: 1.6rem;
@@ -514,13 +504,53 @@ width: 100%;
     align-items: center;
     position: absolute;
     z-index: 1;
-    bottom: -5rem;
+    bottom: -3rem;
     width: inherit;
     height: inherit;
     border-radius: inherit;
+    padding: 0rem;
+    margin: 0rem;
+    text-align: center;
 }
 
-.exibition-shaded-shapes:nth-child(1)::after{
+.exibition-shaded-shapes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 6rem;
+    height: 6rem;
+    background-color: var(--accent-color-primary);
+    border-radius: 50%;
+}
+
+
+#exibition-shaded-shape-1{
+    opacity: 0.1;
+}
+
+#exibition-shaded-shape-2{
+    opacity: 0.2;
+}
+
+#exibition-shaded-shape-3{
+    opacity: 0.4;
+}
+
+#exibition-shaded-shape-4{
+    opacity: 0.6;
+}
+
+#exibition-shaded-shape-5{
+    opacity: 0.8;
+}
+
+#exibition-shaded-shape-6{
+    opacity: 1;
+}
+
+
+/* .exibition-shaded-shapes:nth-child(1)::after{
     content: '0.1';
 }
 
@@ -542,7 +572,7 @@ width: 100%;
 
 .exibition-shaded-shapes:nth-child(6)::after{
     content: '1.0';
-}
+} */
 
 
 
@@ -574,10 +604,10 @@ width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
     width: 8rem;
     height: 8rem;
     margin: 0rem 3rem;
-    position: relative;
 }
 
 .exibition-shape:nth-child(1){
@@ -585,10 +615,20 @@ width: 100%;
 }
 
 .exibition-shape:nth-child(2){
-    border: solid 0.2rem var(--accent-color-primary);
+    border: solid 0.4rem var(--accent-color-primary);
 }
 
 .exibition-shape:nth-child(3){
+    border: solid 0.4rem var(--accent-color-primary);
+    overflow: hidden;
+}
+
+.exibition-shape:nth-child(3)::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: -50%;
     background-color: var(--accent-color-primary);
 }
 
@@ -763,7 +803,7 @@ width: 100%;
     border-radius: var(--border-radius-sm);
     box-shadow: var(--std-box-shadow);
     background-color: #2f4353;
-    background-image: linear-gradient(to right, #202930, var(--bg-color-dark));
+    background-image: linear-gradient(to left, #202930, var(--bg-color-dark));
     overflow: hidden;
 }
 
@@ -771,7 +811,7 @@ width: 100%;
     content: '';
     position: absolute;
     bottom: 0rem;
-    left: -62%;
+    right: -62%;
     width: 100%;
     height: 100%;
     border: solid 12rem var(--accent-color-primary);
@@ -781,7 +821,7 @@ width: 100%;
 .work-canvas::after{
     content: '';
     position: absolute;
-    right: -10%;
+    left: -10%;
     width: 30rem;
     height: 30rem;
     background-color: var(--accent-color-primary);
@@ -796,7 +836,7 @@ width: 100%;
     color: var(--accent-color-primary);
     position: relative;
     padding: 0rem 5rem 0rem 5rem;
-    margin: 4rem 15rem 6rem auto;
+    margin: 4rem auto 6rem 15rem;
     border-top: dashed 1px var(--accent-color-primary);
     border-bottom: dashed 1px var(--accent-color-primary);
 }
@@ -853,7 +893,7 @@ width: 100%;
     position: absolute;
     top: -1rem;
     bottom: -1rem;
-    right: 0rem;
+    left: 0rem;
     width: 0.7rem;
     background-color: var(--accent-color-primary);
     border-radius: 1rem;
@@ -1673,6 +1713,15 @@ and (orientation: portrait) {
 @media only screen 
 and (max-device-width: 500px) 
 and (orientation: portrait) {
+    .exibition-block-partition{
+        margin: 5.5rem 0rem;
+    }
+}
+
+/* PORTRAIT: HD + QHD Phablet(should cover tall aspect ratios also) */
+@media only screen 
+and (max-device-width: 500px) 
+and (orientation: portrait) {
     .exibition-social-icons-wrapper{
         width: 7.7rem;
         height: 7.7rem;
@@ -1822,6 +1871,15 @@ and (orientation: portrait){
         margin-bottom: 2rem;
         }
     }
+
+/* PORTRAIT: HD + QHD Phablet(should cover tall aspect ratios also) */
+@media only screen 
+and (max-device-width: 500px) 
+and (orientation: portrait) {
+    .work-canvas p{
+        padding: 2rem;
+    }
+}
 
 /* LANDSCAPE: HD + QHD Phablet(should cover tall aspect ratios also) */
 @media only screen 
