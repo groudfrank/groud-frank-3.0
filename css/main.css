@@ -19,7 +19,7 @@ body{
     'Arial Narrow', 'Helvetica', 'Geneva', sans-serif;
     color: var(--txt-color-light);
     --pink: #FF4081;
-    --grey: #89AEB2;
+    --grey: #485a6c;
     --purple: #7C4DFF;
     --green: #38908F;
     --blue: #1E90FF;
@@ -628,8 +628,9 @@ width: 100%;
     position: absolute;
     width: 100%;
     height: 100%;
-    bottom: -50%;
+    right: -50%;
     background-color: var(--accent-color-primary);
+    transform: rotate(45deg);
 }
 
 .exibition-shape:nth-child(4){
@@ -802,8 +803,8 @@ width: 100%;
     margin: 2rem 2rem 13rem 2rem;
     border-radius: var(--border-radius-sm);
     box-shadow: var(--std-box-shadow);
-    background-color: #2f4353;
-    background-image: linear-gradient(to left, #202930, var(--bg-color-dark));
+    background-color: var(--bg-color-dark);
+    background-image: linear-gradient(to right, var(--bg-color-dark), #0e1820);
     overflow: hidden;
 }
 
@@ -947,8 +948,6 @@ width: 100%;
     width: 80%;
     height: 80%;
     box-shadow: var(--std-box-shadow);
-    /* opacity: 0.4; */
-    /* background-color: var(--accent-color-primary); */
     border: dashed 0.5rem var(--accent-color-primary);
     border-radius: 50%;
 }
@@ -963,7 +962,6 @@ width: 100%;
     height: 80%;
     opacity: 0.4;
     background-color: var(--accent-color-primary);
-    /* border-radius: 50%; */
 }
 
 .logo-wrapper img{
@@ -1063,7 +1061,7 @@ width: 100%;
 
 .gradient-txt {
     /* Fallback: Set a background color. */
-    background-color: #CA4246;
+    background-color: var(--accent-color-primary);
     
     /* Create the gradient. */
      background-image: linear-gradient(
@@ -1160,6 +1158,10 @@ width: 100%;
     line-height: 1.5;
 }
 
+.no-padding-top{
+    padding-top: 0rem;
+}
+
 /*----------Media Queries----------*/
 
 /*LANDSCAPE: MDPI laptop*/
@@ -1210,6 +1212,15 @@ and (max-device-width: 500px)
 and (orientation: portrait) {
     html{
         font-size: 6px; /*37.5%*/
+    }
+}
+
+/* PORTRAIT: HD + QHD Non-Phablet(should cover tall aspect ratios also) */
+@media only screen 
+and (max-device-width: 400px) 
+and (orientation: portrait) {
+    html{
+       font-size: 5px;
     }
 }
 
@@ -1763,7 +1774,7 @@ and (orientation: portrait){
     .work-canvas::before {
         width: 60rem;
         height: 60rem;
-        left: -55%;
+        right: -55%;
         border: solid 9rem var(--accent-color-primary);
         }
     }
@@ -1773,7 +1784,7 @@ and (orientation: portrait){
 and (max-device-width: 1400px) 
 and (orientation: landscape) {
     .work-canvas::before{
-        left: -47%;
+        right: -47%;
         width: 90rem;
         height: 90rem;
         border-width: 15rem;
@@ -1793,9 +1804,18 @@ and (orientation: portrait) {
 @media (max-device-width: 1400px)
 and (orientation: portrait){
     .work-canvas::after {
-        right: -20%;
+        left: -20%;
         }
     }
+
+/*PORTRAIT: Smaller tablets e.g. Ipad*/
+@media (max-device-width: 800px)
+and (orientation: portrait){
+    .work-canvas::after{
+        top: -18%;
+        left: -24%;
+    }
+}
 
 @media only screen 
 and (max-device-width: 500px) 
@@ -1821,7 +1841,7 @@ and (orientation: landscape) {
 @media (max-device-width: 1400px)
 and (orientation: portrait){
     .work-canvas h1{
-        margin: 1rem 3rem 6rem auto;
+        margin: 1rem auto 6rem auto;
         }
     }
 
