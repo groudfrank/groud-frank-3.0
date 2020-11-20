@@ -40,6 +40,7 @@ body{
     --border-radius-sm: 1rem;
     --bouncy-trans: cubic-bezier(0.25, 0.1, 0, 2.05);
     --heading-txt-m: 6rem;
+    --heading-txt-ms: 5.5rem;
     --heading-txt-sm: 3.5rem;
 }
 
@@ -89,7 +90,8 @@ p a:hover::after{
 
 
 h1{
-    font-family: 'Ubuntu';
+    font-family: 'Ubuntu', 'Trebuchet', 'Verdana', 'Tahoma',
+    'Arial Narrow', 'Helvetica', 'Geneva', sans-serif;
     color: var(--txt-color-lighter);
 }
 
@@ -967,6 +969,62 @@ width: 100%;
     position: relative;
     width: 40rem;
     height: 40rem;
+}
+
+#bio-txt{
+    width: 35%;
+}
+
+#bio-txt h1{
+    font-size: var(--heading-txt-ms);
+}
+
+/*()||||||+++++ME HTML+++++|||||()*/
+
+#bio-content-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#bio-photo-wrapper{
+    position: relative;
+    margin: 0rem 0rem 0rem 20rem;
+}
+
+#bio-photo-wrapper::before{
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: -10%;
+    right: -10%;
+    width: 100%;
+    height: 100%;
+    border: dashed 0.4rem var(--accent-color-primary);
+}
+
+#bio-photo-wrapper::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--accent-color-primary);
+    opacity: 0.3;
+}
+
+#bio-photo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 40rem;
+    height: 40rem;
+    border: solid 0.6rem var(--bg-color-light);
 }
 
 /*----------Colors----------*/
