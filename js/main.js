@@ -11,6 +11,8 @@ var WorkCanvasImg = document.querySelectorAll('.work-canvas img');
 var WindowWidth = 0;
 var WindowHeight = 0;
 
+root.style.setProperty('--accent-color-primary', window.localStorage.getItem("selected-color"));
+
 window.addEventListener('resize', () =>{
     WindowWidth = innerWidth;
     WindowHeight = innerHeight;
@@ -63,8 +65,9 @@ NavMenuBtnWrapper.addEventListener('click', () =>{
 ColorBar.forEach((el)=>{
     el.addEventListener('click', () =>{
         var styles = getComputedStyle(el);
-        var color = styles.backgroundColor
-        // console.log(color);
+        var color = styles.backgroundColor;
+        window.localStorage.setItem("selected-color", color);
+        // root.style.setProperty('--accent-color-primary', window.localStorage.getItem("selected-color"));
         root.style.setProperty('--accent-color-primary', color);
     })
 });
@@ -90,5 +93,7 @@ window.addEventListener('scroll', () =>{
         }
     });
 });
+
+
 
 }); //document

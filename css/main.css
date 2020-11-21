@@ -1354,8 +1354,27 @@ and (orientation: portrait) {
 and (orientation: portrait){
     :root {
     --heading-txt-m: 4rem;
+    --heading-txt-ms: 3.5rem;
         }
     }
+
+/* PORTRAIT: HD + QHD Non-Phablet(should cover tall aspect ratios also) */
+@media only screen 
+and (max-device-width: 400px) 
+and (orientation: portrait) {
+    :root{
+        --heading-txt-ms: 4rem;
+    }
+}
+
+/* LANDSCAPE: HD + QHD Phablet(should cover tall aspect ratios also) */
+@media only screen 
+and (max-device-width: 900px) 
+and (orientation: landscape) {
+    :root{
+        --heading-txt-ms: 4rem;
+    }
+}
 
 /*()||||||+++++NAVIGATION BUTTON+++++|||||()*/
 
@@ -2048,7 +2067,111 @@ and (orientation: landscape) {
         height: 30rem;
     }
 }
+
+/*PORTRAIT: Super HiDPI tablets e.g. Ipad Pro Kindle Fire HD */
+@media (max-device-width: 1400px)
+and (orientation: portrait){
+    #bio-content-wrapper{
+        flex-direction: column-reverse;
+        }
+    }
+
+/* LANDSCAPE: HD + QHD Phablet(should cover tall aspect ratios also) */
+@media only screen 
+and (max-device-width: 900px) 
+and (orientation: landscape) {
+    #bio-content-wrapper{
+        flex-direction: column-reverse;
+    }
+}
+
+/*PORTRAIT: Super HiDPI tablets e.g. Ipad Pro Kindle Fire HD */
+@media (max-device-width: 1400px)
+and (orientation: portrait){
+    #bio-txt{
+        width: 75%;
+        }
+    }
+
+/*PORTRAIT: Smaller tablets e.g. Ipad*/
+@media (max-device-width: 800px)
+and (orientation: portrait){
+    #bio-txt{
+        width: 95%;
+    }
+}
+
+/* PORTRAIT: HD + QHD Phablet(should cover tall aspect ratios also) */
+@media only screen 
+and (max-device-width: 500px) 
+and (orientation: portrait) {
+    #bio-txt{
+        width: 88%;
+    }
+}
+
+/*LANDSCAPE: Super HiDPI tablets e.g. Ipad Pro Kindle Fire HD*/
+@media only screen 
+and (max-device-width: 1400px) 
+and (orientation: landscape) {
+    #bio-txt{
+        width: 55%;
+    }
+}
+
+/*LANDSCAPE: Smaller tablets e.g. Ipad*/
+@media (max-device-width: 1100px)
+and (orientation: landscape){
+    #bio-txt{
+        width: 60%;
+    }
+}
+
+/* LANDSCAPE: HD + QHD Phablet(should cover tall aspect ratios also) */
+@media only screen 
+and (max-device-width: 900px) 
+and (orientation: landscape) {
+    #bio-txt{
+        width: 80%;
+    }
+}
+    
+
+/*PORTRAIT: Super HiDPI tablets e.g. Ipad Pro Kindle Fire HD */
+@media (max-device-width: 1400px)
+and (orientation: portrait){
+    #bio-photo-wrapper{
+        margin: 0rem 0rem 5rem 0rem;
+        }
+    }
+
+/*LANDSCAPE: Super HiDPI tablets e.g. Ipad Pro Kindle Fire HD*/
+@media only screen 
+and (max-device-width: 1400px) 
+and (orientation: landscape) {
+    #bio-photo-wrapper{
+        margin-left: 10rem;
+    }
+}
+
+/*PORTRAIT: Super HiDPI tablets e.g. Ipad Pro Kindle Fire HD */
+@media (max-device-width: 1400px)
+and (orientation: portrait){
+    #bio-photo{
+        width: 30rem;
+        height: 30rem;
+        }
+    }
  
+/*LANDSCAPE: Super HiDPI tablets e.g. Ipad Pro Kindle Fire HD*/
+@media only screen 
+and (max-device-width: 1400px) 
+and (orientation: landscape) {
+    #bio-photo{
+        width: 35rem;
+        height: 35rem;
+    }
+}
 
 /* PORTRAIT: HD + QHD Phablet(should cover tall aspect ratios also) */
 @media only screen 
@@ -2093,11 +2216,29 @@ and (orientation: landscape){
         }
     }
 
+/* LANDSCAPE: HD + QHD Phablet(should cover tall aspect ratios also) */
+@media only screen 
+and (max-device-width: 600px) 
+and (orientation: landscape) {
+    .p-scaler{
+        font-size: 2.7rem;
+    }
+}
+
 /* PORTRAIT: HD + QHD Phablet(should cover tall aspect ratios also) */
 @media only screen 
 and (max-device-width: 500px) 
 and (orientation: portrait) {
     .p-scaler{
         font-size: 2.7rem;
+    }
+}
+
+/* LANDSCAPE: Small phones like iPhone SE */
+@media only screen 
+and (max-device-width: 400px) 
+and (orientation: portrait) {
+    .p-scaler{
+       font-size: 3.1rem
     }
 }
