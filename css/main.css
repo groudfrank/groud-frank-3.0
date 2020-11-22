@@ -42,6 +42,7 @@ body{
     --heading-txt-m: 6rem;
     --heading-txt-ms: 5.5rem;
     --heading-txt-sm: 3.5rem;
+    --heading-txt-xsm: 2.5rem;
 }
 
 
@@ -85,6 +86,33 @@ p a::after{
 
 p a:hover::after{
     height: 135%;
+    left: 0rem;
+}
+
+h1 a{
+    color: var(--accent-color-primary);
+    font-weight: bold;
+    white-space: nowrap;
+    position: relative;
+}
+
+h1 a::after{
+    content: '';
+    width: 100%;
+    height: 35%;
+    position: absolute;
+    bottom: -0.3rem;
+    left: 1rem;
+    right: 0rem;
+    opacity: 0.35;
+    background-color: var(--accent-color-primary);
+    transition-property: height, left;
+    transition-duration: 0.3s;
+    transition-timing-function: var(--bouncy-trans);
+}
+
+h1 a:hover::after{
+    height: 110%;
     left: 0rem;
 }
 
@@ -833,41 +861,6 @@ width: 100%;
     border-radius: 50%;
 }
 
-.work-canvas h1{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: var(--heading-txt-m);
-    color: var(--accent-color-primary);
-    position: relative;
-    padding: 0rem 5rem 0rem 5rem;
-    margin: 4rem auto 6rem 15rem;
-    border-top: dashed 1px var(--accent-color-primary);
-    border-bottom: dashed 1px var(--accent-color-primary);
-}
-
-.work-canvas h1::before{
-    content: '';
-    position: absolute;
-    left: 1.3rem;
-    width: 2rem;
-    height: 165%;
-    border-left: dashed 1px var(--accent-color-primary);
-    border-right: dashed 1px var(--accent-color-primary);
-    transform: rotate(180deg);
-}
-
-.work-canvas h1::after{
-    content: '';
-    position: absolute;
-    right: 3.3rem;
-    width: 0.1rem;
-    height: 68%;
-    border-left: dashed 1px var(--accent-color-primary);
-    transform: rotate(180deg);
-    bottom: -33%;
-}
-
 .work-canvas img{
     position: relative;
     z-index: 2;
@@ -1024,6 +1017,53 @@ width: 100%;
     position: relative;
     width: 40rem;
     height: 40rem;
+    border: solid 0.6rem var(--bg-color-light);
+}
+
+.interests-block{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+    margin: 0rem auto;
+}
+
+.interests-collection{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.interests-unit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem auto;
+}
+
+.interests-canvas{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 3rem;
+}
+
+.interests-canvas h1{
+    font-size: var(--heading-txt-xsm);
+    color: var(--accent-color-primary);
+}
+
+.interests-canvas p{
+    margin: 0rem;
+}
+
+.interests-canvas img{
+    width: 30rem;
+    height: 30rem;
     border: solid 0.6rem var(--bg-color-light);
 }
 
@@ -1221,6 +1261,41 @@ width: 100%;
 .p-scaler{
     font-size: 1.75em;
     line-height: 1.5;
+}
+
+.gridded-heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--heading-txt-m);
+    color: var(--accent-color-primary);
+    position: relative;
+    padding: 0rem 5rem 0rem 5rem;
+    margin: 4rem auto 6rem 15rem;
+    border-top: dashed 1px var(--accent-color-primary);
+    border-bottom: dashed 1px var(--accent-color-primary);
+}
+
+.gridded-heading::before{
+    content: '';
+    position: absolute;
+    left: 1.3rem;
+    width: 2rem;
+    height: 165%;
+    border-left: dashed 1px var(--accent-color-primary);
+    border-right: dashed 1px var(--accent-color-primary);
+    transform: rotate(180deg);
+}
+
+.gridded-heading::after{
+    content: '';
+    position: absolute;
+    right: 3.3rem;
+    width: 0.1rem;
+    height: 68%;
+    border-left: dashed 1px var(--accent-color-primary);
+    transform: rotate(180deg);
+    bottom: -33%;
 }
 
 .no-padding-top{
@@ -1924,14 +1999,6 @@ and (orientation: landscape) {
 /*PORTRAIT: Super HiDPI tablets e.g. Ipad Pro Kindle Fire HD */
 @media (max-device-width: 1400px)
 and (orientation: portrait){
-    .work-canvas h1{
-        margin: 1rem auto 6rem auto;
-        }
-    }
-
-/*PORTRAIT: Super HiDPI tablets e.g. Ipad Pro Kindle Fire HD */
-@media (max-device-width: 1400px)
-and (orientation: portrait){
     .work-canvas img{
         width: 59rem;
         height: 43.7rem;
@@ -2240,5 +2307,13 @@ and (max-device-width: 400px)
 and (orientation: portrait) {
     .p-scaler{
        font-size: 3.1rem
+    }
+}
+
+/*PORTRAIT: Super HiDPI tablets e.g. Ipad Pro Kindle Fire HD */
+@media (max-device-width: 1400px)
+and (orientation: portrait){
+    .gridded-heading{
+        margin: 1rem auto 6rem auto;
     }
 }
