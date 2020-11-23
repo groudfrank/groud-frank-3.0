@@ -42,7 +42,7 @@ body{
     --heading-txt-m: 6rem;
     --heading-txt-ms: 5.5rem;
     --heading-txt-sm: 3.5rem;
-    --heading-txt-xsm: 2.5rem;
+    --heading-txt-xsm: 1.9rem;
 }
 
 
@@ -63,8 +63,10 @@ p{
 }
 
 p a{
+    font-family: 'Ubuntu', 'Trebuchet', 'Verdana', 'Tahoma',
+    'Arial Narrow', 'Helvetica', 'Geneva', sans-serif;
     color: var(--accent-color-primary);
-    font-weight: bold;
+    font-weight: 300;
     white-space: nowrap;
     position: relative;
 }
@@ -92,6 +94,7 @@ p a:hover::after{
 h1 a{
     color: var(--accent-color-primary);
     font-weight: bold;
+    font-style: italic;
     white-space: nowrap;
     position: relative;
 }
@@ -1026,7 +1029,7 @@ width: 100%;
     justify-content: center;
     align-items: center;
     width: 75%;
-    margin: 0rem auto;
+    margin: 10rem auto;
 }
 
 .interests-collection{
@@ -1037,24 +1040,24 @@ width: 100%;
     width: 100%;
 }
 
-.interests-unit{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 2rem auto;
-}
-
 .interests-canvas{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    margin: 1rem 3rem;
+    /* align-items: center; */
+    position: relative;
+    margin: 2rem auto;
+}
+
+.interests-canvas .interests-canvas-label{
+    font-weight: 300;
+    margin: 0rem auto 0.5rem 0rem;
 }
 
 .interests-canvas h1{
     font-size: var(--heading-txt-xsm);
     color: var(--accent-color-primary);
+    margin-bottom: 1rem;
 }
 
 .interests-canvas p{
@@ -1260,6 +1263,7 @@ width: 100%;
 /*----------Misc----------*/
 .p-scaler{
     font-size: 1.75em;
+    font-weight: 600;
     line-height: 1.5;
 }
 
@@ -1433,12 +1437,14 @@ and (orientation: portrait){
         }
     }
 
-/* PORTRAIT: HD + QHD Non-Phablet(should cover tall aspect ratios also) */
+/* PORTRAIT: HD + QHD Phablet(should cover tall aspect ratios also) */
 @media only screen 
-and (max-device-width: 400px) 
+and (max-device-width: 500px) 
 and (orientation: portrait) {
     :root{
         --heading-txt-ms: 4rem;
+        --heading-txt-xsm: 3rem;
+
     }
 }
 
@@ -2227,8 +2233,8 @@ and (orientation: portrait){
     #bio-photo{
         width: 30rem;
         height: 30rem;
-        }
     }
+}
  
 /*LANDSCAPE: Super HiDPI tablets e.g. Ipad Pro Kindle Fire HD*/
 @media only screen 
@@ -2237,6 +2243,61 @@ and (orientation: landscape) {
     #bio-photo{
         width: 35rem;
         height: 35rem;
+    }
+}
+
+/*LANDSCAPE: Super HiDPI tablets e.g. Ipad Pro Kindle Fire HD*/
+@media only screen 
+and (max-device-width: 1400px) 
+and (orientation: landscape) {
+    .interests-block{
+        width: 100%;
+    }
+}
+
+/*PORTRAIT: Super HiDPI tablets e.g. Ipad Pro Kindle Fire HD */
+@media (max-device-width: 1400px)
+and (orientation: portrait){
+    .interests-collection{
+        flex-direction: column;
+    }
+}
+
+/* LANDSCAPE: HD + QHD Phablet(should cover tall aspect ratios also) */
+@media only screen 
+and (max-device-width: 900px) 
+and (orientation: landscape) {
+    .interests-collection{
+        flex-direction: column;
+    }
+}
+
+/* PORTRAIT: HD + QHD Phablet(should cover tall aspect ratios also) */
+@media only screen 
+and (max-device-width: 500px) 
+and (orientation: portrait) {
+    .interests-block{
+        width: 100%;
+    }
+}
+
+/* PORTRAIT: HD + QHD Phablet(should cover tall aspect ratios also) */
+@media only screen 
+and (max-device-width: 500px) 
+and (orientation: portrait) {
+    .interests-canvas img{
+        width: 50rem;
+        height: 50rem;
+    }
+}
+
+/* LANDSCAPE: HD + QHD Phablet(should cover tall aspect ratios also) */
+@media only screen 
+and (max-device-width: 900px) 
+and (orientation: landscape) {
+    .interests-canvas img{
+       width: 50rem;
+       height: 50rem;
     }
 }
 
