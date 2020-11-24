@@ -149,6 +149,8 @@ section{
 
 .section-heading{
     font-size: var(--heading-txt-sm);
+    font-weight: 300;
+    font-style: italic;
     text-align: center;
     position: absolute;
     top: 0rem;
@@ -915,6 +917,7 @@ width: 100%;
 
 .contact-info-wrapper h1{
     font-size: var(--heading-txt-m);
+    font-weight: 300;
 }
 
 .contact-info-wrapper p a{
@@ -1086,7 +1089,7 @@ width: 100%;
     color: var(--txt-color-light);
 }
 
-.accent-txt-color{
+.accent-color-txt{
     color: var(--accent-color-primary);
 }
 
