@@ -41,7 +41,7 @@ body{
     --bouncy-trans: cubic-bezier(0.25, 0.1, 0, 2.05);
     --heading-txt-m: 6rem;
     --heading-txt-ms: 5.5rem;
-    --heading-txt-sm: 3.5rem;
+    --heading-txt-sm: 3rem;
     --heading-txt-xsm: 1.9rem;
 }
 
@@ -156,6 +156,7 @@ section{
     top: 0rem;
     right: 0rem;
     left: 0rem;
+    opacity: 0.6;
 }
 
 /*()||||||+++++NAVIGATION MENU BOTTON+++++|||||()*/
@@ -328,18 +329,18 @@ width: 100%;
 
 /*()||||||+++++HERO SECTION+++++|||||()*/
 
-#hero-intro{
+#home{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
 
-#hero-intro-txt-wrapper{
+#home-txt-wrapper{
     max-width: 95%;
 }
 
-#hero-intro-txt-wrapper h1{
+#home-txt-wrapper h1{
     display: block;
     font-size: 12.8rem;
     font-weight: 300;
@@ -899,6 +900,10 @@ width: 100%;
     border-radius: 1rem;
 }
 
+.contact-wrapper{
+    margin-bottom: 30rem;
+}
+
 .contact-content-wrapper{
     display: flex;
     flex-direction: row;
@@ -940,7 +945,7 @@ width: 100%;
     height: auto;
 }
 
-.logo-wrapper::before{
+/* .logo-wrapper::before{
     content: '';
     position: absolute;
     top: -22%;
@@ -962,7 +967,7 @@ width: 100%;
     height: 80%;
     opacity: 0.4;
     background-color: var(--accent-color-primary);
-}
+} */
 
 .logo-wrapper img{
     position: relative;
@@ -970,12 +975,22 @@ width: 100%;
     height: 40rem;
 }
 
+#footer .footer-txt{
+    display: inline-block;
+    font-family: 'Ubuntu';
+    font-weight: 300;
+    text-align: center;
+    margin: 0rem auto;
+}
+
 #bio-txt{
     width: 35%;
 }
 
 #bio-txt h1{
-    font-size: var(--heading-txt-ms);
+    display: inline-block;
+    font-size: var(--heading-txt-m);
+    font-weight: 300;
 }
 
 /*()||||||+++++ME HTML+++++|||||()*/
@@ -1689,7 +1704,7 @@ and (orientation: portrait) {
 /*PORTRAIT: Super HiDPI tablets e.g. Ipad Pro Kindle Fire HD */
 @media (max-device-width: 1100px)
 and (orientation: portrait){
-    #hero-intro-txt-wrapper h1 {
+    #home-txt-wrapper h1 {
     font-size: 6rem;
         }
     }
@@ -1698,7 +1713,7 @@ and (orientation: portrait){
 @media only screen 
 and (max-device-width: 1400px) 
 and (orientation: landscape) {
-    #hero-intro-txt-wrapper h1{
+    #home-txt-wrapper h1{
         font-size: 10.2rem;
     }
 }
@@ -1706,7 +1721,7 @@ and (orientation: landscape) {
 /*PORTRAIT: Smaller tablets e.g. Ipad*/
 @media (max-device-width: 800px)
 and (orientation: portrait){
-    #hero-intro-txt-wrapper h1 {
+    #home-txt-wrapper h1 {
     font-size: 5rem;
         }
     }
@@ -1714,7 +1729,7 @@ and (orientation: portrait){
 /*LANDSCAPE: Smaller tablets e.g. Ipad*/
 @media (max-device-width: 1100px)
 and (orientation: landscape){
-    #hero-intro-txt-wrapper h1 {
+    #home-txt-wrapper h1 {
     font-size: 6.6rem;
         }
     }
@@ -1723,7 +1738,7 @@ and (orientation: landscape){
 @media only screen 
 and (max-device-width: 500px) 
 and (orientation: portrait) {
-    #hero-intro-txt-wrapper h1{
+    #home-txt-wrapper h1{
         font-size: 8rem;
         text-align: center;
     }
@@ -1733,7 +1748,7 @@ and (orientation: portrait) {
 @media only screen 
 and (max-device-width: 900px) 
 and (orientation: landscape) {
-    #hero-intro-txt-wrapper h1{
+    #home-txt-wrapper h1{
         font-size: 4.0rem;
     }
 }
@@ -1742,7 +1757,7 @@ and (orientation: landscape) {
 @media only screen 
 and (max-device-width: 360px) 
 and (orientation: portrait) {
-    #hero-intro-txt-wrapper h1{
+    #home-txt-wrapper h1{
         font-size: 3.2rem;
     }
 }
@@ -1751,7 +1766,7 @@ and (orientation: portrait) {
 @media only screen 
 and (max-device-width: 700px) 
 and (orientation: landscape) {
-    #hero-intro-txt-wrapper h1{
+    #home-txt-wrapper h1{
         font-size: 4.0rem;
     }
 }
