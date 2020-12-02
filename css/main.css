@@ -35,9 +35,11 @@ body{
     --bg-color-light-contrast:  #EEEEFF;
     --bg-color-dark: #071119;
     --bg-color-dark-contrast: #0A1620;
+    --bg-color-dark-alt:  #0e1820;
     --ripple-size-small: 1.1rem;
     --std-box-shadow: 0 5.2rem 7.4rem rgba(0,0,0, 0.8);
     --border-radius-sm: 1rem;
+    --border-radius-xsm: 0.5rem;
     --bouncy-trans: cubic-bezier(0.25, 0.1, 0, 2.05);
     --heading-txt-m: 6rem;
     --heading-txt-ms: 5.5rem;
@@ -374,6 +376,7 @@ width: 100%;
     padding: 7rem 4rem 0rem 4rem;
     margin: 0rem 4rem 6rem 0rem;
     border-radius: var(--border-radius-sm);
+    background-color: linear-gradient(to right, var(--bg-color-dark),var(--bg-color-dark-alt));
     box-shadow: var(--std-box-shadow);
 }
 
@@ -385,6 +388,33 @@ width: 100%;
     top: 0rem;
     left: 0rem;
     right: 0rem;
+}
+
+.customizations-btn-wrapper form select{
+    font-size: 2rem;
+    color: #fff;
+    width: 20rem;
+    height: 4rem;
+    background-color: var(--bg-color-dark-contrast);
+    border: var(--accent-color-primary) solid 0.2rem;
+    border-radius: var(--border-radius-xsm);
+    margin: 5rem;
+}
+
+#option-small{
+    font-size: 1.2rem;
+}
+
+#option-defaul{
+    font-size: 1.75rem;
+}
+
+#option-medium{
+    font-size: 2.2rem;
+}
+
+#option-large{
+    font-size: 2.7rem;
 }
 
 .color-bar{
@@ -842,7 +872,7 @@ width: 100%;
     border-radius: var(--border-radius-sm);
     box-shadow: var(--std-box-shadow);
     background-color: var(--bg-color-dark);
-    background-image: linear-gradient(to right, var(--bg-color-dark), #0e1820);
+    background-image: linear-gradient(to right, var(--bg-color-dark),var(--bg-color-dark-alt));
     overflow: hidden;
 }
 
@@ -977,6 +1007,8 @@ width: 100%;
 
 #footer .footer-txt{
     display: inline-block;
+    position: absolute;
+    left: 50%;
     font-family: 'Ubuntu';
     font-weight: 300;
     text-align: center;
