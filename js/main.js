@@ -1,12 +1,14 @@
 document.addEventListener("DOMContentLoaded", function(){
 
 var root = document.querySelector(':root');
+var ParagraphScaler = document.querySelectorAll('.p-scaler');
 var NavMenuBtnWrapper = document.getElementById('nav-menu-btn-wrapper');
 var NavMenuWrapper = document.getElementById('nav-menu-wrapper');
 var NavMenuBtnLineTop = document.getElementById('nav-menu-btn-line-top');
 var NavMenuBtnLineBottom = document.getElementById('nav-menu-btn-line-bottom');
 var NavMenuLabel = document.getElementById('nav-menu-label');
 var ColorBar = document.querySelectorAll('.color-bar');
+var FontSizeSelector = document.querySelector('.font-size-selector');
 var WorkCanvasImg = document.querySelectorAll('.work-canvas img');
 var WindowWidth = 0;
 var WindowHeight = 0;
@@ -67,9 +69,32 @@ ColorBar.forEach((el)=>{
         var styles = getComputedStyle(el);
         var color = styles.backgroundColor;
         window.localStorage.setItem("selected-color", color);
-        // root.style.setProperty('--accent-color-primary', window.localStorage.getItem("selected-color"));
         root.style.setProperty('--accent-color-primary', color);
     })
+});
+
+FontSizeSelector.addEventListener('change',(event)=>{
+    var option;
+    option = event.target.value;
+    option = option.toLowerCase();
+    ParagraphScaler.forEach((el)=>{
+        switch(option){
+            case 'small':
+                el.style.fontSize = 'small';
+                break;
+            case 'medium':
+                el.style.fontSize = 'large';
+                break;
+            case 'large':
+                el.style.fontSize = 'x-large';
+                break;
+            case 'default':
+                el.style.fontSize = 'initial';
+                break;
+            default:
+                console.log('This is not an option');
+        }
+    });
 });
 
 var isInViewport = (target) => {
