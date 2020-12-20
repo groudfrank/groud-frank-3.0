@@ -8,6 +8,8 @@ var NavMenuBtnLineTop = document.getElementById('nav-menu-btn-line-top');
 var NavMenuBtnLineBottom = document.getElementById('nav-menu-btn-line-bottom');
 var NavMenuLabel = document.getElementById('nav-menu-label');
 var ColorBar = document.querySelectorAll('.color-bar');
+var ThemeIconLight = document.getElementById('theme-icon-light');
+var ThemeIconDark = document.getElementById('theme-icon-dark');
 var FontSizeSelector = document.querySelector('.font-size-selector');
 var WorkCanvasImg = document.querySelectorAll('.work-canvas img');
 var WindowWidth = 0;
@@ -23,6 +25,52 @@ window.addEventListener('resize', () =>{
     WindowWidth = innerWidth;
     WindowHeight = innerHeight;
 })
+
+// darkTheme = {
+//     '--txt-color' : 'var(--txt-color-light)',
+//     '--txt-color-alt' : 'var(--txt-color-lighter)',
+//     '--bg-color' : 'var(--bg-color-dark)',
+//     '--bg-color-contrast' : 'var(--bg-color-dark-contrast)',
+//     '--bg-color-alt' : 'var(--bg-color-dark-alt)',
+//     '--std-box-shadow' : '0 5.2rem 7.4rem rgba(0,0,0, 0.8)'
+// }
+
+// lightTheme = {
+//     '--txt-color' : 'var(--txt-color-dark)',
+//     '--txt-color-alt' : 'var(--txt-color-darker)',
+//     '--bg-color' : 'var(--bg-color-light)',
+//     '--bg-color-contrast' : 'var(--bg-color-light-contrast)',
+//     '--bg-color-alt' : 'var(--bg-color-light-alt)',
+//     '--std-box-shadow' : '0 5.2rem 7.4rem rgba(0,0,0, 0.2)'
+// }
+
+var setDarkTheme = () =>{
+    root.style.setProperty('--txt-color', 'var(--txt-color-light)');
+    root.style.setProperty('--txt-color-alt', 'var(--txt-color-lighter)');
+    root.style.setProperty('--bg-color', 'var(--bg-color-dark)');
+    root.style.setProperty('--bg-color-contrast', 'var(--bg-color-dark-contrast)');
+    root.style.setProperty('--bg-color-alt', 'var(--bg-color-dark-alt)');
+    root.style.setProperty('--std-box-shadow', '0 5.2rem 7.4rem rgba(0,0,0, 0.8)');
+    root.style.setProperty('--transparent-panel', 'rgba(0, 0, 0, 0.6)');
+}
+
+var setLightTheme = () =>{
+    root.style.setProperty('--txt-color', 'var(--txt-color-dark)');
+    root.style.setProperty('--txt-color-alt', 'var(--txt-color-dark)');
+    root.style.setProperty('--bg-color', 'var(--bg-color-light)');
+    root.style.setProperty('--bg-color-contrast', 'var(--bg-color-light-contrast)');
+    root.style.setProperty('--bg-color-alt', 'var(--bg-color-light-alt)');
+    root.style.setProperty('--std-box-shadow', '0 5.2rem 7.4rem rgba(0,0,0, 0.2)');
+    root.style.setProperty('--transparent-panel', 'rgba(220, 220, 220, 0.6)');
+}
+
+ThemeIconLight.addEventListener('click', ()=>{
+    setLightTheme();
+});
+
+ThemeIconDark.addEventListener('click', ()=>{
+    setDarkTheme();
+});
 
 NavMenuBtnWrapper.addEventListener('click', () =>{
     if(NavMenuWrapper.classList.contains('hidden')){
