@@ -15,14 +15,14 @@ var WindowHeight = 0;
 
 root.style.setProperty('--accent-color-primary', window.localStorage.getItem("selected-color"));
 
+ParagraphScaler.forEach((el)=>{
+    el.style.fontSize = window.localStorage.getItem("selected-font-size");
+});
+
 window.addEventListener('resize', () =>{
     WindowWidth = innerWidth;
     WindowHeight = innerHeight;
 })
-
-// var addPropertyValue = (el, property, value) =>{
-//     el.style.property = value;
-// }
 
 NavMenuBtnWrapper.addEventListener('click', () =>{
     if(NavMenuWrapper.classList.contains('hidden')){
@@ -81,15 +81,19 @@ FontSizeSelector.addEventListener('change',(event)=>{
         switch(option){
             case 'small':
                 el.style.fontSize = 'small';
+                window.localStorage.setItem("selected-font-size", el.style.fontSize);
                 break;
             case 'medium':
                 el.style.fontSize = 'large';
+                window.localStorage.setItem("selected-font-size", el.style.fontSize);
                 break;
             case 'large':
                 el.style.fontSize = 'x-large';
+                window.localStorage.setItem("selected-font-size", el.style.fontSize);
                 break;
             case 'default':
                 el.style.fontSize = 'initial';
+                window.localStorage.setItem("selected-font-size", el.style.fontSize);
                 break;
             default:
                 console.log('This is not an option');
