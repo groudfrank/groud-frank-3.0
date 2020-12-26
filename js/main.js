@@ -12,6 +12,7 @@ var ThemeIconLight = document.getElementById('theme-icon-light');
 var ThemeIconDark = document.getElementById('theme-icon-dark');
 var FontSizeSelector = document.querySelector('.font-size-selector');
 var WorkCanvasImg = document.querySelectorAll('.work-canvas img');
+var logo = document.querySelectorAll('.g-logo'); 
 var WindowWidth = 0;
 var WindowHeight = 0;
 
@@ -44,14 +45,29 @@ window.addEventListener('resize', () =>{
 //     '--std-box-shadow' : '0 5.2rem 7.4rem rgba(0,0,0, 0.2)'
 // }
 
+// var queryLooper = (array) => {
+//     array.forEach((el) =>{
+//         console.log(el);
+//         return el;
+//     });
+// }
+
+var setLogoColor = (url) =>{
+    logo.forEach((el) =>{
+        el.src = url;
+    });
+}
+
 var setDarkTheme = () =>{
     root.style.setProperty('--txt-color', 'var(--txt-color-light)');
     root.style.setProperty('--txt-color-alt', 'var(--txt-color-lighter)');
     root.style.setProperty('--bg-color', 'var(--bg-color-dark)');
     root.style.setProperty('--bg-color-contrast', 'var(--bg-color-dark-contrast)');
     root.style.setProperty('--bg-color-alt', 'var(--bg-color-dark-alt)');
+    root.style.setProperty('--frame-color', '#ebedee');
     root.style.setProperty('--std-box-shadow', '0 5.2rem 7.4rem rgba(0,0,0, 0.8)');
     root.style.setProperty('--transparent-panel', 'rgba(0, 0, 0, 0.6)');
+    setLogoColor("icon/groud-logo-white.svg");
 }
 
 var setLightTheme = () =>{
@@ -60,8 +76,10 @@ var setLightTheme = () =>{
     root.style.setProperty('--bg-color', 'var(--bg-color-light)');
     root.style.setProperty('--bg-color-contrast', 'var(--bg-color-light-contrast)');
     root.style.setProperty('--bg-color-alt', 'var(--bg-color-light-alt)');
+    root.style.setProperty('--frame-color', ' #d8d8d8');
     root.style.setProperty('--std-box-shadow', '0 5.2rem 7.4rem rgba(0,0,0, 0.2)');
     root.style.setProperty('--transparent-panel', 'rgba(220, 220, 220, 0.6)');
+    setLogoColor("icon/groud-logo-black.svg");
 }
 
 ThemeIconLight.addEventListener('click', ()=>{

@@ -41,6 +41,7 @@ body{
     --bg-color: var(--bg-color-dark);
     --bg-color-contrast: var(--bg-color-dark-contrast);
     --bg-color-alt: var(--bg-color-dark-alt);
+    --frame-color: #ebedee;
     --nav-btn-icon-color: #fff;
     --transparent-panel: rgba(0, 0, 0, 0.6);
     --ripple-size-small: 1.1rem;
@@ -913,7 +914,7 @@ width: 100%;
     width: 110.2rem;
     height: 80.4rem;
     filter: grayscale(1);
-    border: solid 0.6rem var(--bg-color-light);
+    border: solid 0.6rem var(--frame-color);
 }
 
 .work-canvas p{
@@ -1080,7 +1081,7 @@ width: 100%;
     position: relative;
     width: 40rem;
     height: 40rem;
-    border: solid 0.6rem var(--bg-color-light);
+    border: solid 0.6rem var(--frame-color);
 }
 
 .interests-block{
@@ -1127,7 +1128,7 @@ width: 100%;
 .interests-canvas img{
     width: 30rem;
     height: 30rem;
-    border: solid 0.6rem var(--bg-color-light);
+    border: solid 0.6rem var(--frame-color);
 }
 
 /*----------Colors----------*/
