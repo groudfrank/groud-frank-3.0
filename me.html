@@ -26,7 +26,7 @@ digital experiences.">
 Category: UI, UX, Web Developer.">
 <link rel="shortcut icon" type="image/x-icon" href="img/groud-logo-white-bg-brown.png">
 <link rel="stylesheet" href="css/main.css">
-<link rel="preconnect" href="https://fonts.gstatic.com">
+<!-- <link rel="preconnect" href="https://fonts.gstatic.com"> -->
 <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;600;900&family=Ubuntu:wght@300;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
 <link href="https://cdn.lineicons.com/2.0/LineIcons.css" rel="stylesheet">
@@ -199,6 +199,14 @@ Category: UI, UX, Web Developer.">
 <section id="footer">
     <p class="gradient-txt footer-txt p-scaler">Pixel produced by yours truly.</p>
 </section>
+<!--
+I am not exactly sure what's going on here but I kept getting either ThemeIconLight is null, ThemeIconDark is null
+or FontSizeSelector is null when these elements aren't present on this page and cases the navigation menu to break. 
+Until I figure out why this is happening this embarassing hack will have to do.
+ -->
+<div id="theme-icon-light" style="display: none;"></div>
+<div id="theme-icon-dark" style="display: none;"></div>
+<div class="font-size-selector" style="display: none;"></div>
 <script src="js/main.js"></script>
 </body>
 </html>

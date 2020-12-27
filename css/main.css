@@ -34,16 +34,16 @@ body{
     --txt-color: var(--txt-color-light);
     --txt-color-alt: var(--txt-color-lighter);
     --bg-color-light:#fdfbfb;
-    --bg-color-light-contrast:  #ebedee;
+    --bg-color-light-contrast:  #e9e8e8;
     --bg-color-dark: #071119;
     --bg-color-dark-contrast: #0A1620;
     --bg-color-dark-alt:  #0e1820;
     --bg-color: var(--bg-color-dark);
     --bg-color-contrast: var(--bg-color-dark-contrast);
     --bg-color-alt: var(--bg-color-dark-alt);
-    --frame-color: #ebedee;
+    --frame-color: #e9e8e8;
     --nav-btn-icon-color: #fff;
-    --transparent-panel: rgba(0, 0, 0, 0.6);
+    --transparent-panel: rgba(0, 0, 0, 0.35);
     --ripple-size-small: 1.1rem;
     --std-box-shadow: 0 5.2rem 7.4rem rgba(0,0,0, 0.8);
     --border-radius-sm: 1rem;
@@ -138,7 +138,7 @@ h1{
 
 ::placeholder{
     color: var(--accent-color-primary);
-    opacity: 0.3;
+    opacity: 0.5;
 }
 
 .standout-txt{
@@ -159,6 +159,7 @@ section{
 
 .section-heading{
     font-size: var(--heading-txt-sm);
+    color: var(--accent-color-primary);
     font-weight: 300;
     font-style: italic;
     text-align: center;
@@ -216,6 +217,13 @@ section{
     background-color: var(--bg-color-light);
     margin: 0.4rem 0rem;
 }
+
+/* .nav-menu-btn-lines::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: var(--nav-btn-icon-color);
+} */
 
 #nav-menu-label{
     font-size: 1.6rem;
@@ -402,7 +410,7 @@ width: 100%;
 
 .customizations-btn-wrapper form select{
     font-size: 1.75rem;
-    color: #fff;
+    color: var(--accent-color-primary);
     width: 20rem;
     height: 4rem;
     background-color: var(--bg-color-contrast);
@@ -927,6 +935,7 @@ width: 100%;
     box-shadow: var(--std-box-shadow);
     padding: 2rem 4rem;
     background: var(--transparent-panel);
+    border: solid 0.1rem var(--accent-color-primary);
     border-radius: var(--border-radius-sm);
 }
 
@@ -935,8 +944,8 @@ width: 100%;
     position: absolute;
     top: -1rem;
     bottom: -1rem;
-    left: 0rem;
-    width: 0.7rem;
+    left: -0.3rem;
+    width: 0.85rem;
     background-color: var(--accent-color-primary);
     border-radius: 1rem;
 }
@@ -1900,6 +1909,16 @@ and (orientation: portrait) {
         padding-right: 0.5rem;
         margin-left: 0.5rem;
         margin-right: 0.5rem;
+    }
+}
+
+/* PORTRAIT: HD + QHD Phablet(should cover tall aspect ratios also) */
+@media only screen 
+and (max-device-width: 500px) 
+and (orientation: portrait) {
+    .customizations-btn-wrapper form select{
+        width: 40rem;
+        height: 6.5rem;
     }
 }
 

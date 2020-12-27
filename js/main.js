@@ -27,31 +27,6 @@ window.addEventListener('resize', () =>{
     WindowHeight = innerHeight;
 })
 
-// darkTheme = {
-//     '--txt-color' : 'var(--txt-color-light)',
-//     '--txt-color-alt' : 'var(--txt-color-lighter)',
-//     '--bg-color' : 'var(--bg-color-dark)',
-//     '--bg-color-contrast' : 'var(--bg-color-dark-contrast)',
-//     '--bg-color-alt' : 'var(--bg-color-dark-alt)',
-//     '--std-box-shadow' : '0 5.2rem 7.4rem rgba(0,0,0, 0.8)'
-// }
-
-// lightTheme = {
-//     '--txt-color' : 'var(--txt-color-dark)',
-//     '--txt-color-alt' : 'var(--txt-color-darker)',
-//     '--bg-color' : 'var(--bg-color-light)',
-//     '--bg-color-contrast' : 'var(--bg-color-light-contrast)',
-//     '--bg-color-alt' : 'var(--bg-color-light-alt)',
-//     '--std-box-shadow' : '0 5.2rem 7.4rem rgba(0,0,0, 0.2)'
-// }
-
-// var queryLooper = (array) => {
-//     array.forEach((el) =>{
-//         console.log(el);
-//         return el;
-//     });
-// }
-
 var setLogoColor = (url) =>{
     logo.forEach((el) =>{
         el.src = url;
@@ -64,11 +39,12 @@ var setDarkTheme = () =>{
     root.style.setProperty('--bg-color', 'var(--bg-color-dark)');
     root.style.setProperty('--bg-color-contrast', 'var(--bg-color-dark-contrast)');
     root.style.setProperty('--bg-color-alt', 'var(--bg-color-dark-alt)');
-    root.style.setProperty('--frame-color', '#ebedee');
+    root.style.setProperty('--frame-color', '#e9e8e8');
     root.style.setProperty('--std-box-shadow', '0 5.2rem 7.4rem rgba(0,0,0, 0.8)');
     root.style.setProperty('--transparent-panel', 'rgba(0, 0, 0, 0.6)');
+    root.style.setProperty('--nav-btn-icon-color', '#fff');
     setLogoColor("icon/groud-logo-white.svg");
-}
+};
 
 var setLightTheme = () =>{
     root.style.setProperty('--txt-color', 'var(--txt-color-dark)');
@@ -76,11 +52,12 @@ var setLightTheme = () =>{
     root.style.setProperty('--bg-color', 'var(--bg-color-light)');
     root.style.setProperty('--bg-color-contrast', 'var(--bg-color-light-contrast)');
     root.style.setProperty('--bg-color-alt', 'var(--bg-color-light-alt)');
-    root.style.setProperty('--frame-color', ' #d8d8d8');
+    root.style.setProperty('--frame-color', '#d8d8d8');
     root.style.setProperty('--std-box-shadow', '0 5.2rem 7.4rem rgba(0,0,0, 0.2)');
     root.style.setProperty('--transparent-panel', 'rgba(220, 220, 220, 0.6)');
+    root.style.setProperty('--nav-btn-icon-color', '#666');
     setLogoColor("icon/groud-logo-black.svg");
-}
+};
 
 ThemeIconLight.addEventListener('click', ()=>{
     setLightTheme();
@@ -101,10 +78,12 @@ NavMenuBtnWrapper.addEventListener('click', () =>{
         if(NavMenuBtnLineTop.classList.contains('off-state')){
             NavMenuBtnLineTop.classList.remove('off-state');
             NavMenuBtnLineTop.classList.add('top-nav-btn-icon-transition');
+            // root.style.setProperty('--nav-btn-icon-color', '#fff');
         }
         if(NavMenuBtnLineBottom.classList.contains('off-state')){
             NavMenuBtnLineBottom.classList.remove('off-state');
             NavMenuBtnLineBottom.classList.add('bottom-nav-btn-icon-transition');
+            // root.style.setProperty('--nav-btn-icon-color', '#fff');
         }
         // add transition styles for the navigation menu label
         NavMenuLabel.style.opacity = '0';
@@ -118,11 +97,13 @@ NavMenuBtnWrapper.addEventListener('click', () =>{
         if(NavMenuBtnLineTop.classList.contains('off-state') == false){
             NavMenuBtnLineTop.classList.add('off-state');
             NavMenuBtnLineTop.classList.remove('top-nav-btn-icon-transition');
+            // root.style.setProperty('--nav-btn-icon-color', 'initial');
         }
 
         if(NavMenuBtnLineBottom.classList.contains('off-state') == false){
             NavMenuBtnLineBottom.classList.add('off-state');
             NavMenuBtnLineBottom.classList.remove('bottom-nav-btn-icon-transition');
+            // root.style.setProperty('--nav-btn-icon-color', 'initial');
         }
         // add transition styles for the navigation menu label
         NavMenuLabel.style.opacity = '1';
@@ -146,7 +127,7 @@ FontSizeSelector.addEventListener('change',(event)=>{
     ParagraphScaler.forEach((el)=>{
         switch(option){
             case 'small':
-                el.style.fontSize = 'small';
+                el.style.fontSize = 'small'; 
                 window.localStorage.setItem("selected-font-size", el.style.fontSize);
                 break;
             case 'medium':
