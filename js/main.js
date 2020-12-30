@@ -88,7 +88,7 @@ var setLightTheme = () =>{
     root.style.setProperty('--frame-color', '#e9e8e8');
     root.style.setProperty('--std-box-shadow', '0 5.2rem 7.4rem rgba(0,0,0, 0.2)');
     root.style.setProperty('--transparent-panel', 'rgba(220, 220, 220, 0.6)');
-    root.style.setProperty('--nav-btn-icon-color', '#666');
+    root.style.setProperty('--nav-btn-icon-color', '#333');
     setLogoColor("icon/groud-logo-grey.svg");
 };
 
@@ -101,7 +101,7 @@ var setLightThemeCookies = () =>{
     window.localStorage.setItem('selected-frame-color', '#d8d8d8');
     window.localStorage.setItem('selected-std-box-shadow', '0 5.2rem 7.4rem rgba(0,0,0, 0.2)');
     window.localStorage.setItem('selected-transparent-panel', 'rgba(220, 220, 220, 0.6)');
-    window.localStorage.setItem('selected-nav-btn-icon-color', '#666');
+    window.localStorage.setItem('selected-nav-btn-icon-color', '#333');
     window.localStorage.setItem('selected-logo-color', 'icon/groud-logo-grey.svg');
 }
 
