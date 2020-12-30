@@ -27,7 +27,7 @@ body{
     --brown: #AA7B6F;
     --yellow: #E6B655;
     --accent-color-primary: #7C4DFF;
-    --txt-color-dark: #666;
+    --txt-color-dark: #555;
     --txt-color-darker: #111;
     --txt-color-light: #C0C0C0;
     --txt-color-lighter: #fff;
@@ -69,7 +69,7 @@ a:active{
 }
 
 p{
-    color: var(--txt-color-alt);
+    color: var(--txt-color);
 }
 
 p a{
@@ -133,7 +133,7 @@ h1 a:hover::after{
 h1{
     font-family: 'Ubuntu', 'Trebuchet', 'Verdana', 'Tahoma',
     'Arial Narrow', 'Helvetica', 'Geneva', sans-serif;
-    color: var(--txt-color-alt);
+    color: var(--txt-color);
 }
 
 ::placeholder{
@@ -761,7 +761,7 @@ width: 100%;
 }
 
 .exibition-txt-wrapper p{
-    color: var(--txt-color-alt);
+    color: var(--txt-color);
     margin: 0rem;
 }
 
@@ -771,7 +771,7 @@ width: 100%;
 
 #exibition-form label{
     font-size: 1.5rem;
-    color: var(--txt-color-alt);
+    color: var(--txt-color);
     margin-left: 0.5rem;
 }
 
@@ -931,7 +931,7 @@ width: 100%;
     padding: 0rem 5rem 0rem 5rem;
     margin: 4rem auto 6rem auto;
     width: 50%;
-    color: var(--txt-color-alt);
+    color: var(--txt-color);
     box-shadow: var(--std-box-shadow);
     padding: 2rem 4rem;
     background: var(--transparent-panel);
@@ -1580,7 +1580,7 @@ and (orientation: portrait) {
 and (orientation: portrait){
     #nav-menu-wrapper {
     width: 44rem;
-    height: 50rem;
+    min-height: 50rem;
         }
     }
 

@@ -15,27 +15,47 @@ var WorkCanvasImg = document.querySelectorAll('.work-canvas img');
 var logo = document.querySelectorAll('.g-logo'); 
 var WindowWidth = 0;
 var WindowHeight = 0;
+var NodeCheckerErrorMessage = 'does not exist on this HTML page. Just a warning. Carry on!';
 
-root.style.setProperty('--accent-color-primary', window.localStorage.getItem("selected-color"));
+// localStorage.clear();
 
-ParagraphScaler.forEach((el)=>{
-    el.style.fontSize = window.localStorage.getItem("selected-font-size");
-});
-
-window.addEventListener('resize', () =>{
-    WindowWidth = innerWidth;
-    WindowHeight = innerHeight;
-})
-
+// This function has to be higher up and a biut out of place so that
+// any IFFE that calls it will recognize it.
 var setLogoColor = (url) =>{
     logo.forEach((el) =>{
         el.src = url;
     });
 }
 
+// accent color persistance
+root.style.setProperty('--accent-color-primary', window.localStorage.getItem("selected-color"));
+
+// accent color persistance
+ParagraphScaler.forEach((el)=>{
+    el.style.fontSize = window.localStorage.getItem("selected-font-size");
+});
+
+(()=>{
+    root.style.setProperty('--txt-color', window.localStorage.getItem('selected-txt-color'));
+    // root.style.setProperty('--txt-color-alt', window.localStorage.getItem('selected-txt-color-alt'));
+    root.style.setProperty('--bg-color', window.localStorage.getItem('selected-bg-color'));
+    root.style.setProperty('--bg-color-contrast', window.localStorage.getItem('selected-bg-color-contrast'));
+    root.style.setProperty('--bg-color-alt', window.localStorage.getItem('selected-bg-color-alt'));
+    root.style.setProperty('--frame-color', window.localStorage.getItem('selected-frame-color'));
+    root.style.setProperty('--std-box-shadow', window.localStorage.getItem('selected-std-box-shadow'));
+    root.style.setProperty('--transparent-panel', window.localStorage.getItem('selected-transparent-panel'));
+    root.style.setProperty('--nav-btn-icon-color', window.localStorage.getItem('selected-nav-btn-icon-color'));
+    setLogoColor(window.localStorage.getItem('selected-logo-color'));
+})()
+
+window.addEventListener('resize', () =>{
+    WindowWidth = innerWidth;
+    WindowHeight = innerHeight;
+})
+
 var setDarkTheme = () =>{
-    root.style.setProperty('--txt-color', 'var(--txt-color-light)');
-    root.style.setProperty('--txt-color-alt', 'var(--txt-color-lighter)');
+    root.style.setProperty('--txt-color', 'var(--txt-color-lighter)');
+    // root.style.setProperty('--txt-color-alt', 'var(--txt-color-lighter)');
     root.style.setProperty('--bg-color', 'var(--bg-color-dark)');
     root.style.setProperty('--bg-color-contrast', 'var(--bg-color-dark-contrast)');
     root.style.setProperty('--bg-color-alt', 'var(--bg-color-dark-alt)');
@@ -46,25 +66,71 @@ var setDarkTheme = () =>{
     setLogoColor("icon/groud-logo-white.svg");
 };
 
+var setDarkThemeCookies = () =>{
+    window.localStorage.setItem('selected-txt-color', 'var(--txt-color-lighter)');
+    // window.localStorage.setItem('selected-txt-color-alt', 'var(--txt-color-lighter)');
+    window.localStorage.setItem('selected-bg-color', 'var(--bg-color-dark)');
+    window.localStorage.setItem('selected-bg-color-contrast', 'var(--bg-color-dark-contrast)');
+    window.localStorage.setItem('selected-bg-color-alt', 'var(--bg-color-dark-alt)');
+    window.localStorage.setItem('selected-frame-color', '#d8d8d8');
+    window.localStorage.setItem('selected-std-box-shadow', '0 5.2rem 7.4rem rgba(0,0,0, 0.8)');
+    window.localStorage.setItem('selected-transparent-panel', 'rgba(0, 0, 0, 0.6');
+    window.localStorage.setItem('selected-nav-btn-icon-color', '#fff');
+    window.localStorage.setItem('selected-logo-color', 'icon/groud-logo-white.svg');
+}
+
 var setLightTheme = () =>{
     root.style.setProperty('--txt-color', 'var(--txt-color-dark)');
-    root.style.setProperty('--txt-color-alt', 'var(--txt-color-dark)');
+    // root.style.setProperty('--txt-color-alt', 'var(--txt-color-darker)');
     root.style.setProperty('--bg-color', 'var(--bg-color-light)');
     root.style.setProperty('--bg-color-contrast', 'var(--bg-color-light-contrast)');
     root.style.setProperty('--bg-color-alt', 'var(--bg-color-light-alt)');
-    root.style.setProperty('--frame-color', '#d8d8d8');
+    root.style.setProperty('--frame-color', '#e9e8e8');
     root.style.setProperty('--std-box-shadow', '0 5.2rem 7.4rem rgba(0,0,0, 0.2)');
     root.style.setProperty('--transparent-panel', 'rgba(220, 220, 220, 0.6)');
     root.style.setProperty('--nav-btn-icon-color', '#666');
-    setLogoColor("icon/groud-logo-black.svg");
+    setLogoColor("icon/groud-logo-grey.svg");
 };
+
+var setLightThemeCookies = () =>{
+    window.localStorage.setItem('selected-txt-color', 'var(--txt-color-dark)');
+    // window.localStorage.setItem('selected-txt-color-alt', 'var(--txt-color-darker)');
+    window.localStorage.setItem('selected-bg-color', 'var(--bg-color-light)');
+    window.localStorage.setItem('selected-bg-color-contrast', 'var(--bg-color-light-contrast)');
+    window.localStorage.setItem('selected-bg-color-alt', 'var(--bg-color-light-alt)');
+    window.localStorage.setItem('selected-frame-color', '#d8d8d8');
+    window.localStorage.setItem('selected-std-box-shadow', '0 5.2rem 7.4rem rgba(0,0,0, 0.2)');
+    window.localStorage.setItem('selected-transparent-panel', 'rgba(220, 220, 220, 0.6)');
+    window.localStorage.setItem('selected-nav-btn-icon-color', '#666');
+    window.localStorage.setItem('selected-logo-color', 'icon/groud-logo-grey.svg');
+}
+
+// if(ThemeIconLight != null){
+//     ThemeIconLight.addEventListener('click', ()=>{
+//         setLightTheme();
+//         setLightThemeCookies();
+//     });
+// }else{
+//     console.log('ThemeIconLight ' + NodeCheckerErrorMessage);
+// }
+
+// if(ThemeIconDark != null){
+//     ThemeIconDark.addEventListener('click', ()=>{
+//         setDarkTheme();
+//         setDarkThemeCookies();
+//     });
+// }else{
+//     console.log('ThemeIconDark ' + NodeCheckerErrorMessage);
+// }
 
 ThemeIconLight.addEventListener('click', ()=>{
     setLightTheme();
+    setLightThemeCookies();
 });
 
 ThemeIconDark.addEventListener('click', ()=>{
     setDarkTheme();
+    setDarkThemeCookies();
 });
 
 NavMenuBtnWrapper.addEventListener('click', () =>{
@@ -120,33 +186,38 @@ ColorBar.forEach((el)=>{
     })
 });
 
-FontSizeSelector.addEventListener('change',(event)=>{
-    var option;
-    option = event.target.value;
-    option = option.toLowerCase();
-    ParagraphScaler.forEach((el)=>{
-        switch(option){
-            case 'small':
-                el.style.fontSize = 'small'; 
-                window.localStorage.setItem("selected-font-size", el.style.fontSize);
-                break;
-            case 'medium':
-                el.style.fontSize = 'large';
-                window.localStorage.setItem("selected-font-size", el.style.fontSize);
-                break;
-            case 'large':
-                el.style.fontSize = 'x-large';
-                window.localStorage.setItem("selected-font-size", el.style.fontSize);
-                break;
-            case 'default':
-                el.style.fontSize = 'initial';
-                window.localStorage.setItem("selected-font-size", el.style.fontSize);
-                break;
-            default:
-                console.log('This is not an option');
-        }
+
+if(FontSizeSelector != null){
+    FontSizeSelector.addEventListener('change',(event)=>{
+        var option;
+        option = event.target.value;
+        option = option.toLowerCase();
+        ParagraphScaler.forEach((el)=>{
+            switch(option){
+                case 'small':
+                    el.style.fontSize = 'small'; 
+                    window.localStorage.setItem("selected-font-size", el.style.fontSize);
+                    break;
+                case 'medium':
+                    el.style.fontSize = 'large';
+                    window.localStorage.setItem("selected-font-size", el.style.fontSize);
+                    break;
+                case 'large':
+                    el.style.fontSize = 'x-large';
+                    window.localStorage.setItem("selected-font-size", el.style.fontSize);
+                    break;
+                case 'default':
+                    el.style.fontSize = 'initial';
+                    window.localStorage.setItem("selected-font-size", el.style.fontSize);
+                    break;
+                default:
+                    console.log('This is not an option');
+            }
+        });
     });
-});
+}else{
+    console.log('FontSizeSelector ' + NodeCheckerErrorMessage);
+}
 
 var isInViewport = (target) => {
     var bounding = target.getBoundingClientRect();
