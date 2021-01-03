@@ -34,7 +34,7 @@ body{
     --txt-color: var(--txt-color-lighter);
     /* --txt-color-alt: var(--txt-color-lighter); */
     --bg-color-light:#fdfbfb;
-    --bg-color-light-contrast:  #e9e8e8;
+    --bg-color-light-contrast:  #f6f5f5;
     --bg-color-dark: #071119;
     --bg-color-dark-contrast: #0A1620;
     --bg-color-dark-alt:  #0e1820;
@@ -586,7 +586,7 @@ width: 100%;
 
 .exibition-shaded-shapes-wrapper p{
     font-family: 'Ubuntu';
-    color: #fff;
+    color: var(--txt-color);
     font-size: 1.6rem;
     display: flex;
     justify-content: center;
@@ -1029,10 +1029,15 @@ width: 100%;
     height: 40rem;
 }
 
+#footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #footer .footer-txt{
     display: inline-block;
     position: absolute;
-    left: 50%;
     font-family: 'Ubuntu';
     font-weight: 300;
     text-align: center;

@@ -62,9 +62,9 @@ var setLightTheme = () =>{
     root.style.setProperty('--bg-color-contrast', 'var(--bg-color-light-contrast)');
     root.style.setProperty('--bg-color-alt', 'var(--bg-color-light-alt)');
     root.style.setProperty('--img-frame-color', '#e9e8e8');
-    root.style.setProperty('--card-frame', 'solid 0.2rem transparent');
+    root.style.setProperty('--card-frame', 'none');
     root.style.setProperty('--std-box-shadow', '0 5.2rem 7.4rem rgba(0,0,0, 0.2)');
-    root.style.setProperty('--transparent-panel', 'rgba(220, 220, 220, 0.6)');
+    root.style.setProperty('--transparent-panel', 'rgba(246, 245, 245, 0.6)');
     root.style.setProperty('--nav-btn-icon-color', '#333');
     setLogoColor("icon/groud-logo-grey.svg");
 };
@@ -76,9 +76,9 @@ var setLightThemeCookies = () =>{
     window.localStorage.setItem('selected-bg-color-contrast', 'var(--bg-color-light-contrast)');
     window.localStorage.setItem('selected-bg-color-alt', 'var(--bg-color-light-alt)');
     window.localStorage.setItem('selected-img-frame-color', '#e9e8e8');
-    window.localStorage.setItem('selected-card-frame', 'solid 0.2rem transparent');
+    window.localStorage.setItem('selected-card-frame', 'none');
     window.localStorage.setItem('selected-std-box-shadow', '0 5.2rem 7.4rem rgba(0,0,0, 0.2)');
-    window.localStorage.setItem('selected-transparent-panel', 'rgba(220, 220, 220, 0.6)');
+    window.localStorage.setItem('selected-transparent-panel', 'rgba(246, 245, 245, 0.6)');
     window.localStorage.setItem('selected-nav-btn-icon-color', '#333');
     window.localStorage.setItem('selected-logo-color', 'icon/groud-logo-grey.svg');
 }
@@ -90,7 +90,7 @@ var setDarkTheme = () =>{
     root.style.setProperty('--bg-color-contrast', 'var(--bg-color-dark-contrast)');
     root.style.setProperty('--bg-color-alt', 'var(--bg-color-dark-alt)');
     root.style.setProperty('--img-frame-color', 'var(--bg-color-dark-alt)');
-    root.style.setProperty('--card-frame', 'solid 0.2rem transparent');
+    root.style.setProperty('--card-frame', 'none');
     root.style.setProperty('--std-box-shadow', '0 5.2rem 7.4rem rgba(0,0,0, 0.8)');
     root.style.setProperty('--transparent-panel', 'rgba(0, 0, 0, 0.6)');
     root.style.setProperty('--nav-btn-icon-color', '#fff');
@@ -104,7 +104,7 @@ var setDarkThemeCookies = () =>{
     window.localStorage.setItem('selected-bg-color-contrast', 'var(--bg-color-dark-contrast)');
     window.localStorage.setItem('selected-bg-color-alt', 'var(--bg-color-dark-alt)');
     window.localStorage.setItem('selected-img-frame-color', 'var(--bg-color-dark-alt)');
-    window.localStorage.setItem('selected-card-frame', 'solid 0.2rem transparent');
+    window.localStorage.setItem('selected-card-frame', 'none');
     window.localStorage.setItem('selected-std-box-shadow', '0 5.2rem 7.4rem rgba(0,0,0, 0.8)');
     window.localStorage.setItem('selected-transparent-panel', 'rgba(0, 0, 0, 0.6');
     window.localStorage.setItem('selected-nav-btn-icon-color', '#fff');
@@ -117,7 +117,7 @@ var setAmoledTheme = () =>{
     root.style.setProperty('--bg-color', '#000000');
     root.style.setProperty('--bg-color-contrast', '#080808');
     root.style.setProperty('--bg-color-alt', '#080808');
-    root.style.setProperty('--img-frame-color', '#111111');
+    root.style.setProperty('--img-frame-color', '#333');
     root.style.setProperty('--card-frame', 'solid 0.2rem #111111');
     root.style.setProperty('--std-box-shadow', 'none');
     root.style.setProperty('--transparent-panel', 'rgba(0, 0, 0, 0.6)');
@@ -131,7 +131,7 @@ var setAmoledThemeCookies = () =>{
     window.localStorage.setItem('selected-bg-color', '#000000');
     window.localStorage.setItem('selected-bg-color-contrast', '#080808');
     window.localStorage.setItem('selected-bg-color-alt', '#080808');
-    window.localStorage.setItem('selected-img-frame-color', '#111111');
+    window.localStorage.setItem('selected-img-frame-color', '#333');
     window.localStorage.setItem('selected-card-frame', 'solid 0.2rem #111111');
     window.localStorage.setItem('selected-std-box-shadow', 'none');
     window.localStorage.setItem('selected-transparent-panel', 'rgba(0, 0, 0, 0.6');
