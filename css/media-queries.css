@@ -698,7 +698,7 @@ and (orientation: portrait) {
 and (max-width: 900px) 
 and (orientation: landscape) {
     .work-canvas::before{
-        left: -132%;
+        right: -132%;
         width: 120rem;
         height: 120rem;
         border-width: 12rem;
@@ -740,6 +740,7 @@ and (orientation: landscape) {
     .work-canvas img{
         width: 58rem;
         height: 42rem;
+        transform: scale(0.9);
     }
 }
 
@@ -1079,5 +1080,14 @@ and (orientation: portrait) {
 and (orientation: portrait){
     .gridded-heading{
         margin: 1rem auto 6rem auto;
+    }
+}
+
+/* LANDSCAPE: HD + QHD Phablet(should cover tall aspect ratios also) */
+@media only screen 
+and (max-width: 900px) 
+and (orientation: landscape) {
+    .gridded-heading{
+        margin: 4rem auto 6rem 5rem;
     }
 }

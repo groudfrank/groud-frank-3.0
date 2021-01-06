@@ -38,7 +38,6 @@ ParagraphScaler.forEach((el)=>{
 
 (()=>{
     root.style.setProperty('--txt-color', window.localStorage.getItem('selected-txt-color'));
-    // root.style.setProperty('--txt-color-alt', window.localStorage.getItem('selected-txt-color-alt'));
     root.style.setProperty('--bg-color', window.localStorage.getItem('selected-bg-color'));
     root.style.setProperty('--bg-color-contrast', window.localStorage.getItem('selected-bg-color-contrast'));
     root.style.setProperty('--bg-color-alt', window.localStorage.getItem('selected-bg-color-alt'));
@@ -46,6 +45,7 @@ ParagraphScaler.forEach((el)=>{
     root.style.setProperty('--card-frame', window.localStorage.getItem('selected-card-frame'));
     root.style.setProperty('--std-box-shadow', window.localStorage.getItem('selected-std-box-shadow'));
     root.style.setProperty('--transparent-panel', window.localStorage.getItem('selected-transparent-panel'));
+    root.style.setProperty('--border-highlight', window.localStorage.getItem('selected-border-highlight'));
     root.style.setProperty('--nav-btn-icon-color', window.localStorage.getItem('selected-nav-btn-icon-color'));
     setLogoColor(window.localStorage.getItem('selected-logo-color'));
 })()
@@ -55,86 +55,89 @@ window.addEventListener('resize', () =>{
     WindowHeight = innerHeight;
 })
 
+// LIGHT THEME SETTERS
 var setLightTheme = () =>{
     root.style.setProperty('--txt-color', 'var(--txt-color-dark)');
-    // root.style.setProperty('--txt-color-alt', 'var(--txt-color-darker)');
     root.style.setProperty('--bg-color', 'var(--bg-color-light)');
     root.style.setProperty('--bg-color-contrast', 'var(--bg-color-light-contrast)');
     root.style.setProperty('--bg-color-alt', 'var(--bg-color-light-alt)');
-    root.style.setProperty('--img-frame-color', '#e9e8e8');
-    root.style.setProperty('--card-frame', 'none');
-    root.style.setProperty('--std-box-shadow', '0 5.2rem 7.4rem rgba(0,0,0, 0.2)');
-    root.style.setProperty('--transparent-panel', 'rgba(246, 245, 245, 0.6)');
+    root.style.setProperty('--img-frame-color','var(--img-frame-color-light)');
+    root.style.setProperty('--card-frame', 'var(--card-frame-light)');
+    root.style.setProperty('--std-box-shadow', 'var(--std-box-shadow-light)');
+    root.style.setProperty('--transparent-panel', 'var(--transparent-panel-light)');
+    root.style.setProperty('--border-highlight', 'var(--border-highlight-light)');
     root.style.setProperty('--nav-btn-icon-color', '#333');
     setLogoColor("icon/groud-logo-grey.svg");
 };
 
 var setLightThemeCookies = () =>{
     window.localStorage.setItem('selected-txt-color', 'var(--txt-color-dark)');
-    // window.localStorage.setItem('selected-txt-color-alt', 'var(--txt-color-darker)');
     window.localStorage.setItem('selected-bg-color', 'var(--bg-color-light)');
     window.localStorage.setItem('selected-bg-color-contrast', 'var(--bg-color-light-contrast)');
     window.localStorage.setItem('selected-bg-color-alt', 'var(--bg-color-light-alt)');
-    window.localStorage.setItem('selected-img-frame-color', '#e9e8e8');
-    window.localStorage.setItem('selected-card-frame', 'none');
-    window.localStorage.setItem('selected-std-box-shadow', '0 5.2rem 7.4rem rgba(0,0,0, 0.2)');
-    window.localStorage.setItem('selected-transparent-panel', 'rgba(246, 245, 245, 0.6)');
+    window.localStorage.setItem('selected-img-frame-color', 'var(--img-frame-color-light)');
+    window.localStorage.setItem('selected-card-frame', 'var(--card-frame-light)');
+    window.localStorage.setItem('selected-std-box-shadow', 'var(--std-box-shadow-light)');
+    window.localStorage.setItem('selected-transparent-panel', 'var(--transparent-panel-light)');
+    window.localStorage.setItem('selected-border-highlight', 'var(--border-highlight-light)');
     window.localStorage.setItem('selected-nav-btn-icon-color', '#333');
     window.localStorage.setItem('selected-logo-color', 'icon/groud-logo-grey.svg');
 }
 
+// DARK THEME SETTERS
 var setDarkTheme = () =>{
     root.style.setProperty('--txt-color', 'var(--txt-color-lighter)');
-    // root.style.setProperty('--txt-color-alt', 'var(--txt-color-lighter)');
     root.style.setProperty('--bg-color', 'var(--bg-color-dark)');
     root.style.setProperty('--bg-color-contrast', 'var(--bg-color-dark-contrast)');
     root.style.setProperty('--bg-color-alt', 'var(--bg-color-dark-alt)');
-    root.style.setProperty('--img-frame-color', 'var(--bg-color-dark-alt)');
-    root.style.setProperty('--card-frame', 'none');
-    root.style.setProperty('--std-box-shadow', '0 5.2rem 7.4rem rgba(0,0,0, 0.8)');
-    root.style.setProperty('--transparent-panel', 'rgba(0, 0, 0, 0.6)');
+    root.style.setProperty('--img-frame-color', 'var(--img-frame-color-dark)');
+    root.style.setProperty('--card-frame', 'var(--card-frame-dark)');
+    root.style.setProperty('--std-box-shadow', 'var(--std-box-shadow-dark)');
+    root.style.setProperty('--transparent-panel', 'var(--transparent-panel-dark)');
+    root.style.setProperty('--border-highlight', 'var(--border-highlight-dark)');
     root.style.setProperty('--nav-btn-icon-color', '#fff');
     setLogoColor("icon/groud-logo-white.svg");
 };
 
 var setDarkThemeCookies = () =>{
     window.localStorage.setItem('selected-txt-color', 'var(--txt-color-lighter)');
-    // window.localStorage.setItem('selected-txt-color-alt', 'var(--txt-color-lighter)');
     window.localStorage.setItem('selected-bg-color', 'var(--bg-color-dark)');
     window.localStorage.setItem('selected-bg-color-contrast', 'var(--bg-color-dark-contrast)');
     window.localStorage.setItem('selected-bg-color-alt', 'var(--bg-color-dark-alt)');
-    window.localStorage.setItem('selected-img-frame-color', 'var(--bg-color-dark-alt)');
-    window.localStorage.setItem('selected-card-frame', 'none');
-    window.localStorage.setItem('selected-std-box-shadow', '0 5.2rem 7.4rem rgba(0,0,0, 0.8)');
-    window.localStorage.setItem('selected-transparent-panel', 'rgba(0, 0, 0, 0.6');
+    window.localStorage.setItem('selected-img-frame-color', 'var(--img-frame-color-dark)');
+    window.localStorage.setItem('selected-card-frame', 'var(--card-frame-dark)');
+    window.localStorage.setItem('selected-std-box-shadow', 'var(--std-box-shadow-dark)');
+    window.localStorage.setItem('selected-transparent-panel', 'var(--transparent-panel-dark)');
+    window.localStorage.setItem('selected-border-highlight', 'var(--border-highlight-dark)');
     window.localStorage.setItem('selected-nav-btn-icon-color', '#fff');
     window.localStorage.setItem('selected-logo-color', 'icon/groud-logo-white.svg');
 }
 
+// AMOLED THEME SETTERS
 var setAmoledTheme = () =>{
     root.style.setProperty('--txt-color', '#ffffff');
-    // root.style.setProperty('--txt-color-alt', 'var(--txt-color-lighter)');
-    root.style.setProperty('--bg-color', '#000000');
-    root.style.setProperty('--bg-color-contrast', '#080808');
-    root.style.setProperty('--bg-color-alt', '#080808');
-    root.style.setProperty('--img-frame-color', '#333');
-    root.style.setProperty('--card-frame', 'solid 0.2rem #111111');
-    root.style.setProperty('--std-box-shadow', 'none');
-    root.style.setProperty('--transparent-panel', 'rgba(0, 0, 0, 0.6)');
+    root.style.setProperty('--bg-color', 'var(--bg-color-amoled)');
+    root.style.setProperty('--bg-color-contrast', 'var(--bg-color-amoled-contrast)');
+    root.style.setProperty('--bg-color-alt', 'var(--bg-color-amoled-alt)');
+    root.style.setProperty('--img-frame-color', 'var(--img-frame-color-amoled)');
+    root.style.setProperty('--card-frame', 'var(--card-frame-amoled)');
+    root.style.setProperty('--std-box-shadow', 'var(--std-box-shadow-amoled)');
+    root.style.setProperty('--transparent-panel', 'var(--transparent-panel-amoled)');
+    root.style.setProperty('--transparent-panel', 'var(--transparent-panel-amoled)');
     root.style.setProperty('--nav-btn-icon-color', '#fff');
     setLogoColor("icon/groud-logo-white.svg");
 };
 
 var setAmoledThemeCookies = () =>{
     window.localStorage.setItem('selected-txt-color', '#ffffff');
-    // window.localStorage.setItem('selected-txt-color-alt', 'var(--txt-color-lighter)');
-    window.localStorage.setItem('selected-bg-color', '#000000');
-    window.localStorage.setItem('selected-bg-color-contrast', '#080808');
-    window.localStorage.setItem('selected-bg-color-alt', '#080808');
-    window.localStorage.setItem('selected-img-frame-color', '#333');
-    window.localStorage.setItem('selected-card-frame', 'solid 0.2rem #111111');
-    window.localStorage.setItem('selected-std-box-shadow', 'none');
-    window.localStorage.setItem('selected-transparent-panel', 'rgba(0, 0, 0, 0.6');
+    window.localStorage.setItem('selected-bg-color', 'var(--bg-color-amoled)');
+    window.localStorage.setItem('selected-bg-color-contrast', 'var(--bg-color-amoled-contrast)');
+    window.localStorage.setItem('selected-bg-color-alt', 'var(--bg-color-amoled-alt)');
+    window.localStorage.setItem('selected-img-frame-color', 'var(--img-frame-color-amoled)');
+    window.localStorage.setItem('selected-card-frame', 'var(--card-frame-amoled)');
+    window.localStorage.setItem('selected-std-box-shadow', 'var(--std-box-shadow-amoled)');
+    window.localStorage.setItem('selected-transparent-panel', 'var(--transparent-panel-amoled)');
+    window.localStorage.setItem('selected-border-highlight', 'var(--border-highlight-amoled)');
     window.localStorage.setItem('selected-nav-btn-icon-color', '#fff');
     window.localStorage.setItem('selected-logo-color', 'icon/groud-logo-white.svg');
 }
@@ -279,7 +282,5 @@ window.addEventListener('scroll', () =>{
         }
     });
 });
-
-
 
 }); //document
