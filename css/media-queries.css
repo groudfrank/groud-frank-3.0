@@ -989,6 +989,15 @@ and (orientation: portrait) {
 @media only screen 
 and (max-width: 500px) 
 and (orientation: portrait) {
+    .interests-canvas{
+        margin: 2rem auto 13rem auto;
+    }
+}
+
+/* PORTRAIT: HD + QHD Phablet(should cover tall aspect ratios also) */
+@media only screen 
+and (max-width: 500px) 
+and (orientation: portrait) {
     .interests-canvas img{
         width: 50rem;
         height: 50rem;
