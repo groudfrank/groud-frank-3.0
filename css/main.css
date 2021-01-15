@@ -38,8 +38,8 @@ body{
     --bg-color-dark-contrast: #0A1620;
     --bg-color-dark-alt:  #0e1820;
     --bg-color-amoled: #000000;
-    --bg-color-amoled-contrast: #080808;
-    --bg-color-amoled-alt: #080808;
+    --bg-color-amoled-contrast: #111;
+    --bg-color-amoled-alt: #111;
     --bg-color: var(--bg-color-dark);
     --bg-color-contrast: var(--bg-color-dark-contrast);
     --bg-color-alt: var(--bg-color-dark-alt);
@@ -843,8 +843,8 @@ width: 100%;
     justify-content: center;
     align-items: center;
     position: relative;
-    width: 6rem;
-    height: 6rem;
+    width: 9rem;
+    height: 9rem;
     padding: 2rem;
     margin: 0rem 3rem 5rem 1rem;
     border-radius: var(--border-radius-sm);
@@ -885,7 +885,7 @@ width: 100%;
 }
 
 .theme-icon-wrapper i{
-    font-size: 3.5rem;
+    font-size: 5rem;
     color: var(--accent-color-primary);
     transition-property: transform;
     transition-duration: 0.3s;

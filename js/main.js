@@ -175,43 +175,47 @@ ThemeIconAmoled.addEventListener('click', ()=>{
     setAmoledThemeCookies();
 });
 
+var fadeInNavMenu = () => {
+    NavMenuWrapper.classList.remove('hidden');
+    NavMenuWrapper.classList.remove('fade-out-nav-bar');
+    NavMenuWrapper.classList.add('fade-in-nav-bar');
+}
+
+var fadeOutNavMenu = () => {
+    NavMenuWrapper.classList.add('hidden');
+    NavMenuWrapper.classList.add('fade-out-nav-bar');
+    NavMenuWrapper.classList.remove('fade-in-nav-bar');
+}
+
 NavMenuBtnWrapper.addEventListener('click', () =>{
     if(NavMenuWrapper.classList.contains('hidden')){
         // Fades in the navigation bar
-        NavMenuWrapper.classList.remove('hidden');
-        NavMenuWrapper.classList.remove('fade-out-nav-bar');
-        NavMenuWrapper.classList.add('fade-in-nav-bar');
+        fadeInNavMenu();
 
         // Transitions the navigation menu lines to an X.
         if(NavMenuBtnLineTop.classList.contains('off-state')){
             NavMenuBtnLineTop.classList.remove('off-state');
             NavMenuBtnLineTop.classList.add('top-nav-btn-icon-transition');
-            // root.style.setProperty('--nav-btn-icon-color', '#fff');
         }
         if(NavMenuBtnLineBottom.classList.contains('off-state')){
             NavMenuBtnLineBottom.classList.remove('off-state');
             NavMenuBtnLineBottom.classList.add('bottom-nav-btn-icon-transition');
-            // root.style.setProperty('--nav-btn-icon-color', '#fff');
         }
         // add transition styles for the navigation menu label
         NavMenuLabel.style.opacity = '0';
         NavMenuLabel.style.transform = 'translateX(-20px)';
     } else{
         // Fades out the navigation bar
-        NavMenuWrapper.classList.add('hidden');
-        NavMenuWrapper.classList.add('fade-out-nav-bar');
-        NavMenuWrapper.classList.remove('fade-in-nav-bar');
+        fadeOutNavMenu();
 
         if(NavMenuBtnLineTop.classList.contains('off-state') == false){
             NavMenuBtnLineTop.classList.add('off-state');
             NavMenuBtnLineTop.classList.remove('top-nav-btn-icon-transition');
-            // root.style.setProperty('--nav-btn-icon-color', 'initial');
         }
 
         if(NavMenuBtnLineBottom.classList.contains('off-state') == false){
             NavMenuBtnLineBottom.classList.add('off-state');
             NavMenuBtnLineBottom.classList.remove('bottom-nav-btn-icon-transition');
-            // root.style.setProperty('--nav-btn-icon-color', 'initial');
         }
         // add transition styles for the navigation menu label
         NavMenuLabel.style.opacity = '1';
