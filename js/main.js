@@ -7,6 +7,7 @@ var NavMenuWrapper = document.getElementById('nav-menu-wrapper');
 var NavMenuBtnLineTop = document.getElementById('nav-menu-btn-line-top');
 var NavMenuBtnLineBottom = document.getElementById('nav-menu-btn-line-bottom');
 var NavMenuLabel = document.getElementById('nav-menu-label');
+var NavMenuLinks = document.querySelectorAll('.nav-menu-site-link a');
 var ColorBar = document.querySelectorAll('.color-bar');
 var ThemeIconLight = document.getElementById('theme-icon-light');
 var ThemeIconDark = document.getElementById('theme-icon-dark');
@@ -231,7 +232,36 @@ ColorBar.forEach((el)=>{
         root.style.setProperty('--accent-color-primary', color);
     })
 });
+ 
+for (const link of NavMenuLinks) {
+  link.addEventListener("click", clickHandler);
+}
+ 
+function clickHandler(e) {
+//   e.preventDefault();
+  const href = this.getAttribute("href");
+ 
+  document.querySelector(href).scrollIntoView({
+    behavior: "smooth"
+  });
 
+  // Fades out the navigation bar
+  fadeOutNavMenu();
+
+  if(NavMenuBtnLineTop.classList.contains('off-state') == false){
+      NavMenuBtnLineTop.classList.add('off-state');
+      NavMenuBtnLineTop.classList.remove('top-nav-btn-icon-transition');
+  }
+
+  if(NavMenuBtnLineBottom.classList.contains('off-state') == false){
+      NavMenuBtnLineBottom.classList.add('off-state');
+      NavMenuBtnLineBottom.classList.remove('bottom-nav-btn-icon-transition');
+  }
+  // add transition styles for the navigation menu label
+  NavMenuLabel.style.opacity = '1';
+  NavMenuLabel.style.transform = 'translateX(0px)';
+
+}
 
 if(FontSizeSelector != null){
     FontSizeSelector.addEventListener('change',(event)=>{
