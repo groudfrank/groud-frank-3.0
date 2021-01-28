@@ -48,12 +48,12 @@ body{
     --img-frame-color-amoled: #333333;
     --img-frame-color: var(--bg-color-dark-alt);
     --card-frame-light: none;
-    --card-frame-dark:  none;
-    --card-frame-amoled: solid 0.2rem #111111;
+    --card-frame-dark:  solid 0.2rem #30363d;
+    --card-frame-amoled: solid 0.2rem #30363d;
     --card-frame: solid 0.2rem transparent;
     --border-highlight-light: solid 0.1rem #999;
-    --border-highlight-dark: solid 0.1rem #333;
-    --border-highlight-amoled: solid 0.1rem #222;
+    --border-highlight-dark: solid 0.1rem #30363d;
+    --border-highlight-amoled: solid 0.1rem #30363d;
     --border-highlight: var(--border-highlight-dark);
     --nav-btn-icon-color: #fff;
     --transparent-panel-light:rgba(255, 255, 255, 0.8);

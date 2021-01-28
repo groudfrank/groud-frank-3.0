@@ -3,6 +3,15 @@
 
 /*LANDSCAPE: MDPI laptop*/
 @media only screen 
+and (max-width: 1920px) 
+and (orientation: landscape) {
+    html{
+        font-size: 52%;
+    }
+}
+
+/*LANDSCAPE: MDPI laptop*/
+@media only screen 
 and (max-width: 1500px) 
 and (orientation: landscape) {
     html{
