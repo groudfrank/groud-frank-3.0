@@ -43,11 +43,11 @@ body{
     --bg-color: var(--bg-color-dark);
     --bg-color-contrast: var(--bg-color-dark-contrast);
     --bg-color-alt: var(--bg-color-dark-alt);
-    --img-frame-color-light: #e9e8e8;
+    --img-frame-color-light: #ededed;
     --img-frame-color-dark: #0e1820;
     --img-frame-color-amoled: #333333;
     --img-frame-color: var(--bg-color-dark-alt);
-    --card-frame-light: none;
+    --card-frame-light: solid 0.2rem #ededed;
     --card-frame-dark:  solid 0.2rem #30363d;
     --card-frame-amoled: solid 0.2rem #30363d;
     --card-frame: solid 0.2rem transparent;
