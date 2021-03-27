@@ -50,7 +50,7 @@ body{
     --card-frame-light: solid 0.2rem #ededed;
     --card-frame-dark:  solid 0.2rem #30363d;
     --card-frame-amoled: solid 0.2rem #30363d;
-    --card-frame: solid 0.2rem transparent;
+    --card-frame: solid 0.2rem #30363d;
     --border-highlight-light: solid 0.1rem #999;
     --border-highlight-dark: solid 0.1rem #30363d;
     --border-highlight-amoled: solid 0.1rem #30363d;

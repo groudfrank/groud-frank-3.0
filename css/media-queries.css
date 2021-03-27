@@ -757,7 +757,7 @@ and (orientation: landscape) {
 @media (max-width: 1400px)
 and (orientation: portrait){
     .work-canvas p{
-        width: 85%;
+        width: 70%;
         margin-bottom: 2rem;
         }
     }
