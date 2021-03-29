@@ -21,6 +21,7 @@ var NodeCheckerErrorMessage = 'does not exist on this HTML page. Just a warning.
 
 // localStorage.clear();
 
+
 // This function has to be higher up and a biut out of place so that
 // any IFFE that calls it will recognize it.
 var setLogoColor = (url) =>{
@@ -37,6 +38,7 @@ ParagraphScaler.forEach((el)=>{
     el.style.fontSize = window.localStorage.getItem("selected-font-size");
 });
 
+
 (()=>{
     root.style.setProperty('--txt-color', window.localStorage.getItem('selected-txt-color'));
     root.style.setProperty('--bg-color', window.localStorage.getItem('selected-bg-color'));
@@ -48,7 +50,14 @@ ParagraphScaler.forEach((el)=>{
     root.style.setProperty('--transparent-panel', window.localStorage.getItem('selected-transparent-panel'));
     root.style.setProperty('--border-highlight', window.localStorage.getItem('selected-border-highlight'));
     root.style.setProperty('--nav-btn-icon-color', window.localStorage.getItem('selected-nav-btn-icon-color'));
-    setLogoColor(window.localStorage.getItem('selected-logo-color'));
+    // The if statement checks the value of selected-logo-color to see if it has a value(which it won't if a user clears cookies
+    // or visits the site for the first time) and acts accordingly. If it has a value then it will pull that value and if it doesn't
+    // have a value it will set the default logo image for the website.Without the if statement, no image shows up
+    if(localStorage.getItem('selected-logo-color') == null){
+        setLogoColor("icon/groud-logo-white.svg");
+    } else {
+        setLogoColor(window.localStorage.getItem('selected-logo-color'));
+    }
 })()
 
 window.addEventListener('resize', () =>{
