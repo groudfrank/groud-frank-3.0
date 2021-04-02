@@ -515,13 +515,13 @@ and (orientation: portrait) {
 }
 
 /* PORTRAIT: HD + QHD Phablet(should cover tall aspect ratios also) */
-@media only screen 
+/* @media only screen 
 and (max-width: 400px) 
 and (orientation: portrait) {
     .color-bar{
         width: 12rem;
     }
-}
+} */
 
 /*PORTRAIT: Super HiDPI tablets e.g. Ipad Pro Kindle Fire HD */
 @media (max-width: 1400px)
