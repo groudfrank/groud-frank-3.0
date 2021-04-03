@@ -767,6 +767,7 @@ and (orientation: portrait){
 and (max-width: 500px) 
 and (orientation: portrait) {
     .work-canvas p{
+        width: 85%;
         padding: 2rem;
     }
 }
