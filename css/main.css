@@ -48,11 +48,13 @@ body{
     --img-frame-color-amoled: #333333;
     --img-frame-color: var(--bg-color-dark-alt);
     --card-frame-light: solid 0.2rem #ededed;
-    --card-frame-dark:  solid 0.2rem #30363d;
+    /* --card-frame-dark:  solid 0.2rem #30363d; */
+    --card-frame-dark:  solid 0.2rem #131D25;
     --card-frame-amoled: solid 0.2rem #30363d;
     --card-frame: solid 0.2rem #30363d;
-    --border-highlight-light: solid 0.1rem #999;
-    --border-highlight-dark: solid 0.1rem #30363d;
+    /* --border-highlight-light: solid 0.1rem #999; */
+    --border-highlight-light: solid 0.1rem rgba(0,0,0,0.1);
+    --border-highlight-dark: solid 0.1rem #131D25;
     --border-highlight-amoled: solid 0.1rem #30363d;
     --border-highlight: var(--border-highlight-dark);
     --nav-btn-icon-color: #fff;
@@ -336,7 +338,7 @@ width: 100%;
 }
 
 .nav-contact{
-    font-size: 2.1rem;
+    font-size: 1.8rem;
     font-weight: 300;
     margin: 0rem 0rem 1rem 0rem;
 }
@@ -911,10 +913,11 @@ width: 100%;
     padding: 2rem 4rem;
     background: var(--transparent-panel);
     border: var(--border-highlight);
+    border-left: solid 0.5rem var(--accent-color-primary);
     border-radius: var(--border-radius-sm);
 }
 
-.work-canvas p::before{
+/* .work-canvas p::before{
     content: '';
     position: absolute;
     top: -1rem;
@@ -923,7 +926,7 @@ width: 100%;
     width: 0.85rem;
     background-color: var(--accent-color-primary);
     border-radius: 1rem;
-}
+} */
 
 .contact-wrapper{
     margin-bottom: 30rem;
