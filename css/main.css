@@ -56,7 +56,7 @@ body{
     --border-highlight-amoled: solid 0.1rem #30363d;
     --border-highlight: var(--border-highlight-dark);
     --nav-btn-icon-color: #fff;
-    --transparent-panel-light:rgba(255, 255, 255, 0.8);
+    --transparent-panel-light:rgba(255, 255, 255, 0.6);
     --transparent-panel-dark:rgba(0, 0, 0, 0.6);
     --transparent-panel-amoled:rgba(0, 0, 0, 0.6);
     --transparent-panel: var(--transparent-panel-dark);
@@ -905,6 +905,7 @@ width: 100%;
     margin: 4rem auto 6rem auto;
     width: 50%;
     color: var(--txt-color);
+    backdrop-filter: blur(10px);
     font-weight: 200;
     box-shadow: var(--std-box-shadow);
     padding: 2rem 4rem;
