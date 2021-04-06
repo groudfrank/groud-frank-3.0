@@ -30,7 +30,8 @@ body{
     --txt-color-dark: #555;
     --txt-color-darker: #111;
     --txt-color-light: #C0C0C0;
-    --txt-color-lighter: #fff;
+    /* --txt-color-lighter: #fff; */
+    --txt-color-lighter: #ced0d2;
     --txt-color: var(--txt-color-lighter);
     --bg-color-light:#fdfbfb;
     --bg-color-light-contrast:  #f6f5f5;

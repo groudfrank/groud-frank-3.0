@@ -125,7 +125,7 @@ var setDarkThemeCookies = () =>{
 
 // AMOLED THEME SETTERS
 var setAmoledTheme = () =>{
-    root.style.setProperty('--txt-color', '#ffffff');
+    root.style.setProperty('--txt-color', 'var(--txt-color-lighter)');
     root.style.setProperty('--bg-color', 'var(--bg-color-amoled)');
     root.style.setProperty('--bg-color-contrast', 'var(--bg-color-amoled-contrast)');
     root.style.setProperty('--bg-color-alt', 'var(--bg-color-amoled-alt)');
@@ -139,7 +139,7 @@ var setAmoledTheme = () =>{
 };
 
 var setAmoledThemeCookies = () =>{
-    window.localStorage.setItem('selected-txt-color', '#ffffff');
+    window.localStorage.setItem('selected-txt-color', 'var(--txt-color-lighter)');
     window.localStorage.setItem('selected-bg-color', 'var(--bg-color-amoled)');
     window.localStorage.setItem('selected-bg-color-contrast', 'var(--bg-color-amoled-contrast)');
     window.localStorage.setItem('selected-bg-color-alt', 'var(--bg-color-amoled-alt)');
