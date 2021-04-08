@@ -231,6 +231,7 @@ and (orientation: portrait) {
     #nav-menu-wrapper{
         width: 100vw;
         height: 100vh;
+        border-radius: initial;
     }
 }
 
@@ -246,6 +247,7 @@ and (orientation: landscape) {
         top: 0rem;
         bottom: 0rem;
         left: unset;
+        border-radius: initial;
     }
 }
 
@@ -767,6 +769,7 @@ and (orientation: portrait){
 and (max-width: 500px) 
 and (orientation: portrait) {
     .work-canvas p{
+        font-weight: 200;
         width: 85%;
         padding: 2rem;
     }
@@ -957,6 +960,26 @@ and (orientation: landscape) {
     #bio-photo{
         width: 35rem;
         height: 35rem;
+    }
+}
+
+/* PORTRAIT: HD + QHD Phablet(should cover tall aspect ratios also) */
+@media only screen 
+and (max-width: 500px) 
+and (orientation: portrait) {
+    #bio-photo{
+        width: 50rem;
+        height: 50rem;
+    }
+}
+
+/* LANDSCAPE: HD + QHD Phablet(should cover tall aspect ratios also) */
+@media only screen 
+and (max-width: 900px) 
+and (orientation: landscape) {
+    #bio-photo{
+        width: 50rem;
+        height: 50rem;
     }
 }
 
