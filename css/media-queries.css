@@ -948,8 +948,8 @@ and (orientation: landscape) {
 @media (max-width: 1400px)
 and (orientation: portrait){
     #bio-photo{
-        width: 30rem;
-        height: 30rem;
+        width: 50rem;
+        height: 50rem;
     }
 }
  
@@ -1018,12 +1018,29 @@ and (orientation: portrait) {
     }
 }
 
+/*PORTRAIT: Super HiDPI tablets e.g. Ipad Pro Kindle Fire HD */
+@media (max-width: 1400px)
+and (orientation: portrait){
+    .interests-canvas{
+        margin-bottom: 7rem;
+    }
+}
+
 /* PORTRAIT: HD + QHD Phablet(should cover tall aspect ratios also) */
 @media only screen 
 and (max-width: 500px) 
 and (orientation: portrait) {
     .interests-canvas{
         margin: 2rem auto 13rem auto;
+    }
+}
+
+/*PORTRAIT: Super HiDPI tablets e.g. Ipad Pro Kindle Fire HD */
+@media (max-width: 1400px)
+and (orientation: portrait){
+    .interests-canvas img{
+        width: 50rem;
+        height: 50rem;
     }
 }
 

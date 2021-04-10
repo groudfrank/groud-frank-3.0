@@ -415,7 +415,7 @@ width: 100%;
     flex-wrap: wrap;
     position: relative;
     width: 50rem;
-    padding: 7rem 4rem 0rem 4rem;
+    padding: 7rem 4rem 2rem 4rem;
     margin: 0rem 4rem 6rem 0rem;
     border: var(--card-frame);
     border-radius: var(--border-radius-sm);
@@ -900,7 +900,7 @@ width: 100%;
     height: 80.4rem;
     filter: grayscale(1);
     box-shadow: 0 10px 15px -3px rgba(0,0,0,.2), 0 4px 6px -2px rgba(0,0,0,.1);
-    border: solid 0.6rem var(--img-frame-color);
+    /* border: solid 0.6rem var(--img-frame-color); */
     border-radius: var(--border-radius-m);
 }
 
@@ -1059,7 +1059,7 @@ width: 100%;
     border-radius: inherit;
 } */
 
-#bio-photo-wrapper::after{
+/* #bio-photo-wrapper::after{
     content: '';
     position: absolute;
     width: 100%;
@@ -1071,16 +1071,16 @@ width: 100%;
     background-color: var(--accent-color-primary);
     opacity: 0.3;
     border-radius: inherit;
-}
+} */
 
 #bio-photo{
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-    width: 40rem;
-    height: 40rem;
-    border: solid 0.6rem var(--img-frame-color);
+    width: 50rem;
+    height: 50rem;
+    /* border: solid 0.6rem var(--img-frame-color); */
     box-shadow: var(--std-box-shadow);
     border-radius: inherit;
 }
@@ -1274,7 +1274,6 @@ width: 100%;
     animation-name: fade-out-nav-bar;
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
-    /* animation-timing-function: var(--bouncy-trans); */
     pointer-events: none;
 }
 
