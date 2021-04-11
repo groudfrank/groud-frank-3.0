@@ -133,7 +133,8 @@ var setAmoledTheme = () =>{
     root.style.setProperty('--card-frame', 'var(--card-frame-amoled)');
     root.style.setProperty('--std-box-shadow', 'var(--std-box-shadow-amoled)');
     root.style.setProperty('--transparent-panel', 'var(--transparent-panel-amoled)');
-    root.style.setProperty('--transparent-panel', 'var(--transparent-panel-amoled)');
+    // root.style.setProperty('--transparent-panel', 'var(--transparent-panel-amoled)');
+    root.style.setProperty('--border-highlight', 'var(--border-highlight-amoled)');
     root.style.setProperty('--nav-btn-icon-color', '#fff');
     setLogoColor("icon/groud-logo-white.svg");
 };
