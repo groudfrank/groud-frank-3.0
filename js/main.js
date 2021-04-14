@@ -15,12 +15,9 @@ var ThemeIconAmoled = document.getElementById('theme-icon-amoled');
 var FontSizeSelector = document.querySelector('.font-size-selector');
 var WorkCanvasImg = document.querySelectorAll('.work-canvas img');
 var logo = document.querySelectorAll('.g-logo'); 
-var WindowWidth = 0;
-var WindowHeight = 0;
 var NodeCheckerErrorMessage = 'does not exist on this HTML page. Just a warning. Carry on!';
 
 // localStorage.clear();
-
 
 // This function has to be higher up and a biut out of place so that
 // any IFFE that calls it will recognize it.
@@ -133,7 +130,6 @@ var setAmoledTheme = () =>{
     root.style.setProperty('--card-frame', 'var(--card-frame-amoled)');
     root.style.setProperty('--std-box-shadow', 'var(--std-box-shadow-amoled)');
     root.style.setProperty('--transparent-panel', 'var(--transparent-panel-amoled)');
-    // root.style.setProperty('--transparent-panel', 'var(--transparent-panel-amoled)');
     root.style.setProperty('--border-highlight', 'var(--border-highlight-amoled)');
     root.style.setProperty('--nav-btn-icon-color', '#fff');
     setLogoColor("icon/groud-logo-white.svg");
@@ -152,24 +148,6 @@ var setAmoledThemeCookies = () =>{
     window.localStorage.setItem('selected-nav-btn-icon-color', '#fff');
     window.localStorage.setItem('selected-logo-color', 'icon/groud-logo-white.svg');
 }
-
-// if(ThemeIconLight != null){
-//     ThemeIconLight.addEventListener('click', ()=>{
-//         setLightTheme();
-//         setLightThemeCookies();
-//     });
-// }else{
-//     console.log('ThemeIconLight ' + NodeCheckerErrorMessage);
-// }
-
-// if(ThemeIconDark != null){
-//     ThemeIconDark.addEventListener('click', ()=>{
-//         setDarkTheme();
-//         setDarkThemeCookies();
-//     });
-// }else{
-//     console.log('ThemeIconDark ' + NodeCheckerErrorMessage);
-// }
 
 ThemeIconLight.addEventListener('click', ()=>{
     setLightTheme();

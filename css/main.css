@@ -12,6 +12,7 @@ body{
     margin: 0rem;
     background-color: var(--bg-color);
     box-sizing: border-box;
+    transition: all 0.1s ease;
 }
 
 :root{
@@ -30,7 +31,6 @@ body{
     --txt-color-dark: #555;
     --txt-color-darker: #111;
     --txt-color-light: #C0C0C0;
-    /* --txt-color-lighter: #fff; */
     --txt-color-lighter: #ced0d2;
     --txt-color: var(--txt-color-lighter);
     --bg-color-light:#fdfbfb;
@@ -49,11 +49,9 @@ body{
     --img-frame-color-amoled: #333333;
     --img-frame-color: var(--bg-color-dark-alt);
     --card-frame-light: solid 0.2rem #ededed;
-    /* --card-frame-dark:  solid 0.2rem #30363d; */
     --card-frame-dark:  solid 0.2rem #131D25;
     --card-frame-amoled: solid 0.2rem #30363d;
     --card-frame: solid 0.2rem #30363d;
-    /* --border-highlight-light: solid 0.1rem #999; */
     --border-highlight-light: solid 0.1rem rgba(0,0,0,0.1);
     --border-highlight-dark: solid 0.1rem #131D25;
     --border-highlight-amoled: solid 0.1rem #30363d;
@@ -72,7 +70,7 @@ body{
     --border-radius-sm: 1rem;
     --border-radius-xsm: 0.5rem;
     --bouncy-trans: cubic-bezier(0.25, 0.1, 0, 2.05);
-    --heading-txt-m: 6rem;
+    --heading-txt-m: 7rem;
     --heading-txt-ms: 5.5rem;
     --heading-txt-sm: 3rem;
     --heading-txt-xsm: 1.9rem;
@@ -241,13 +239,6 @@ section{
     margin: 0.4rem 0rem;
 }
 
-/* .nav-menu-btn-lines::after{
-    content: '';
-    width: 100%;
-    height: 100%;
-    background-color: var(--nav-btn-icon-color);
-} */
-
 #nav-menu-label{
     font-size: 1.6rem;
     color: var(--txt-color);
@@ -266,6 +257,10 @@ section{
     box-shadow: var(--std-box-shadow);
     overflow-x: hidden;
     border-radius: var(--border-radius-m);
+}
+
+.nav-bg-handler{
+    background: var(--accent-color-primary);
 }
 
 #nav-menu{
@@ -386,7 +381,7 @@ width: 100%;
 
 #home-txt-wrapper h1{
     display: block;
-    font-size: 12.8rem;
+    font-size: 9.8rem;
     font-weight: 300;
     letter-spacing: 0.6rem;
     margin: 0em;
@@ -714,7 +709,6 @@ width: 100%;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
     animation-direction: alternate;
-    /* animation: spin 6s ease-in-out infinite; */
     background: var(--bg-color);
 }
 
@@ -898,7 +892,6 @@ width: 100%;
     height: 80.4rem;
     filter: grayscale(1);
     box-shadow: 0 10px 15px -3px rgba(0,0,0,.2), 0 4px 6px -2px rgba(0,0,0,.1);
-    /* border: solid 0.6rem var(--img-frame-color); */
     border-radius: var(--border-radius-m);
 }
 
@@ -918,17 +911,6 @@ width: 100%;
     border-left: solid 0.5rem var(--accent-color-primary);
     border-radius: var(--border-radius-sm);
 }
-
-/* .work-canvas p::before{
-    content: '';
-    position: absolute;
-    top: -1rem;
-    bottom: -1rem;
-    left: -0.3rem;
-    width: 0.85rem;
-    background-color: var(--accent-color-primary);
-    border-radius: 1rem;
-} */
 
 .contact-wrapper{
     margin-bottom: 30rem;
@@ -975,30 +957,6 @@ width: 100%;
     height: auto;
 }
 
-/* .logo-wrapper::before{
-    content: '';
-    position: absolute;
-    top: -22%;
-    right: -16%;
-    width: 80%;
-    height: 80%;
-    box-shadow: var(--std-box-shadow);
-    border: dashed 0.5rem var(--accent-color-primary);
-    border-radius: 50%;
-}
-
-.logo-wrapper::after{
-    content: '';
-    position: absolute;
-    z-index: -1;
-    top: 6%;
-    right: 14%;
-    width: 80%;
-    height: 80%;
-    opacity: 0.4;
-    background-color: var(--accent-color-primary);
-} */
-
 .logo-wrapper img{
     position: relative;
     width: 40rem;
@@ -1021,13 +979,14 @@ width: 100%;
 }
 
 #bio-txt{
-    width: 35%;
+    width: 26%;
 }
 
 #bio-txt h1{
     display: inline-block;
     font-size: var(--heading-txt-m);
     font-weight: 300;
+    margin-bottom: 2rem;
 }
 
 /*()||||||+++++ME HTML+++++|||||()*/
@@ -1044,32 +1003,6 @@ width: 100%;
     margin: 0rem 0rem 0rem 20rem;
     border-radius: var(--border-radius-m);
 }
-
-/* #bio-photo-wrapper::before{
-    content: '';
-    position: absolute;
-    z-index: -1;
-    top: -10%;
-    right: -10%;
-    width: 100%;
-    height: 100%;
-    border: dashed 0.4rem var(--accent-color-primary);
-    border-radius: inherit;
-} */
-
-/* #bio-photo-wrapper::after{
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: var(--accent-color-primary);
-    opacity: 0.3;
-    border-radius: inherit;
-} */
 
 #bio-photo{
     display: flex;
@@ -1224,28 +1157,14 @@ width: 100%;
 .gradient-txt {
     /* Fallback: Set a background color. */
     background-color: var(--accent-color-primary);
-    
-    /* Create the gradient. */
-     /* background-image: linear-gradient(
-          45deg,
-          var(--brown) 20%,
-          var(--blue) 20%,
-          var(--blue) 40%,
-          var(--pink) 40%,
-          var(--pink) 60%,
-          var(--yellow) 60%,
-          var(--yellow) 80%,
-          var(--orange) 80%
-          ); */
 
-          background-image: linear-gradient( 45deg,
-          var(--purple) 20%,
-          var(--blue) 20%
-          ,var(--blue) 30%,
-          var(--pink) 60%,
-          var(--yellow) 80%,
-          var(--orange) 80% );
-    
+    background-image: linear-gradient( 45deg,
+    var(--purple) 20%,
+    var(--blue) 20%
+    ,var(--blue) 30%,
+    var(--pink) 60%,
+    var(--yellow) 80%,
+    var(--orange) 80% );
     background-size: 100%;
     background-repeat: repeat;
     -webkit-background-clip: text;
@@ -1259,7 +1178,6 @@ width: 100%;
     animation-name: fade-in-nav-bar;
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
-    /* animation-timing-function: var(--bouncy-trans); */
     pointer-events: all;
 }
 

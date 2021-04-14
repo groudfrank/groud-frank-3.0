@@ -134,7 +134,7 @@ and (orientation: portrait) {
 @media (max-width: 1400px)
 and (orientation: portrait){
     :root {
-    --heading-txt-m: 4rem;
+    --heading-txt-m: 6rem;
     --heading-txt-ms: 3.5rem;
         }
     }
@@ -144,6 +144,7 @@ and (orientation: portrait){
 and (max-width: 500px) 
 and (orientation: portrait) {
     :root{
+        --heading-txt-m: 7rem;
         --heading-txt-ms: 4rem;
         --heading-txt-xsm: 3rem;
 
@@ -868,6 +869,15 @@ and (orientation: landscape) {
     }
 }
 
+/* PORTRAIT: HD + QHD Phablet(should cover tall aspect ratios also) */
+@media only screen 
+and (max-width: 500px) 
+and (orientation: portrait) {
+    #bio{
+        padding-top: 21rem;
+    }
+}
+
 /*PORTRAIT: Super HiDPI tablets e.g. Ipad Pro Kindle Fire HD */
 @media (max-width: 1400px)
 and (orientation: portrait){
@@ -915,7 +925,7 @@ and (orientation: portrait) {
 and (max-width: 1400px) 
 and (orientation: landscape) {
     #bio-txt{
-        width: 55%;
+        width: 50%;
     }
 }
 
@@ -968,8 +978,8 @@ and (orientation: portrait){
 and (max-width: 1400px) 
 and (orientation: landscape) {
     #bio-photo{
-        width: 35rem;
-        height: 35rem;
+        width: 45rem;
+        height: 45rem;
     }
 }
 
