@@ -63,7 +63,7 @@ body{
     --transparent-panel: var(--transparent-panel-dark);
     --ripple-size-small: 1.1rem;
     --std-box-shadow-dark: 0 5.2rem 7.4rem rgba(0,0,0, 0.8);
-    --std-box-shadow-light: 0 5.2rem 7.4rem rgba(0,0,0, 0.2);
+    --std-box-shadow-light: 0 5.2rem 7.4rem rgba(0,0,0, 0.125);
     --std-box-shadow-amoled: none;
     --std-box-shadow: var(--std-box-shadow-dark);
     --border-radius-m: 2rem;
