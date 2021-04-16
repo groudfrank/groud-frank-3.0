@@ -14,10 +14,22 @@ var ThemeIconDark = document.getElementById('theme-icon-dark');
 var ThemeIconAmoled = document.getElementById('theme-icon-amoled');
 var FontSizeSelector = document.querySelector('.font-size-selector');
 var WorkCanvasImg = document.querySelectorAll('.work-canvas img');
-var logo = document.querySelectorAll('.g-logo'); 
+var logo = document.querySelectorAll('.g-logo');
+var metaTags = document.getElementsByTagName('META');
 var NodeCheckerErrorMessage = 'does not exist on this HTML page. Just a warning. Carry on!';
 
 // localStorage.clear();
+
+// console.log(typeof(metaTags));
+//  var metaTagsArray = Object.values(metaTags);
+
+var setBrowserColor = (value) =>{
+    for(var i = 0; i < metaTags.length; i++){
+        if(metaTags[i].getAttribute('name') == 'theme-color'){
+            metaTags[i].setAttribute('content', value);
+        }
+    }
+}
 
 // This function has to be higher up and a biut out of place so that
 // any IFFE that calls it will recognize it.
@@ -218,6 +230,8 @@ ColorBar.forEach((el)=>{
         var color = styles.backgroundColor;
         window.localStorage.setItem("selected-color", color);
         root.style.setProperty('--accent-color-primary', color);
+
+        setBrowserColor(color);
     })
 });
  

@@ -76,6 +76,15 @@ body{
     --heading-txt-xsm: 1.9rem;
 }
 
+::-webkit-scrollbar {
+    width: 1rem;
+  }
+
+::-webkit-scrollbar-thumb {
+    background:var(--accent-color-primary);
+    border-radius: 0.4rem;
+}
+
 
 a{
     text-decoration: none;
