@@ -67,6 +67,8 @@ ParagraphScaler.forEach((el)=>{
     } else {
         setLogoColor(window.localStorage.getItem('selected-logo-color'));
     }
+
+    setBrowserColor(window.localStorage.getItem('mobile-browser-ui-color'));
 })()
 
 window.addEventListener('resize', () =>{
@@ -232,6 +234,7 @@ ColorBar.forEach((el)=>{
         root.style.setProperty('--accent-color-primary', color);
 
         setBrowserColor(color);
+        window.localStorage.setItem('mobile-browser-ui-color', color)
     })
 });
  
