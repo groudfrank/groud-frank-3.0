@@ -68,14 +68,11 @@ ParagraphScaler.forEach((el)=>{
         setLogoColor(window.localStorage.getItem('selected-logo-color'));
     }
 
-    for(var i = 0; i < metaTags.length; i++){
-        if(metaTags[i].getAttribute('name') == 'theme-color'){
-            if(metaTags[i].getAttribute('content') == null){
-                setBrowserColor('rgb(124, 77, 255)');
-            }else{
-                setBrowserColor(window.localStorage.getItem('mobile-browser-ui-color'));
-            }
-        }
+
+    if(localStorage.getItem('mobile-browser-ui-color') == null){
+        setBrowserColor('rgb(124, 77, 255)');
+    }else{
+        setBrowserColor(window.localStorage.getItem('mobile-browser-ui-color'));
     }
 })()
 
