@@ -34,6 +34,7 @@ body{
     --txt-color-lighter: #ced0d2;
     --txt-color: var(--txt-color-lighter);
     --bg-color-light:#fdfbfb;
+    --bg-color-light-alt: #f6f6f6;
     --bg-color-light-contrast:  #f6f5f5;
     --bg-color-dark: #071119;
     --bg-color-dark-contrast: #0A1620;
@@ -265,7 +266,7 @@ section{
     right: 3.5rem;
     box-shadow: var(--std-box-shadow);
     overflow-x: hidden;
-    border-radius: var(--border-radius-m);
+    border-radius: var(--border-radius-sm);
 }
 
 .nav-bg-handler{
@@ -1167,7 +1168,7 @@ width: 100%;
     /* Fallback: Set a background color. */
     background-color: var(--accent-color-primary);
 
-    background-image: linear-gradient( 45deg,
+    background-image: linear-gradient( 140deg,
     var(--purple) 20%,
     var(--blue) 20%
     ,var(--blue) 30%,
@@ -1259,7 +1260,7 @@ width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: var(--heading-txt-m);
+    font-size: var(--heading-txt-ms);
     color: var(--accent-color-primary);
     position: relative;
     padding: 0rem 5rem 0rem 5rem;
