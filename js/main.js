@@ -1,22 +1,22 @@
 document.addEventListener("DOMContentLoaded", function(){
 
-var root = document.querySelector(':root');
-var ParagraphScaler = document.querySelectorAll('.p-scaler');
-var NavMenuBtnWrapper = document.getElementById('nav-menu-btn-wrapper');
-var NavMenuWrapper = document.getElementById('nav-menu-wrapper');
-var NavMenuBtnLineTop = document.getElementById('nav-menu-btn-line-top');
-var NavMenuBtnLineBottom = document.getElementById('nav-menu-btn-line-bottom');
-var NavMenuLabel = document.getElementById('nav-menu-label');
-var NavMenuLinks = document.querySelectorAll('.nav-menu-site-link a');
-var ColorBar = document.querySelectorAll('.color-bar');
-var ThemeIconLight = document.getElementById('theme-icon-light');
-var ThemeIconDark = document.getElementById('theme-icon-dark');
-var ThemeIconAmoled = document.getElementById('theme-icon-amoled');
-var FontSizeSelector = document.querySelector('.font-size-selector');
-var WorkCanvasImg = document.querySelectorAll('.work-canvas img');
-var logo = document.querySelectorAll('.g-logo');
-var metaTags = document.getElementsByTagName('META');
-var NodeCheckerErrorMessage = 'does not exist on this HTML page. Just a warning. Carry on!';
+let root = document.querySelector(':root');
+let ParagraphScaler = document.querySelectorAll('.p-scaler');
+let NavMenuBtnWrapper = document.getElementById('nav-menu-btn-wrapper');
+let NavMenuWrapper = document.getElementById('nav-menu-wrapper');
+let NavMenuBtnLineTop = document.getElementById('nav-menu-btn-line-top');
+let NavMenuBtnLineBottom = document.getElementById('nav-menu-btn-line-bottom');
+let NavMenuLabel = document.getElementById('nav-menu-label');
+let NavMenuLinks = document.querySelectorAll('.nav-menu-site-link a');
+let ColorBar = document.querySelectorAll('.color-bar');
+let ThemeIconLight = document.getElementById('theme-icon-light');
+let ThemeIconDark = document.getElementById('theme-icon-dark');
+let ThemeIconAmoled = document.getElementById('theme-icon-amoled');
+let FontSizeSelector = document.querySelector('.font-size-selector');
+let WorkCanvasImg = document.querySelectorAll('.work-canvas img');
+let logo = document.querySelectorAll('.g-logo');
+let metaTags = document.getElementsByTagName('META');
+let NodeCheckerErrorMessage = 'does not exist on this HTML page. Just a warning. Carry on!';
 
 // localStorage.clear();
 
@@ -24,15 +24,15 @@ var NodeCheckerErrorMessage = 'does not exist on this HTML page. Just a warning.
 //  var metaTagsArray = Object.values(metaTags);
 
 var setBrowserColor = (value) =>{
-    for(var i = 0; i < metaTags.length; i++){
+    for(let i = 0; i < metaTags.length; i++){
         if(metaTags[i].getAttribute('name') == 'theme-color'){
             metaTags[i].setAttribute('content', value);
         }
     }
 }
 
-// This function has to be higher up and a biut out of place so that
-// any IFFE that calls it will recognize it.
+/* This function has to be higher up and a biut out of place so that
+ any IFFE that calls it will recognize it. */
 var setLogoColor = (url) =>{
     logo.forEach((el) =>{
         el.src = url;
@@ -59,9 +59,11 @@ ParagraphScaler.forEach((el)=>{
     root.style.setProperty('--transparent-panel', window.localStorage.getItem('selected-transparent-panel'));
     root.style.setProperty('--border-highlight', window.localStorage.getItem('selected-border-highlight'));
     root.style.setProperty('--nav-btn-icon-color', window.localStorage.getItem('selected-nav-btn-icon-color'));
-    // The if statement checks the value of selected-logo-color to see if it has a value(which it won't if a user clears cookies
-    // or visits the site for the first time) and acts accordingly. If it has a value then it will pull that value and if it doesn't
-    // have a value it will set the default logo image for the website.Without the if statement, no image shows up
+    /*
+    The if statement checks the value of selected-logo-color to see if it has a value(which it won't if a user clears cookies
+    or visits the site for the first time) and acts accordingly. If it has a value then it will pull that value and if it doesn't
+    have a value it will set the default logo image for the website.Without the if statement, no image shows up
+    */
     if(localStorage.getItem('selected-logo-color') == null){
         setLogoColor("icon/groud-logo-white.svg");
     } else {
@@ -82,7 +84,7 @@ window.addEventListener('resize', () =>{
 })
 
 // LIGHT THEME SETTERS
-var setLightTheme = () =>{
+let setLightTheme = () =>{
     root.style.setProperty('--txt-color', 'var(--txt-color-dark)');
     root.style.setProperty('--bg-color', 'var(--bg-color-light)');
     root.style.setProperty('--bg-color-contrast', 'var(--bg-color-light-contrast)');
@@ -96,7 +98,7 @@ var setLightTheme = () =>{
     setLogoColor("icon/groud-logo-grey.svg");
 };
 
-var setLightThemeCookies = () =>{
+let setLightThemeCookies = () =>{
     window.localStorage.setItem('selected-txt-color', 'var(--txt-color-dark)');
     window.localStorage.setItem('selected-bg-color', 'var(--bg-color-light)');
     window.localStorage.setItem('selected-bg-color-contrast', 'var(--bg-color-light-contrast)');
@@ -111,7 +113,7 @@ var setLightThemeCookies = () =>{
 }
 
 // DARK THEME SETTERS
-var setDarkTheme = () =>{
+let setDarkTheme = () =>{
     root.style.setProperty('--txt-color', 'var(--txt-color-lighter)');
     root.style.setProperty('--bg-color', 'var(--bg-color-dark)');
     root.style.setProperty('--bg-color-contrast', 'var(--bg-color-dark-contrast)');
@@ -125,7 +127,7 @@ var setDarkTheme = () =>{
     setLogoColor("icon/groud-logo-white.svg");
 };
 
-var setDarkThemeCookies = () =>{
+let setDarkThemeCookies = () =>{
     window.localStorage.setItem('selected-txt-color', 'var(--txt-color-lighter)');
     window.localStorage.setItem('selected-bg-color', 'var(--bg-color-dark)');
     window.localStorage.setItem('selected-bg-color-contrast', 'var(--bg-color-dark-contrast)');
@@ -140,7 +142,7 @@ var setDarkThemeCookies = () =>{
 }
 
 // AMOLED THEME SETTERS
-var setAmoledTheme = () =>{
+let setAmoledTheme = () =>{
     root.style.setProperty('--txt-color', 'var(--txt-color-lighter)');
     root.style.setProperty('--bg-color', 'var(--bg-color-amoled)');
     root.style.setProperty('--bg-color-contrast', 'var(--bg-color-amoled-contrast)');
@@ -154,7 +156,7 @@ var setAmoledTheme = () =>{
     setLogoColor("icon/groud-logo-white.svg");
 };
 
-var setAmoledThemeCookies = () =>{
+let setAmoledThemeCookies = () =>{
     window.localStorage.setItem('selected-txt-color', 'var(--txt-color-lighter)');
     window.localStorage.setItem('selected-bg-color', 'var(--bg-color-amoled)');
     window.localStorage.setItem('selected-bg-color-contrast', 'var(--bg-color-amoled-contrast)');
@@ -233,8 +235,8 @@ NavMenuBtnWrapper.addEventListener('click', () =>{
 
 ColorBar.forEach((el)=>{
     el.addEventListener('click', () =>{
-        var styles = getComputedStyle(el);
-        var color = styles.backgroundColor;
+        let styles = getComputedStyle(el);
+        let color = styles.backgroundColor;
         window.localStorage.setItem("selected-color", color);
         root.style.setProperty('--accent-color-primary', color);
 
@@ -248,7 +250,7 @@ for (const link of NavMenuLinks) {
 }
  
 function clickHandler(e) {
-//   e.preventDefault();
+  //e.preventDefault();
   const href = this.getAttribute("href");
  
   document.querySelector(href).scrollIntoView({
@@ -275,7 +277,7 @@ function clickHandler(e) {
 
 if(FontSizeSelector != null){
     FontSizeSelector.addEventListener('change',(event)=>{
-        var option;
+        let option;
         option = event.target.value;
         option = option.toLowerCase();
         ParagraphScaler.forEach((el)=>{
