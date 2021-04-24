@@ -13,7 +13,7 @@ let ThemeIconLight = document.getElementById('theme-icon-light');
 let ThemeIconDark = document.getElementById('theme-icon-dark');
 let ThemeIconAmoled = document.getElementById('theme-icon-amoled');
 let FontSizeSelector = document.querySelector('.font-size-selector');
-let WorkCanvasImg = document.querySelectorAll('.work-canvas img');
+let WorkCanvasImg = document.querySelectorAll('.work-canvas-img-wrapper img');
 let logo = document.querySelectorAll('.g-logo');
 let metaTags = document.getElementsByTagName('META');
 let NodeCheckerErrorMessage = 'does not exist on this HTML page. Just a warning. Carry on!';
@@ -64,14 +64,14 @@ ParagraphScaler.forEach((el)=>{
     or visits the site for the first time) and acts accordingly. If it has a value then it will pull that value and if it doesn't
     have a value it will set the default logo image for the website.Without the if statement, no image shows up
     */
-    if(localStorage.getItem('selected-logo-color') == null){
+    if(localStorage.getItem('selected-logo-color') === null){
         setLogoColor("icon/groud-logo-white.svg");
     } else {
         setLogoColor(window.localStorage.getItem('selected-logo-color'));
     }
 
 
-    if(localStorage.getItem('mobile-browser-ui-color') == null){
+    if(localStorage.getItem('mobile-browser-ui-color') === null){
         setBrowserColor('rgb(124, 77, 255)');
     }else{
         setBrowserColor(window.localStorage.getItem('mobile-browser-ui-color'));
@@ -218,12 +218,12 @@ NavMenuBtnWrapper.addEventListener('click', () =>{
         // Fades out the navigation bar
         fadeOutNavMenu();
 
-        if(NavMenuBtnLineTop.classList.contains('off-state') == false){
+        if(NavMenuBtnLineTop.classList.contains('off-state') === false){
             NavMenuBtnLineTop.classList.add('off-state');
             NavMenuBtnLineTop.classList.remove('top-nav-btn-icon-transition');
         }
 
-        if(NavMenuBtnLineBottom.classList.contains('off-state') == false){
+        if(NavMenuBtnLineBottom.classList.contains('off-state') === false){
             NavMenuBtnLineBottom.classList.add('off-state');
             NavMenuBtnLineBottom.classList.remove('bottom-nav-btn-icon-transition');
         }
@@ -260,12 +260,12 @@ function clickHandler(e) {
   // Fades out the navigation bar
   fadeOutNavMenu();
 
-  if(NavMenuBtnLineTop.classList.contains('off-state') == false){
+  if(NavMenuBtnLineTop.classList.contains('off-state') === false){
       NavMenuBtnLineTop.classList.add('off-state');
       NavMenuBtnLineTop.classList.remove('top-nav-btn-icon-transition');
   }
 
-  if(NavMenuBtnLineBottom.classList.contains('off-state') == false){
+  if(NavMenuBtnLineBottom.classList.contains('off-state') === false){
       NavMenuBtnLineBottom.classList.add('off-state');
       NavMenuBtnLineBottom.classList.remove('bottom-nav-btn-icon-transition');
   }

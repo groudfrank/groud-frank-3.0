@@ -75,6 +75,9 @@ body{
     --heading-txt-ms: 5.5rem;
     --heading-txt-sm: 3rem;
     --heading-txt-xsm: 1.9rem;
+    --canvas-img-width: 70%;
+    --canvas-img-height-percentage: 
+    --icon-wrapper-sq-m: 7rem;
 }
 
 ::-webkit-scrollbar {
@@ -644,8 +647,8 @@ width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 9rem;
-    height: 9rem;
+    width: var(--icon-wrapper-sq-m);
+    height: var(--icon-wrapper-sq-m);
     padding: 2rem;
     margin: 0rem auto;
     border: var(--card-frame);
@@ -800,8 +803,8 @@ width: 100%;
     justify-content: center;
     align-items: center;
     position: relative;
-    width: 9rem;
-    height: 9rem;
+    width: var(--icon-wrapper-sq-m);
+    height: var(--icon-wrapper-sq-m);
     padding: 2rem;
     margin: 0rem 3rem 5rem 1rem;
     border: var(--card-frame);
@@ -895,14 +898,30 @@ width: 100%;
     border-radius: 50%;
 }
 
-.work-canvas img{
+.work-canvas-img-wrapper{
+    position: relative;
+    width: var(--canvas-img-width);
+    height: calc(var(--canvas-img-width) * 0.73);
+}
+
+.work-canvas-img-wrapper img{
     position: relative;
     z-index: 2;
-    width: 110.2rem;
-    height: 80.4rem;
+    /* width: 110.2rem;
+    height: 80.4rem; */
+    width: 100%;
+    height: 100%;
     filter: grayscale(1);
     box-shadow: 0 10px 15px -3px rgba(0,0,0,.2), 0 4px 6px -2px rgba(0,0,0,.1);
     border-radius: var(--border-radius-m);
+}
+
+.work-canvas a{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 .work-canvas p{

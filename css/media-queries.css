@@ -136,8 +136,18 @@ and (orientation: portrait){
     :root {
     --heading-txt-m: 6rem;
     --heading-txt-ms: 3.5rem;
+    --canvas-img-width: 90%;
         }
     }
+
+/*LANDSCAPE: Super HiDPI tablets e.g. Ipad Pro Kindle Fire HD*/
+@media only screen 
+and (max-width: 1400px) 
+and (orientation: landscape) {
+    :root {
+        --canvas-img-width: 80%;
+    }
+}
 
 /* PORTRAIT: HD + QHD Phablet(should cover tall aspect ratios also) */
 @media only screen 
@@ -147,6 +157,7 @@ and (orientation: portrait) {
         --heading-txt-m: 7rem;
         --heading-txt-ms: 4rem;
         --heading-txt-xsm: 3rem;
+        --canvas-img-width: 95%;
 
     }
 }
@@ -728,43 +739,43 @@ and (orientation: landscape) {
 }
 
 /*PORTRAIT: Super HiDPI tablets e.g. Ipad Pro Kindle Fire HD */
-@media (max-width: 1400px)
+/* @media (max-width: 1400px)
 and (orientation: portrait){
-    .work-canvas img{
+    .work-canvas-img-wrapper img{
         width: 59rem;
         height: 43.7rem;
         }
-    }
+    } */
 
 /* PORTRAIT: HD + QHD Phablet(should cover tall aspect ratios also) */
-@media only screen 
+/* @media only screen 
 and (max-width: 500px) 
 and (orientation: portrait) {
-    .work-canvas img{
+    .work-canvas-img-wrapper img{
         width: 55rem;
         height: 40.15rem;
     }
-}
+} */
 
 /* PORTRAIT: HD + QHD Non-Phablet(should cover tall aspect ratios also) */
-@media only screen 
+/* @media only screen 
 and (max-width: 400px) 
 and (orientation: portrait) {
-    .work-canvas img{
+    .work-canvas-img-wrapper img{
         width: 47rem;
         height: 34.3rem;
     }
-}
+} */
 
-@media only screen 
+/* @media only screen 
 and (max-width: 900px) 
 and (orientation: landscape) {
-    .work-canvas img{
+    .work-canvas-img-wrapper img{
         width: 58rem;
         height: 42rem;
         transform: scale(0.9);
     }
-}
+} */
 
 /*PORTRAIT: Super HiDPI tablets e.g. Ipad Pro Kindle Fire HD */
 @media (max-width: 1400px)
