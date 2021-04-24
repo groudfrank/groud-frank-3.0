@@ -916,7 +916,7 @@ width: 100%;
     border-radius: var(--border-radius-m);
 }
 
-.work-canvas a{
+.work-canvas-img-link{
     position: absolute;
     top: 0;
     bottom: 0;
