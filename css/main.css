@@ -82,7 +82,8 @@ body{
     --nav-txt-color-light: hsl(0, 0%, 75%);
     --nav-txt-color-lighter: hsl(210, 4%, 82%);
     --nav-txt-color: var(--txt-color-lighter); */
-    --nav-bg-color-dark: hsla(210deg, 30%, 8%, 0.55);
+    /* --nav-bg-color-dark: hsla(210deg, 30%, 8%, 0.55); */
+    --nav-bg-color-dark: hsla(0, 0%, 0%, 0.6);
     --nav-bg-color-light: hsla(0deg, 0%, 100%, 0.55);
     --nav-bg-color: var(--nav-bg-color-dark);
 }

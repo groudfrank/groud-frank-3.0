@@ -368,7 +368,7 @@ and (orientation: portrait) {
 and (max-width: 500px) 
 and (orientation: portrait) {
     #nav-menu{
-        padding: 70% 1.9rem 4rem 4rem;
+        padding: 62% 1.9rem 4rem 4rem;
     }
 }
 
