@@ -77,6 +77,14 @@ body{
     --heading-txt-xsm: 1.9rem;
     --canvas-img-width: 70%; 
     --icon-wrapper-sq-m: 6rem;
+    /* --nav-txt-color-dark: hsl(0, 0%, 33%);
+    --nav-txt-color-darker: hsl(0, 0%, 7%);
+    --nav-txt-color-light: hsl(0, 0%, 75%);
+    --nav-txt-color-lighter: hsl(210, 4%, 82%);
+    --nav-txt-color: var(--txt-color-lighter); */
+    --nav-bg-color-dark: hsla(210deg, 30%, 8%, 0.55);
+    --nav-bg-color-light: hsla(0deg, 0%, 100%, 0.55);
+    --nav-bg-color: var(--nav-bg-color-dark);
 }
 
 ::-webkit-scrollbar {
@@ -204,7 +212,6 @@ section{
 }
 
 /*()||||||+++++NAVIGATION MENU BOTTON+++++|||||()*/
-
 #nav-menu-btn-wrapper{
     display: flex;
     flex-direction: row;
@@ -260,6 +267,11 @@ section{
 
 /*()||||||+++++NAVIGATION MENU+++++|||||()*/
 
+.nav-bg-handler{
+    color: #fff;
+    background: var(--accent-color-primary);
+}
+
 #nav-menu-wrapper{
     height: auto;
     position: fixed;
@@ -271,11 +283,8 @@ section{
     border-radius: var(--border-radius-sm);
 }
 
-.nav-bg-handler{
-    background: var(--accent-color-primary);
-}
-
 #nav-menu{
+    color: inherit;
     width: 100%;
     height: 100%;
     padding: 4rem 4rem 4rem 4rem;
@@ -285,10 +294,12 @@ section{
 }
 
 #nav-menu-subsections-wrapper{
+    color: inherit;
     position: relative;
 }
 
 .nav-menu-subsection-style{
+    color: inherit;
     position: relative;
     padding: 2rem;
     margin: 0rem 0rem 0rem 0rem;
@@ -298,7 +309,7 @@ section{
 
 .nav-menu-site-link{
     font-size: 2.8rem;
-    color: #fff;
+    color: inherit;
     display: flex;
     justify-content: left;
     align-items: center;
@@ -308,7 +319,7 @@ section{
 }
 
 .nav-menu-site-link a{
-    color: #fff;
+    color: inherit;
     position: relative;
     padding-bottom: 1rem;
 }

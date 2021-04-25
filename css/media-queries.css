@@ -178,6 +178,37 @@ and (orientation: landscape) {
 @media only screen 
 and (max-width: 500px) 
 and (orientation: portrait) {
+    .nav-bg-handler{
+        color: var(--txt-color);
+        font-weight: bold;
+        background: var(--nav-bg-color);
+        backdrop-filter: blur(10px);
+    }
+}
+
+/* PORTRAIT: HD + QHD Phablet(should cover tall aspect ratios also) */
+@media only screen 
+and (max-width: 500px) 
+and (orientation: portrait) {
+    #nav-contact-info h1{
+        color: var(--txt-color);
+    }
+}
+
+/* PORTRAIT: HD + QHD Phablet(should cover tall aspect ratios also) */
+@media only screen 
+and (max-width: 500px) 
+and (orientation: portrait) {
+    .hover-highlightable-nav-menu::after{
+        background: var(--txt-color);
+    }
+}
+
+
+/* PORTRAIT: HD + QHD Phablet(should cover tall aspect ratios also) */
+@media only screen 
+and (max-width: 500px) 
+and (orientation: portrait) {
     #nav-menu-btn-wrapper{
         top: 3rem;
         right: 0rem;

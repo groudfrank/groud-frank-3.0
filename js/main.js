@@ -65,6 +65,7 @@ ParagraphScaler.forEach((el)=>{
     root.style.setProperty('--std-box-shadow', window.localStorage.getItem('selected-std-box-shadow'));
     root.style.setProperty('--transparent-panel', window.localStorage.getItem('selected-transparent-panel'));
     root.style.setProperty('--border-highlight', window.localStorage.getItem('selected-border-highlight'));
+    root.style.setProperty('--nav-bg-color', window.localStorage.getItem('selected-nav-bg-color'));
     root.style.setProperty('--nav-btn-icon-color', window.localStorage.getItem('selected-nav-btn-icon-color'));
     /*
     The if statement checks the value of selected-logo-color to see if it has a value(which it won't if a user clears cookies
@@ -101,6 +102,7 @@ let setLightTheme = () =>{
     root.style.setProperty('--std-box-shadow', 'var(--std-box-shadow-light)');
     root.style.setProperty('--transparent-panel', 'var(--transparent-panel-light)');
     root.style.setProperty('--border-highlight', 'var(--border-highlight-light)');
+    root.style.setProperty('--nav-bg-color', 'var(--nav-bg-color-light)');
     root.style.setProperty('--nav-btn-icon-color', '#333');
     setLogoColor("icon/groud-logo-grey.svg");
 };
@@ -115,6 +117,7 @@ let setLightThemeCookies = () =>{
     window.localStorage.setItem('selected-std-box-shadow', 'var(--std-box-shadow-light)');
     window.localStorage.setItem('selected-transparent-panel', 'var(--transparent-panel-light)');
     window.localStorage.setItem('selected-border-highlight', 'var(--border-highlight-light)');
+    window.localStorage.setItem('selected-nav-bg-color', 'var(--nav-bg-color-light)');
     window.localStorage.setItem('selected-nav-btn-icon-color', '#333');
     window.localStorage.setItem('selected-logo-color', 'icon/groud-logo-grey.svg');
 }
@@ -130,6 +133,7 @@ let setDarkTheme = () =>{
     root.style.setProperty('--std-box-shadow', 'var(--std-box-shadow-dark)');
     root.style.setProperty('--transparent-panel', 'var(--transparent-panel-dark)');
     root.style.setProperty('--border-highlight', 'var(--border-highlight-dark)');
+    root.style.setProperty('--nav-bg-color', 'var(--nav-bg-color-dark)');
     root.style.setProperty('--nav-btn-icon-color', '#fff');
     setLogoColor("icon/groud-logo-white.svg");
 };
@@ -144,6 +148,7 @@ let setDarkThemeCookies = () =>{
     window.localStorage.setItem('selected-std-box-shadow', 'var(--std-box-shadow-dark)');
     window.localStorage.setItem('selected-transparent-panel', 'var(--transparent-panel-dark)');
     window.localStorage.setItem('selected-border-highlight', 'var(--border-highlight-dark)');
+    window.localStorage.setItem('selected-nav-bg-color', 'var(--nav-bg-color-dark)');
     window.localStorage.setItem('selected-nav-btn-icon-color', '#fff');
     window.localStorage.setItem('selected-logo-color', 'icon/groud-logo-white.svg');
 }
@@ -159,6 +164,7 @@ let setAmoledTheme = () =>{
     root.style.setProperty('--std-box-shadow', 'var(--std-box-shadow-amoled)');
     root.style.setProperty('--transparent-panel', 'var(--transparent-panel-amoled)');
     root.style.setProperty('--border-highlight', 'var(--border-highlight-amoled)');
+    root.style.setProperty('--nav-bg-color', 'var(--nav-bg-color-dark)');
     root.style.setProperty('--nav-btn-icon-color', '#fff');
     setLogoColor("icon/groud-logo-white.svg");
 };
@@ -173,6 +179,7 @@ let setAmoledThemeCookies = () =>{
     window.localStorage.setItem('selected-std-box-shadow', 'var(--std-box-shadow-amoled)');
     window.localStorage.setItem('selected-transparent-panel', 'var(--transparent-panel-amoled)');
     window.localStorage.setItem('selected-border-highlight', 'var(--border-highlight-amoled)');
+    window.localStorage.setItem('selected-nav-bg-color', 'var(--nav-bg-color-dark)');
     window.localStorage.setItem('selected-nav-btn-icon-color', '#fff');
     window.localStorage.setItem('selected-logo-color', 'icon/groud-logo-white.svg');
 }
