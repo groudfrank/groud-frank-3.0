@@ -75,9 +75,8 @@ body{
     --heading-txt-ms: 5.5rem;
     --heading-txt-sm: 3rem;
     --heading-txt-xsm: 1.9rem;
-    --canvas-img-width: 70%;
-    --canvas-img-height-percentage: 
-    --icon-wrapper-sq-m: 7rem;
+    --canvas-img-width: 70%; 
+    --icon-wrapper-sq-m: 6rem;
 }
 
 ::-webkit-scrollbar {
@@ -846,7 +845,7 @@ width: 100%;
 }
 
 .theme-icon-wrapper i{
-    font-size: 5rem;
+    font-size: 4rem;
     color: var(--accent-color-primary);
     transition-property: transform;
     transition-duration: 0.3s;

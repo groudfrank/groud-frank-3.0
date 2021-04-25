@@ -158,6 +158,7 @@ and (orientation: portrait) {
         --heading-txt-ms: 4rem;
         --heading-txt-xsm: 3rem;
         --canvas-img-width: 95%;
+        --icon-wrapper-sq-m: 8.5rem;
 
     }
 }
