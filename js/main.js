@@ -24,7 +24,7 @@ let audioObj;
 // console.log(typeof(metaTags));
 //  var metaTagsArray = Object.values(metaTags);
 
-audioObj = new Audio('audio/bell-terminal.ogg');
+audioObj = new Audio('audio/drip.ogg');
 
 let playNotification = () =>{
     audioObj.play();
