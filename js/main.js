@@ -17,11 +17,18 @@ let WorkCanvasImg = document.querySelectorAll('.work-canvas-img-wrapper img');
 let logo = document.querySelectorAll('.g-logo');
 let metaTags = document.getElementsByTagName('META');
 let NodeCheckerErrorMessage = 'does not exist on this HTML page. Just a warning. Carry on!';
+let audioObj;
 
 // localStorage.clear();
 
 // console.log(typeof(metaTags));
 //  var metaTagsArray = Object.values(metaTags);
+
+audioObj = new Audio('audio/bell-terminal.ogg');
+
+let playNotification = () =>{
+    audioObj.play();
+}
 
 var setBrowserColor = (value) =>{
     for(let i = 0; i < metaTags.length; i++){
@@ -173,16 +180,19 @@ let setAmoledThemeCookies = () =>{
 ThemeIconLight.addEventListener('click', ()=>{
     setLightTheme();
     setLightThemeCookies();
+    playNotification();
 });
 
 ThemeIconDark.addEventListener('click', ()=>{
     setDarkTheme();
     setDarkThemeCookies();
+    playNotification();
 });
 
 ThemeIconAmoled.addEventListener('click', ()=>{
     setAmoledTheme();
     setAmoledThemeCookies();
+    playNotification();
 });
 
 var fadeInNavMenu = () => {
@@ -241,7 +251,8 @@ ColorBar.forEach((el)=>{
         root.style.setProperty('--accent-color-primary', color);
 
         setBrowserColor(color);
-        window.localStorage.setItem('mobile-browser-ui-color', color)
+        window.localStorage.setItem('mobile-browser-ui-color', color);
+        playNotification();
     })
 });
  
