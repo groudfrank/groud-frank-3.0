@@ -173,6 +173,14 @@ and (orientation: landscape) {
 }
 
 /*()||||||+++++NAVIGATION BUTTON+++++|||||()*/
+/* PORTRAIT: HD + QHD Phablet(should cover tall aspect ratios also) */
+@media only screen 
+and (max-width: 500px) 
+and (orientation: portrait) {
+    #nav-menu-link-wrapper{
+        margin-bottom: 8rem;
+    }
+}
 
 /* PORTRAIT: HD + QHD Phablet(should cover tall aspect ratios also) */
 @media only screen 
@@ -180,9 +188,19 @@ and (max-width: 500px)
 and (orientation: portrait) {
     .nav-bg-handler{
         color: var(--txt-color);
-        font-weight: bold;
         background: var(--nav-bg-color);
-        backdrop-filter: blur(10px);
+        backdrop-filter: blur(14px);
+    }
+}
+
+/* LANDSCAPE: HD + QHD Phablet(should cover tall aspect ratios also) */
+@media only screen 
+and (max-width: 900px) 
+and (orientation: landscape) {
+    .nav-bg-handler{
+        color: var(--txt-color);
+        background: var(--nav-bg-color);
+        backdrop-filter: blur(14px);
     }
 }
 
@@ -192,6 +210,15 @@ and (max-width: 500px)
 and (orientation: portrait) {
     #nav-contact-info h1{
         color: var(--txt-color);
+    }
+}
+
+/* LANDSCAPE: HD + QHD Phablet(should cover tall aspect ratios also) */
+@media only screen 
+and (max-width: 900px) 
+and (orientation: landscape) {
+    .hover-highlightable-nav-menu::after{
+        background: var(--txt-color);
     }
 }
 
@@ -341,18 +368,18 @@ and (orientation: portrait) {
 and (max-width: 500px) 
 and (orientation: portrait) {
     #nav-menu{
-        padding: 60% 1.9rem 4rem 4rem;
+        padding: 70% 1.9rem 4rem 4rem;
     }
 }
 
-/* PORTRAIT: Small phones like iPhone SE */
-/* @media only screen 
-and (max-width: 400px) 
+/* PORTRAIT: Small phones like iPhone SE (350px)*/
+@media only screen 
+and (max-width: 350px) 
 and (orientation: portrait) {
     #nav-menu{
-        padding: 8rem 2rem 1rem 2rem;
+        padding: 50% 2rem 1rem 2rem;
     }
-} */
+}
 
 /* LANDSCAPE: HD + QHD Phablet(should cover tall aspect ratios also) */
 @media only screen 
