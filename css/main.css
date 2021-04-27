@@ -50,7 +50,8 @@ body{
     --img-frame-color-amoled: hsl(0, 0%, 20%);
     --img-frame-color: var(--bg-color-dark-alt);
     --card-frame-light: solid 0.2rem hsl(0, 0%, 93%);
-    --card-frame-dark:  solid 0.2rem hsl(207, 32%, 11%);
+    /* --card-frame-dark:  solid 0.2rem hsl(207, 32%, 11%); */
+    --card-frame-dark:  solid 0.2rem hsl(207, 32%, 20%);
     --card-frame-amoled: solid 0.2rem hsl(212, 12%, 21%);
     --card-frame: solid 0.2rem hsl(212, 12%, 21%);
     --border-highlight-light: solid 0.1rem hsla(0, 0%, 0%, 0.1);
@@ -77,12 +78,6 @@ body{
     --heading-txt-xsm: 1.9rem;
     --canvas-img-width: 70%; 
     --icon-wrapper-sq-m: 6rem;
-    /* --nav-txt-color-dark: hsl(0, 0%, 33%);
-    --nav-txt-color-darker: hsl(0, 0%, 7%);
-    --nav-txt-color-light: hsl(0, 0%, 75%);
-    --nav-txt-color-lighter: hsl(210, 4%, 82%);
-    --nav-txt-color: var(--txt-color-lighter); */
-    /* --nav-bg-color-dark: hsla(210deg, 30%, 8%, 0.55); */
     --nav-bg-color-dark: hsla(0, 0%, 0%, 0.6);
     --nav-bg-color-light: hsla(0deg, 0%, 100%, 0.55);
     --nav-bg-color: var(--nav-bg-color-dark);
@@ -281,7 +276,7 @@ section{
     right: 3.5rem;
     box-shadow: var(--std-box-shadow);
     overflow-x: hidden;
-    border-radius: var(--border-radius-sm);
+    /* border-radius: var(--border-radius-sm); */
 }
 
 #nav-menu{
