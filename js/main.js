@@ -17,12 +17,19 @@ let WorkCanvasImg = document.querySelectorAll('.work-canvas-img-wrapper img');
 let logo = document.querySelectorAll('.g-logo');
 let metaTags = document.getElementsByTagName('META');
 let NodeCheckerErrorMessage = 'does not exist on this HTML page. Just a warning. Carry on!';
+let animatableElements = document.querySelectorAll('.animatable');
 let audioObj;
 
 // localStorage.clear();
 
 // console.log(typeof(metaTags));
 //  var metaTagsArray = Object.values(metaTags);
+
+let addAnimation = () =>{
+    animatableElements.forEach((el) =>{
+        el.classList.toggle('animate');
+    });
+}
 
 audioObj = new Audio('audio/drip.ogg');
 
@@ -218,6 +225,7 @@ NavMenuBtnWrapper.addEventListener('click', () =>{
     if(NavMenuWrapper.classList.contains('hidden')){
         // Fades in the navigation bar
         fadeInNavMenu();
+        addAnimation();
 
         // Transitions the navigation menu lines to an X.
         if(NavMenuBtnLineTop.classList.contains('off-state')){
@@ -234,6 +242,7 @@ NavMenuBtnWrapper.addEventListener('click', () =>{
     } else{
         // Fades out the navigation bar
         fadeOutNavMenu();
+        addAnimation();
 
         if(NavMenuBtnLineTop.classList.contains('off-state') === false){
             NavMenuBtnLineTop.classList.add('off-state');

@@ -189,7 +189,7 @@ and (orientation: portrait) {
     .nav-bg-handler{
         color: var(--txt-color);
         background: var(--nav-bg-color);
-        backdrop-filter: blur(19px);
+        backdrop-filter: blur(14px);
     }
 }
 
