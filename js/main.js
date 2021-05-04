@@ -286,6 +286,7 @@ function clickHandler(e) {
 
   // Fades out the navigation bar
   fadeOutNavMenu();
+  addAnimation();
 
   if(NavMenuBtnLineTop.classList.contains('off-state') === false){
       NavMenuBtnLineTop.classList.add('off-state');
