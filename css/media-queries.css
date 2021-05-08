@@ -177,6 +177,16 @@ and (orientation: landscape) {
 @media only screen 
 and (max-width: 500px) 
 and (orientation: portrait) {
+    #nav-menu-btn .top-nav-btn-icon-transition{
+        margin: -0.9rem -0.1rem;
+    }
+}
+
+/*()||||||+++++NAVIGATION BUTTON+++++|||||()*/
+/* PORTRAIT: HD + QHD Phablet(should cover tall aspect ratios also) */
+@media only screen 
+and (max-width: 500px) 
+and (orientation: portrait) {
     #nav-menu-link-wrapper{
         margin-bottom: 8rem;
     }
@@ -237,7 +247,7 @@ and (orientation: portrait) {
 and (max-width: 500px) 
 and (orientation: portrait) {
     #nav-menu-btn-wrapper{
-        top: 3rem;
+        top: 4rem;
         right: 0rem;
         left: unset;
         margin-right: 3rem;
@@ -268,10 +278,10 @@ and (orientation: portrait) {
 and (max-width: 500px) 
 and (orientation: portrait) {
     .nav-menu-btn-lines{
-        width: 5.5rem;
-        height: 0.3rem;
+        width: 6.5rem;
+        height: 0.6rem;
         background-color: var(--bg-color-light);
-        /* margin: 0.7rem 0rem; */
+        margin: 0.7rem 0rem;
     }
 }
 
@@ -619,7 +629,7 @@ and (orientation: portrait){
 and (max-width: 400px) 
 and (orientation: portrait) {
     .customizations-btn-wrapper{
-        width: 95%;
+        width: 86%;
         padding-left: 0.5rem;
         padding-right: 0.5rem;
         margin-left: 0.5rem;
