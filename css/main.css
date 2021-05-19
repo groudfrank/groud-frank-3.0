@@ -235,14 +235,14 @@ section{
 
 #nav-menu-btn-line-top{
     background-color: var(--nav-btn-icon-color);
-    transition-property: background-color, width, margin, transform;
+    transition-property: width, margin, transform;
     transition-duration: 0.16s;
     transition-timing-function: ease-in;
 }
 
 #nav-menu-btn-line-bottom{
     background-color: var(--nav-btn-icon-color);
-    transition-property: background-color, width, margin, transform;
+    transition-property: width, margin, transform;
     transition-duration: 0.16s;
     transition-delay: 0.16s;
 }
