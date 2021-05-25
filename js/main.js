@@ -32,7 +32,7 @@ let addAnimation = () =>{
 }
 
 audioObj = new Audio('audio/drip.ogg');
-audioObj.volume = 0.09;
+audioObj.volume = 0.04;
 
 let playNotification = () =>{
     audioObj.play();
