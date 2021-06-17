@@ -126,6 +126,7 @@ p a::after{
     left: 1rem;
     right: 0rem;
     opacity: 0.35;
+    border-radius: 0.3rem;
     background-color: var(--accent-color-primary);
     transition-property: height, left;
     transition-duration: 0.3s;
@@ -327,6 +328,7 @@ section{
     content: '';
     width: 0%;
     height: 0.4rem;
+    border-radius: 0.3rem;
     background-color: #fff;
     transition-property: width;
     transition-duration: 0.3s;
@@ -912,19 +914,26 @@ width: 100%;
 .work-canvas-img-wrapper{
     position: relative;
     width: var(--canvas-img-width);
+    border-radius: var(--border-radius-m);
     height: calc(var(--canvas-img-width) * 0.73);
+    overflow: hidden;
 }
 
 .work-canvas-img-wrapper img{
     position: relative;
     z-index: 2;
-    /* width: 110.2rem;
-    height: 80.4rem; */
     width: 100%;
     height: 100%;
     filter: grayscale(1);
     box-shadow: 0 10px 15px -3px rgba(0,0,0,.2), 0 4px 6px -2px rgba(0,0,0,.1);
-    border-radius: var(--border-radius-m);
+    /* border-radius: var(--border-radius-m); */
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.4s;
+    transition-property: transform;
+}
+
+.work-canvas-img-wrapper:hover img{
+    transform: scale(1.03);
 }
 
 .work-canvas-img-link{
