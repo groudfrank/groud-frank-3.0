@@ -1,3 +1,5 @@
+'use strict'
+
 document.addEventListener("DOMContentLoaded", function(){
 
 let root = document.querySelector(':root');
