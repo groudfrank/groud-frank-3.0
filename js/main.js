@@ -10,7 +10,7 @@ let NavMenuBtnLineTop = document.getElementById('nav-menu-btn-line-top');
 let NavMenuBtnLineBottom = document.getElementById('nav-menu-btn-line-bottom');
 let NavMenuLabel = document.getElementById('nav-menu-label');
 let NavMenuLinks = document.querySelectorAll('.nav-menu-site-link a');
-let ColorBar = document.querySelectorAll('.color-bar');
+let colorBtn = document.querySelectorAll('.color-btn');
 let ThemeIconLight = document.getElementById('theme-icon-light');
 let ThemeIconDark = document.getElementById('theme-icon-dark');
 let ThemeIconAmoled = document.getElementById('theme-icon-amoled');
@@ -262,7 +262,7 @@ NavMenuBtnWrapper.addEventListener('click', () =>{
     }
 });
 
-ColorBar.forEach((el)=>{
+colorBtn.forEach((el)=>{
     el.addEventListener('click', () =>{
         let styles = getComputedStyle(el);
         let color = styles.backgroundColor;

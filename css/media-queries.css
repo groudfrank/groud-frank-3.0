@@ -601,7 +601,7 @@ and (orientation: portrait) {
 @media only screen 
 and (max-width: 500px) 
 and (orientation: portrait) {
-    .color-bar{
+    .color-btn{
         width: 8rem;
         height: 8rem
     }
@@ -611,7 +611,7 @@ and (orientation: portrait) {
 /* @media only screen 
 and (max-width: 400px) 
 and (orientation: portrait) {
-    .color-bar{
+    .color-btn{
         width: 12rem;
     }
 } */
