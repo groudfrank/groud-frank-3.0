@@ -33,9 +33,11 @@ body{
     --txt-color-light: hsl(0, 0%, 75%);
     --txt-color-lighter: hsl(210, 4%, 82%);
     --txt-color: var(--txt-color-lighter);
-    --bg-color-light:hsl(0, 33%, 99%);
+    /* --bg-color-light:hsl(0, 33%, 99%); */
+    --bg-color-light: hsl(0deg 0% 98%);
     --bg-color-light-alt: hsl(0, 0%, 100%);
-    --bg-color-light-contrast:  hsl(0, 5%, 96%);
+    /* --bg-color-light-contrast:  hsl(0, 5%, 96%); */
+    --bg-color-light-contrast: hsl(0, 5%, 93%);
     --bg-color-dark: hsl(207, 56%, 6%);
     --bg-color-dark-contrast: hsl(207, 52%, 12%);
     --bg-color-dark-alt:  hsl(207, 56%, 9%);
@@ -49,7 +51,8 @@ body{
     --img-frame-color-dark: hsl(207, 39%, 9%);
     --img-frame-color-amoled: hsl(0, 0%, 20%);
     --img-frame-color: var(--bg-color-dark-alt);
-    --card-frame-light: solid 0.2rem hsl(0, 0%, 93%);
+    /* --card-frame-light: solid 0.2rem hsl(0, 0%, 93%); */
+    --card-frame-light: none;
     --card-frame-dark: none;
     --card-frame-amoled: solid 0.2rem hsl(212, 12%, 21%);
     --card-frame: var(--card-frame-dark);
