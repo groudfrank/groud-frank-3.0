@@ -96,10 +96,10 @@ ParagraphScaler.forEach((el)=>{
     }
 })()
 
-window.addEventListener('resize', () =>{
-    WindowWidth = innerWidth;
-    WindowHeight = innerHeight;
-})
+// window.addEventListener('resize', () =>{
+//     WindowWidth = innerWidth;
+//     WindowHeight = innerHeight;
+// })
 
 // LIGHT THEME SETTERS
 let setLightTheme = () =>{

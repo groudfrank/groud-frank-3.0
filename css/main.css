@@ -480,6 +480,10 @@ width: 100%;
     font-size: 3.3rem;
 }
 
+.color-btn-wrapper{
+    display: flex;
+}
+
 .color-btn{
     display: flex;
     justify-content: center;
