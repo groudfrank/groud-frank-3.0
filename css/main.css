@@ -39,7 +39,7 @@ body{
     /* --bg-color-light-contrast:  hsl(0, 5%, 96%); */
     --bg-color-light-contrast: hsl(0, 5%, 93%);
     --bg-color-dark: hsl(207, 56%, 6%);
-    --bg-color-dark-contrast: hsl(207, 52%, 12%);
+    --bg-color-dark-contrast: hsl(207, 52%, 13%);
     --bg-color-dark-alt:  hsl(207, 56%, 9%);
     --bg-color-amoled: hsl(0, 0%, 0%);
     --bg-color-amoled-contrast: hsl(0, 0%, 7%);
@@ -48,7 +48,7 @@ body{
     --bg-color-contrast: var(--bg-color-dark-contrast);
     --bg-color-alt: var(--bg-color-dark-alt);
     --img-frame-color-light: hsl(0, 0%, 93%);
-    --img-frame-color-dark: hsl(207, 39%, 9%);
+    --img-frame-color-dark: hsl(207, 39%, 15%);
     --img-frame-color-amoled: hsl(0, 0%, 20%);
     --img-frame-color: var(--bg-color-dark-alt);
     /* --card-frame-light: solid 0.2rem hsl(0, 0%, 93%); */
@@ -280,7 +280,7 @@ section{
     right: 3.5rem;
     box-shadow: var(--std-box-shadow);
     overflow-x: hidden;
-    /* border-radius: var(--border-radius-sm); */
+    border-radius: var(--border-radius-m);
 }
 
 #nav-menu{
@@ -438,8 +438,8 @@ width: 100%;
     margin: 0rem 4rem 6rem 0rem;
     border: var(--card-frame);
     border-radius: var(--border-radius-m);
-    /* background-image: linear-gradient(to right, var(--bg-color),var(--bg-color-alt)); */
-    background-image: linear-gradient(to right, var(--bg-color-alt),var(--bg-color-alt));
+    background-image: linear-gradient(to right, var(--bg-color),var(--bg-color-alt));
+    /* background-image: linear-gradient(to right, var(--bg-color-alt),var(--bg-color-alt)); */
     box-shadow: var(--std-box-shadow);
 }
 
@@ -455,12 +455,13 @@ width: 100%;
 
 .customizations-btn-wrapper form select{
     font-size: 1.75rem;
+    text-align: center;
     color: var(--accent-color-primary);
     width: 20rem;
     height: 4rem;
     background-color: var(--bg-color-contrast);
     border: var(--accent-color-primary) solid 0.2rem;
-    border-radius: var(--border-radius-xsm);
+    border-radius: var(--border-radius-m);
     margin: 0rem 5rem 5rem 5rem;
 }
 
@@ -673,7 +674,7 @@ width: 100%;
     padding: 2rem;
     margin: 0rem auto;
     border: var(--card-frame);
-    border-radius: var(--border-radius-sm);
+    border-radius: var(--border-radius-m);
     background-color: var(--bg-color-contrast);
 }
 
@@ -785,7 +786,7 @@ width: 100%;
     margin: 0.5rem 0rem 2rem 0rem;
     background-color: var(--bg-color-contrast);
     border: solid 2px var(--accent-color-primary);
-    border-radius: 0.5rem;
+    border-radius: var(--border-radius-m);
     transition-property: height;
     transition-duration: 0.3s;
     transition-timing-function: var(--bouncy-trans);
@@ -806,7 +807,7 @@ width: 100%;
     margin: 1rem 0rem;
     background-color: var(--accent-color-primary);
     border: unset;
-    border-radius: 0.5rem;
+    border-radius: var(--border-radius-m);
 }
 
 #exibition-form input[type=submit]:hover{
@@ -829,7 +830,7 @@ width: 100%;
     padding: 2rem;
     margin: 0rem 3rem 5rem 1rem;
     border: var(--card-frame);
-    border-radius: var(--border-radius-sm);
+    border-radius: var(--border-radius-m);
     background-color: var(--bg-color-contrast);
 }
 
@@ -891,7 +892,7 @@ width: 100%;
     min-height: 100rem;
     margin: 2rem 2rem 13rem 2rem;
     border: var(--card-frame);
-    border-radius: var(--border-radius-sm);
+    border-radius: var(--border-radius-m);
     box-shadow: var(--std-box-shadow);
     background-color: var(--bg-color);
     background-image: linear-gradient(to right, var(--bg-color),var(--bg-color-alt));
