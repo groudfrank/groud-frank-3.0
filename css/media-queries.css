@@ -642,6 +642,7 @@ and (orientation: portrait) {
 and (max-width: 500px) 
 and (orientation: portrait) {
     .customizations-btn-wrapper form select{
+        font-size: 3.2rem;
         width: 40rem;
         height: 7.5rem;
     }

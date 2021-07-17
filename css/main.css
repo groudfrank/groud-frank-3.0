@@ -438,8 +438,8 @@ width: 100%;
     margin: 0rem 4rem 6rem 0rem;
     border: var(--card-frame);
     border-radius: var(--border-radius-m);
-    background-image: linear-gradient(to right, var(--bg-color),var(--bg-color-alt));
-    /* background-image: linear-gradient(to right, var(--bg-color-alt),var(--bg-color-alt)); */
+    /* background-image: linear-gradient(to right, var(--bg-color),var(--bg-color-alt)); */
+    background-image: linear-gradient(to right, var(--bg-color-alt),var(--bg-color-alt));
     box-shadow: var(--std-box-shadow);
 }
 
