@@ -297,14 +297,6 @@ and (orientation: portrait){
         }
     }
 
-/*PORTRAIT: Smaller tablets e.g. Ipad*/
-/* @media (max-width: 800px)
-and (orientation: portrait){
-    #nav-menu-wrapper {
-    width: 44rem;
-        }
-    } */
-
 /* PORTRAIT: HD + QHD Phablet(should cover tall aspect ratios also) */
 @media only screen 
 and (max-width: 500px) 
@@ -1190,6 +1182,15 @@ and (max-width: 500px)
 and (orientation: portrait) {
     .nav-menu-elements-scaler{
         font-size: 10px;
+    }
+}
+
+/* PORTRAIT: HD + QHD Phablet(should cover tall aspect ratios also) */
+@media only screen 
+and (max-width: 500px) 
+and (orientation: portrait) {
+    h1 {
+        font-size: 2.7rem;
     }
 }
 
