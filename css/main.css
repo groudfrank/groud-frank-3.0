@@ -779,7 +779,7 @@ width: 100%;
     color: var(--accent-color-primary);
     width: 45rem;
     height: 4rem;
-    padding-left: 0.5rem;
+    padding-left: 1.3rem;
     margin: 0.5rem 0rem 2rem 0rem;
     background-color: var(--bg-color-contrast);
     border: solid 2px var(--accent-color-primary);
