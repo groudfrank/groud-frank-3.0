@@ -966,9 +966,10 @@ width: 100%;
     z-index: 2;
     margin: 4rem auto 6rem auto;
     bottom: -2%;
+    right: 4%;
     width: 31%;
     /* max-height: 21.3rem; */
-    right: 4%;
+    
     color: var(--txt-color);
     backdrop-filter: blur(20px) saturate(180%);
     font-weight: 300;
