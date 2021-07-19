@@ -35,7 +35,8 @@ body{
     --txt-color: var(--txt-color-lighter);
     --bg-color-light: hsl(0deg 0% 98%);
     --bg-color-light-alt: hsl(0, 0%, 100%);
-    --bg-color-light-contrast: hsl(0, 5%, 93%);
+    /* --bg-color-light-contrast: hsl(0, 5%, 93%); */
+    --bg-color-light-contrast: hsl(0, 5%, 100%);
     --bg-color-dark: hsl(207, 56%, 6%);
     --bg-color-dark-contrast: hsl(207, 52%, 13%);
     --bg-color-dark-alt:  hsl(207, 56%, 9%);
@@ -63,10 +64,14 @@ body{
     --transparent-panel-amoled:hsla(0, 0%, 0%, 0.6);
     --transparent-panel: var(--transparent-panel-dark);
     --ripple-size-small: 1.1rem;
-    --std-box-shadow-dark: 0 5.2rem 7.4rem hsla(0, 0%, 0%, 0.8);
-    --std-box-shadow-light: 0 5.2rem 7.4rem hsla(0, 0%, 0%, 0.125);
-    --std-box-shadow-amoled: none;
-    --std-box-shadow: var(--std-box-shadow-dark);
+    --box-shadow-high-dark: 0 5.2rem 7.4rem hsla(0, 0%, 0%, 0.8);
+    --box-shadow-high-light: 0 5.2rem 7.4rem hsla(0, 0%, 0%, 0.125);
+    --box-shadow-high-amoled: none;
+    --box-shadow-high: var(--box-shadow-high-dark);
+    --box-shadow-low-dark: 0 10px 25px -10px rgb(0 0 0 / 100%);
+    --box-shadow-low-light: 0 10px 25px -10px rgb(0 0 0 / 33%);
+    --box-shadow-low-amoled: none;
+    --box-shadow-low: var(--box-shadow-low-dark);
     --border-radius-m: 2rem;
     --border-radius-sm: 1rem;
     --border-radius-xsm: 0.5rem;
@@ -275,7 +280,7 @@ section{
     z-index: 10;
     top: 2rem;
     right: 3.5rem;
-    box-shadow: var(--std-box-shadow);
+    box-shadow: var(--box-shadow-high);
     overflow-x: hidden;
     border-radius: var(--border-radius-m);
 }
@@ -437,7 +442,7 @@ width: 100%;
     border-radius: var(--border-radius-m);
     /* background-image: linear-gradient(to right, var(--bg-color),var(--bg-color-alt)); */
     background-image: linear-gradient(to right, var(--bg-color-alt),var(--bg-color-alt));
-    box-shadow: var(--std-box-shadow);
+    box-shadow: var(--box-shadow-high);
 }
 
 .customizations-btn-wrapper h1{
@@ -460,6 +465,7 @@ width: 100%;
     border: var(--accent-color-primary) solid 0.2rem;
     border-radius: var(--border-radius-m);
     margin: 0rem 5rem 5rem 5rem;
+    box-shadow: var(--box-shadow-low);
 }
 
 #option-small{
@@ -673,6 +679,7 @@ width: 100%;
     border: var(--card-frame);
     border-radius: var(--border-radius-m);
     background-color: var(--bg-color-contrast);
+    box-shadow: var(--box-shadow-low);
 }
 
 /* .exibition-social-icons-wrapper:hover i{
@@ -784,6 +791,7 @@ width: 100%;
     background-color: var(--bg-color-contrast);
     border: solid 2px var(--accent-color-primary);
     border-radius: var(--border-radius-m);
+    box-shadow: var(--box-shadow-low);
     transition-property: height;
     transition-duration: 0.3s;
     transition-timing-function: var(--bouncy-trans);
@@ -829,6 +837,7 @@ width: 100%;
     border: var(--card-frame);
     border-radius: var(--border-radius-m);
     background-color: var(--bg-color-contrast);
+    box-shadow: var(--box-shadow-low);
 }
 
 .theme-icon-wrapper::after{
@@ -891,7 +900,7 @@ width: 100%;
     margin: 2rem 2rem 13rem 2rem;
     border: var(--card-frame);
     border-radius: var(--border-radius-m);
-    box-shadow: var(--std-box-shadow);
+    box-shadow: var(--box-shadow-high);
     background-color: var(--bg-color);
     background-image: linear-gradient(to right, var(--bg-color),var(--bg-color-alt));
     overflow: hidden;
@@ -961,11 +970,12 @@ width: 100%;
     color: var(--txt-color);
     backdrop-filter: blur(20px) saturate(180%);
     font-weight: 600;
-    box-shadow: var(--std-box-shadow);
+    box-shadow: var(--box-shadow-high);
     padding: 2rem 4rem;
     background: var(--transparent-panel);
     border: var(--border-highlight);
     border-radius: var(--border-radius-m);
+    box-shadow: var(--box-shadow-low);
 }
 
 .contact-wrapper{
@@ -1067,7 +1077,7 @@ width: 100%;
     width: 50rem;
     height: 50rem;
     /* border: solid 0.6rem var(--img-frame-color); */
-    box-shadow: var(--std-box-shadow);
+    box-shadow: var(--box-shadow-high);
     border-radius: inherit;
 }
 
@@ -1116,7 +1126,7 @@ width: 100%;
     width: 37rem;
     height: 37rem;
     border: solid 0.6rem var(--img-frame-color);
-    box-shadow: var(--std-box-shadow);
+    box-shadow: var(--box-shadow-high);
     border-radius: var(--border-radius-m);
 }
 
