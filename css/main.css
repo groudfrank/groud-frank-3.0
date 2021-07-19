@@ -31,7 +31,7 @@ body{
     --txt-color-dark: 	hsl(57, 29%, 13%);
     --txt-color-darker: hsl(0, 0%, 7%);
     --txt-color-light: hsl(0, 0%, 75%);
-    --txt-color-lighter: hsl(210, 4%, 82%);
+    --txt-color-lighter: hsl(210, 4%, 91%);
     --txt-color: var(--txt-color-lighter);
     --bg-color-light: hsl(0deg 0% 98%);
     --bg-color-light-alt: hsl(0, 0%, 100%);
@@ -69,7 +69,7 @@ body{
     --box-shadow-high-amoled: none;
     --box-shadow-high: var(--box-shadow-high-dark);
     --box-shadow-low-dark: 0 10px 25px -10px rgb(0 0 0 / 100%);
-    --box-shadow-low-light: 0 10px 25px -10px rgb(0 0 0 / 33%);
+    --box-shadow-low-light: 0 10px 25px -10px rgb(0 0 0 / 43%);
     --box-shadow-low-amoled: none;
     --box-shadow-low: var(--box-shadow-low-dark);
     --border-radius-m: 2rem;
@@ -80,7 +80,8 @@ body{
     --heading-txt-ms: 5.5rem;
     --heading-txt-sm: 3rem;
     --heading-txt-xsm: 1.9rem;
-    --canvas-img-width: 70%; 
+    /* --canvas-img-width: 70%;  */
+    --canvas-img-width: 63%; 
     --icon-wrapper-sq-m: 6rem;
     --nav-bg-color-dark: hsla(0, 0%, 0%, 0.4);
     --nav-bg-color-light: hsla(0deg, 0%, 100%, 0.55);
@@ -894,8 +895,7 @@ width: 100%;
     justify-content: center;
     align-items: center;
     position: relative;
-    width: 160rem;
-    min-height: 100rem;
+    width: 66%;
     padding-bottom: 15rem;
     margin: 2rem 2rem 13rem 2rem;
     border: var(--card-frame);
@@ -909,12 +909,13 @@ width: 100%;
 .work-canvas::before{
     content: '';
     position: absolute;
-    bottom: 0rem;
-    right: -62%;
-    width: 100%;
-    height: 100%;
-    border: solid 12rem var(--accent-color-primary);
-    border-radius: 50%;
+    top: 27%;
+    bottom: -43%;
+    right: -1%;
+    width: 10%;
+    height: 84%;
+    border: solid 14.5rem var(--accent-color-primary);
+    transform: rotate(47deg);
 }
 
 .work-canvas::after{
@@ -965,18 +966,34 @@ width: 100%;
     z-index: 2;
     margin: 4rem auto 6rem auto;
     bottom: -2%;
-    width: 26%;
-    right: 8%;
+    width: 31%;
+    /* max-height: 21.3rem; */
+    right: 4%;
     color: var(--txt-color);
     backdrop-filter: blur(20px) saturate(180%);
-    font-weight: 600;
-    box-shadow: var(--box-shadow-high);
+    font-weight: 300;
     padding: 2rem 4rem;
     background: var(--transparent-panel);
     border: var(--border-highlight);
     border-radius: var(--border-radius-m);
     box-shadow: var(--box-shadow-low);
 }
+
+/* .work-canvas p::after{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    content: 'G';
+    font-size: 6rem;
+    color: #fff;
+    position: absolute;
+    top: -7%;
+    right: -7%;
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    background-color: var(--accent-color-primary);
+} */
 
 .contact-wrapper{
     margin-bottom: 30rem;
