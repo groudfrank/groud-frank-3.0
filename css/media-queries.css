@@ -857,9 +857,7 @@ and (orientation: portrait) {
 and (max-width: 900px) 
 and (orientation: landscape) {
     .work-canvas-img-wrapper img{
-        width: 58rem;
-        height: 42rem;
-        transform: scale(0.9);
+        filter: unset;
     }
 } */
 

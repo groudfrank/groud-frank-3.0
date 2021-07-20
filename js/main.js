@@ -21,11 +21,16 @@ let metaTags = document.getElementsByTagName('META');
 let NodeCheckerErrorMessage = 'does not exist on this HTML page. Just a warning. Carry on!';
 let animatableElements = document.querySelectorAll('.animatable');
 let audioObj;
+let mobileUserAgent = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
 // localStorage.clear();
 
 // console.log(typeof(metaTags));
 //  var metaTagsArray = Object.values(metaTags);
+
+// if(window.innerHeight < window.innerWidth){
+//     alert("landscape");
+// }
 
 let addAnimation = () =>{
     animatableElements.forEach((el) =>{
@@ -355,16 +360,22 @@ var isInViewport = (target) => {
     );
 };
 
-window.addEventListener('scroll', () =>{
-    WorkCanvasImg.forEach(img =>{
-        if(isInViewport(img)){
-            img.classList.remove('animate-img-out');
-            img.classList.add('animate-img-in');
-        }else{
-            img.classList.remove('animate-img-in');
-            img.classList.add('animate-img-out');
-        }
+if((mobileUserAgent == true) && (window.innerHeight < window.innerWidth) ){
+    WorkCanvasImg.forEach((img) =>{
+        img.style.setProperty("filter", "none"  );
     });
-});
+} else{
+    window.addEventListener('scroll', () =>{
+        WorkCanvasImg.forEach(img =>{
+            if(isInViewport(img)){
+                img.classList.remove('animate-img-out');
+                img.classList.add('animate-img-in');
+            }else{
+                img.classList.remove('animate-img-in');
+                img.classList.add('animate-img-out');
+            }
+        });
+    });
+}
 
 }); //document
