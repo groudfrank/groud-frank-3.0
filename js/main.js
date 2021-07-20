@@ -72,7 +72,8 @@ ParagraphScaler.forEach((el)=>{
     root.style.setProperty('--bg-color-alt', window.localStorage.getItem('selected-bg-color-alt'));
     root.style.setProperty('--img-frame-color', window.localStorage.getItem('selected-img-frame-color'));
     root.style.setProperty('--card-frame', window.localStorage.getItem('selected-card-frame'));
-    root.style.setProperty('--std-box-shadow', window.localStorage.getItem('selected-std-box-shadow'));
+    root.style.setProperty('--box-shadow-high', window.localStorage.getItem('selected-box-shadow-high'));
+    root.style.setProperty('--box-shadow-low', window.localStorage.getItem('selected-box-shadow-low'));
     root.style.setProperty('--transparent-panel', window.localStorage.getItem('selected-transparent-panel'));
     root.style.setProperty('--border-highlight', window.localStorage.getItem('selected-border-highlight'));
     root.style.setProperty('--nav-bg-color', window.localStorage.getItem('selected-nav-bg-color'));
@@ -109,7 +110,8 @@ let setLightTheme = () =>{
     root.style.setProperty('--bg-color-alt', 'var(--bg-color-light-alt)');
     root.style.setProperty('--img-frame-color','var(--img-frame-color-light)');
     root.style.setProperty('--card-frame', 'var(--card-frame-light)');
-    root.style.setProperty('--std-box-shadow', 'var(--std-box-shadow-light)');
+    root.style.setProperty('--box-shadow-high', 'var(--box-shadow-high-light)');
+    root.style.setProperty('--box-shadow-low', 'var(--box-shadow-low-light)');
     root.style.setProperty('--transparent-panel', 'var(--transparent-panel-light)');
     root.style.setProperty('--border-highlight', 'var(--border-highlight-light)');
     root.style.setProperty('--nav-bg-color', 'var(--nav-bg-color-light)');
@@ -124,7 +126,8 @@ let setLightThemeCookies = () =>{
     window.localStorage.setItem('selected-bg-color-alt', 'var(--bg-color-light-alt)');
     window.localStorage.setItem('selected-img-frame-color', 'var(--img-frame-color-light)');
     window.localStorage.setItem('selected-card-frame', 'var(--card-frame-light)');
-    window.localStorage.setItem('selected-std-box-shadow', 'var(--std-box-shadow-light)');
+    window.localStorage.setItem('selected-box-shadow-high', 'var(--box-shadow-high-light)');
+    window.localStorage.setItem('selected-box-shadow-low', 'var(--box-shadow-low-light)');
     window.localStorage.setItem('selected-transparent-panel', 'var(--transparent-panel-light)');
     window.localStorage.setItem('selected-border-highlight', 'var(--border-highlight-light)');
     window.localStorage.setItem('selected-nav-bg-color', 'var(--nav-bg-color-light)');
@@ -140,7 +143,8 @@ let setDarkTheme = () =>{
     root.style.setProperty('--bg-color-alt', 'var(--bg-color-dark-alt)');
     root.style.setProperty('--img-frame-color', 'var(--img-frame-color-dark)');
     root.style.setProperty('--card-frame', 'var(--card-frame-dark)');
-    root.style.setProperty('--std-box-shadow', 'var(--std-box-shadow-dark)');
+    root.style.setProperty('--box-shadow-high', 'var(--box-shadow-high-dark)');
+    root.style.setProperty('--box-shadow-low', 'var(--box-shadow-low-dark)');
     root.style.setProperty('--transparent-panel', 'var(--transparent-panel-dark)');
     root.style.setProperty('--border-highlight', 'var(--border-highlight-dark)');
     root.style.setProperty('--nav-bg-color', 'var(--nav-bg-color-dark)');
@@ -155,7 +159,8 @@ let setDarkThemeCookies = () =>{
     window.localStorage.setItem('selected-bg-color-alt', 'var(--bg-color-dark-alt)');
     window.localStorage.setItem('selected-img-frame-color', 'var(--img-frame-color-dark)');
     window.localStorage.setItem('selected-card-frame', 'var(--card-frame-dark)');
-    window.localStorage.setItem('selected-std-box-shadow', 'var(--std-box-shadow-dark)');
+    window.localStorage.setItem('selected-box-shadow-high', 'var(--box-shadow-high-dark)');
+    window.localStorage.setItem('selected-box-shadow-low', 'var(--box-shadow-low-dark)');
     window.localStorage.setItem('selected-transparent-panel', 'var(--transparent-panel-dark)');
     window.localStorage.setItem('selected-border-highlight', 'var(--border-highlight-dark)');
     window.localStorage.setItem('selected-nav-bg-color', 'var(--nav-bg-color-dark)');
@@ -171,7 +176,8 @@ let setAmoledTheme = () =>{
     root.style.setProperty('--bg-color-alt', 'var(--bg-color-amoled-alt)');
     root.style.setProperty('--img-frame-color', 'var(--img-frame-color-amoled)');
     root.style.setProperty('--card-frame', 'var(--card-frame-amoled)');
-    root.style.setProperty('--std-box-shadow', 'var(--std-box-shadow-amoled)');
+    root.style.setProperty('--box-shadow-high', 'var(--box-shadow-high-amoled)');
+    root.style.setProperty('--box-shadow-low', 'var(--box-shadow-low-amoled)');
     root.style.setProperty('--transparent-panel', 'var(--transparent-panel-amoled)');
     root.style.setProperty('--border-highlight', 'var(--border-highlight-amoled)');
     root.style.setProperty('--nav-bg-color', 'var(--nav-bg-color-dark)');
@@ -186,7 +192,8 @@ let setAmoledThemeCookies = () =>{
     window.localStorage.setItem('selected-bg-color-alt', 'var(--bg-color-amoled-alt)');
     window.localStorage.setItem('selected-img-frame-color', 'var(--img-frame-color-amoled)');
     window.localStorage.setItem('selected-card-frame', 'var(--card-frame-amoled)');
-    window.localStorage.setItem('selected-std-box-shadow', 'var(--std-box-shadow-amoled)');
+    window.localStorage.setItem('selected-box-shadow-high', 'var(--box-shadow-high-amoled)');
+    window.localStorage.setItem('selected-box-shadow-low', 'var(--box-shadow-low-amoled)');
     window.localStorage.setItem('selected-transparent-panel', 'var(--transparent-panel-amoled)');
     window.localStorage.setItem('selected-border-highlight', 'var(--border-highlight-amoled)');
     window.localStorage.setItem('selected-nav-bg-color', 'var(--nav-bg-color-dark)');
