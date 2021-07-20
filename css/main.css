@@ -501,6 +501,7 @@ width: 100%;
     transition-property: transform;
     transition-duration: 0.2s;
     transition-timing-function: var(--bouncy-trans);
+    box-shadow: var(--box-shadow-low);
 }
 
 

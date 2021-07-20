@@ -360,11 +360,11 @@ var isInViewport = (target) => {
     );
 };
 
-if((mobileUserAgent == true) && (window.innerHeight < window.innerWidth) ){
+if((mobileUserAgent == true) && (window.innerHeight < window.innerWidth)){
     WorkCanvasImg.forEach((img) =>{
-        img.style.setProperty("filter", "none"  );
+        img.style.setProperty("filter", "none");
     });
-} else{
+} else if(mobileUserAgent == false){
     window.addEventListener('scroll', () =>{
         WorkCanvasImg.forEach(img =>{
             if(isInViewport(img)){
@@ -377,5 +377,14 @@ if((mobileUserAgent == true) && (window.innerHeight < window.innerWidth) ){
         });
     });
 }
+
+window.addEventListener('resize', function(){
+    if((mobileUserAgent == true) && (window.innerHeight < window.innerWidth)){
+        WorkCanvasImg.forEach((img) =>{
+            img.style.setProperty("filter", "none");
+            console.log("landscape");
+        });
+    }  
+});
 
 }); //document
