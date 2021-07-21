@@ -54,9 +54,9 @@ body{
     --card-frame-dark: none;
     --card-frame-amoled: solid 0.2rem hsl(212, 12%, 21%);
     --card-frame: var(--card-frame-dark);
-    --border-highlight-light: solid 0.2rem hsla(0, 0%, 0%, 0.1);
-    --border-highlight-dark: solid 0.2rem hsl(207, 32%, 11%);
-    --border-highlight-amoled: solid 0.2rem hsl(212, 12%, 21%);
+    --border-highlight-light: solid 0.1rem hsla(0, 0%, 0%, 0.1);
+    --border-highlight-dark: solid 0.1rem hsl(207, 32%, 11%);
+    --border-highlight-amoled: solid 0.1rem hsl(212, 12%, 21%);
     --border-highlight: var(--border-highlight-dark);
     --nav-btn-icon-color: hsl(0, 0%, 100%);
     --transparent-panel-light:hsla(0, 0%, 100%, 0.7);

@@ -159,6 +159,9 @@ and (orientation: portrait) {
         --heading-txt-xsm: 3rem;
         --canvas-img-width: 95%;
         --icon-wrapper-sq-m: 8.5rem;
+        --border-highlight-light: solid 0.23rem hsla(0, 0%, 0%, 0.1);
+        --border-highlight-dark: solid 0.23rem hsl(207, 32%, 11%);
+        --border-highlight-amoled: solid 0.23rem hsl(212, 13%, 53%);
 
     }
 }
