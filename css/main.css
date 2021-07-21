@@ -960,6 +960,8 @@ width: 100%;
     bottom: 0;
     left: 0;
     right: 0;
+    /*I still don't know why the z-index needs to be so high. I'll figure it out later*/
+    z-index: 3;
 }
 
 .work-canvas p{
