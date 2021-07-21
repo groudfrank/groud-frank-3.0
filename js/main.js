@@ -364,7 +364,7 @@ if((mobileUserAgent == true) && (window.innerHeight < window.innerWidth)){
     WorkCanvasImg.forEach((img) =>{
         img.style.setProperty("filter", "none");
     });
-} else if(mobileUserAgent == false){
+} else if((mobileUserAgent == false) || ((mobileUserAgent == true) && (window.innerHeight > window.innerWidth))){
     window.addEventListener('scroll', () =>{
         WorkCanvasImg.forEach(img =>{
             if(isInViewport(img)){
