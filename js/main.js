@@ -350,41 +350,41 @@ if(FontSizeSelector != null){
     console.log('FontSizeSelector ' + NodeCheckerErrorMessage);
 }
 
-var isInViewport = (target) => {
-    var bounding = target.getBoundingClientRect();
-    return (
-        bounding.top >= 0 &&
-        bounding.left >= 0 &&
-        bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        bounding.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
-};
+// var isInViewport = (target) => {
+//     var bounding = target.getBoundingClientRect();
+//     return (
+//         bounding.top >= 0 &&
+//         bounding.left >= 0 &&
+//         bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+//         bounding.right <= (window.innerWidth || document.documentElement.clientWidth)
+//     );
+// };
 
-if((mobileUserAgent == true) && (window.innerHeight < window.innerWidth)){
-    WorkCanvasImg.forEach((img) =>{
-        img.style.setProperty("filter", "none");
-    });
-} else if((mobileUserAgent == false) || ((mobileUserAgent == true) && (window.innerHeight > window.innerWidth))){
-    window.addEventListener('scroll', () =>{
-        WorkCanvasImg.forEach(img =>{
-            if(isInViewport(img)){
-                img.classList.remove('animate-img-out');
-                img.classList.add('animate-img-in');
-            }else{
-                img.classList.remove('animate-img-in');
-                img.classList.add('animate-img-out');
-            }
-        });
-    });
-}
+// if((mobileUserAgent == true) && (window.innerHeight < window.innerWidth)){
+//     WorkCanvasImg.forEach((img) =>{
+//         img.style.setProperty("filter", "none");
+//     });
+// } else if((mobileUserAgent == false) || ((mobileUserAgent == true) && (window.innerHeight > window.innerWidth))){
+//     window.addEventListener('scroll', () =>{
+//         WorkCanvasImg.forEach(img =>{
+//             if(isInViewport(img)){
+//                 img.classList.remove('animate-img-out');
+//                 img.classList.add('animate-img-in');
+//             }else{
+//                 img.classList.remove('animate-img-in');
+//                 img.classList.add('animate-img-out');
+//             }
+//         });
+//     });
+// }
 
-window.addEventListener('resize', function(){
-    if((mobileUserAgent == true) && (window.innerHeight < window.innerWidth)){
-        WorkCanvasImg.forEach((img) =>{
-            img.style.setProperty("filter", "none");
-            console.log("landscape");
-        });
-    }  
-});
+// window.addEventListener('resize', function(){
+//     if((mobileUserAgent == true) && (window.innerHeight < window.innerWidth)){
+//         WorkCanvasImg.forEach((img) =>{
+//             img.style.setProperty("filter", "none");
+//             console.log("landscape");
+//         });
+//     }  
+// });
 
 }); //document
