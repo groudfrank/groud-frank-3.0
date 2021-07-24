@@ -202,8 +202,8 @@ and (orientation: portrait) {
     .nav-bg-handler{
         color: var(--txt-color);
         background: var(--nav-bg-color);
-        /* backdrop-filter: blur(14px); */
         backdrop-filter: blur(20px) saturate(180%);
+        -webkit-backdrop-filter: blur(20px) saturate(180%);
     }
 }
 
@@ -214,8 +214,8 @@ and (orientation: landscape) {
     .nav-bg-handler{
         color: var(--txt-color);
         background: var(--nav-bg-color);
-        /* backdrop-filter: blur(14px); */
         backdrop-filter: blur(20px) saturate(180%);
+        -webkit-backdrop-filter: blur(20px) saturate(180%);
     }
 }
 
