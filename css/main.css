@@ -59,9 +59,9 @@ body{
     --border-highlight-amoled: solid 0.1rem hsl(212, 12%, 21%);
     --border-highlight: var(--border-highlight-dark);
     --nav-btn-icon-color: hsl(0, 0%, 100%);
-    --transparent-panel-light:hsla(0, 0%, 100%, 0.7);
-    --transparent-panel-dark:hsla(0, 0%, 0%, 0.6);
-    --transparent-panel-amoled:hsla(0, 0%, 0%, 0.6);
+    --transparent-panel-light:hsla(0, 0%, 100%, 0.74);
+    --transparent-panel-dark:hsla(0, 0%, 0%, 0.74);
+    --transparent-panel-amoled:hsla(0, 0%, 0%, 0.74);
     --transparent-panel: var(--transparent-panel-dark);
     --ripple-size-small: 1.1rem;
     --box-shadow-high-dark: 0 5.2rem 7.4rem hsla(0, 0%, 0%, 0.8);
