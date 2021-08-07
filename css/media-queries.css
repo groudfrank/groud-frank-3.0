@@ -1008,6 +1008,27 @@ and (orientation: landscape) {
     }
 }
 
+/*Pixelbook Go*/
+@media (aspect-ratio: 16/9) {
+#bio-txt {
+    width: 34%;
+}
+}
+
+/*M1 Macbook Air*/
+@media (aspect-ratio: 16/10) {
+#bio-txt {
+    width: 34%;
+}
+}
+
+/*OG Pixelbook*/
+@media (aspect-ratio: 3/2) {
+#bio-txt {
+    width: 37%;
+}
+}
+
 /*PORTRAIT: Super HiDPI tablets e.g. Ipad Pro Kindle Fire HD */
 @media (max-width: 1400px)
 and (orientation: portrait){
