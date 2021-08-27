@@ -1,76 +1,74 @@
-'use strict'
+'use strict';
 
-document.addEventListener("DOMContentLoaded", function(){
+document.addEventListener('DOMContentLoaded', function () {
+  let root = document.querySelector(':root');
+  let ParagraphScaler = document.querySelectorAll('.p-scaler');
+  let NavMenuBtnWrapper = document.getElementById('nav-menu-btn-wrapper');
+  let NavMenuWrapper = document.getElementById('nav-menu-wrapper');
+  let NavMenuBtnLineTop = document.getElementById('nav-menu-btn-line-top');
+  let NavMenuBtnLineBottom = document.getElementById('nav-menu-btn-line-bottom');
+  let NavMenuLabel = document.getElementById('nav-menu-label');
+  let NavMenuLinks = document.querySelectorAll('.nav-menu-site-link a');
+  let colorBtn = document.querySelectorAll('.color-btn');
+  let ThemeIconLight = document.getElementById('theme-icon-light');
+  let ThemeIconDark = document.getElementById('theme-icon-dark');
+  let ThemeIconAmoled = document.getElementById('theme-icon-amoled');
+  let FontSizeSelector = document.querySelector('.font-size-selector');
+  let WorkCanvasImg = document.querySelectorAll('.work-canvas-img-wrapper img');
+  let logo = document.querySelectorAll('.g-logo');
+  let metaTags = document.getElementsByTagName('META');
+  let NodeCheckerErrorMessage = 'does not exist on this HTML page. Just a warning. Carry on!';
+  let animatableElements = document.querySelectorAll('.animatable');
+  let audioObj;
+  let mobileUserAgent = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
-let root = document.querySelector(':root');
-let ParagraphScaler = document.querySelectorAll('.p-scaler');
-let NavMenuBtnWrapper = document.getElementById('nav-menu-btn-wrapper');
-let NavMenuWrapper = document.getElementById('nav-menu-wrapper');
-let NavMenuBtnLineTop = document.getElementById('nav-menu-btn-line-top');
-let NavMenuBtnLineBottom = document.getElementById('nav-menu-btn-line-bottom');
-let NavMenuLabel = document.getElementById('nav-menu-label');
-let NavMenuLinks = document.querySelectorAll('.nav-menu-site-link a');
-let colorBtn = document.querySelectorAll('.color-btn');
-let ThemeIconLight = document.getElementById('theme-icon-light');
-let ThemeIconDark = document.getElementById('theme-icon-dark');
-let ThemeIconAmoled = document.getElementById('theme-icon-amoled');
-let FontSizeSelector = document.querySelector('.font-size-selector');
-let WorkCanvasImg = document.querySelectorAll('.work-canvas-img-wrapper img');
-let logo = document.querySelectorAll('.g-logo');
-let metaTags = document.getElementsByTagName('META');
-let NodeCheckerErrorMessage = 'does not exist on this HTML page. Just a warning. Carry on!';
-let animatableElements = document.querySelectorAll('.animatable');
-let audioObj;
-let mobileUserAgent = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+  // localStorage.clear();
 
-// localStorage.clear();
+  // console.log(typeof(metaTags));
+  //  var metaTagsArray = Object.values(metaTags);
 
-// console.log(typeof(metaTags));
-//  var metaTagsArray = Object.values(metaTags);
+  // if(window.innerHeight < window.innerWidth){
+  //     alert("landscape");
+  // }
 
-// if(window.innerHeight < window.innerWidth){
-//     alert("landscape");
-// }
-
-let addAnimation = () =>{
-    animatableElements.forEach((el) =>{
-        el.classList.toggle('animate');
+  let addAnimation = () => {
+    animatableElements.forEach((el) => {
+      el.classList.toggle('animate');
     });
-}
+  };
 
-audioObj = new Audio('audio/drip.ogg');
-audioObj.volume = 0.04;
+  audioObj = new Audio('audio/drip.ogg');
+  audioObj.volume = 0.04;
 
-let playNotification = () =>{
+  let playNotification = () => {
     audioObj.play();
-}
+  };
 
-var setBrowserColor = (value) =>{
-    for(let i = 0; i < metaTags.length; i++){
-        if(metaTags[i].getAttribute('name') == 'theme-color'){
-            metaTags[i].setAttribute('content', value);
-        }
+  var setBrowserColor = (value) => {
+    for (let i = 0; i < metaTags.length; i++) {
+      if (metaTags[i].getAttribute('name') == 'theme-color') {
+        metaTags[i].setAttribute('content', value);
+      }
     }
-}
+  };
 
-/* This function has to be higher up and a biut out of place so that
+  /* This function has to be higher up and a biut out of place so that
  any IFFE that calls it will recognize it. */
-var setLogoColor = (url) =>{
-    logo.forEach((el) =>{
-        el.src = url;
+  var setLogoColor = (url) => {
+    logo.forEach((el) => {
+      el.src = url;
     });
-}
+  };
 
-// accent color persistance
-root.style.setProperty('--accent-color-primary', window.localStorage.getItem("selected-color"));
+  // accent color persistance
+  root.style.setProperty('--accent-color-primary', window.localStorage.getItem('selected-color'));
 
-// accent color persistance
-ParagraphScaler.forEach((el)=>{
-    el.style.fontSize = window.localStorage.getItem("selected-font-size");
-});
+  // accent color persistance
+  ParagraphScaler.forEach((el) => {
+    el.style.fontSize = window.localStorage.getItem('selected-font-size');
+  });
 
-
-(()=>{
+  (() => {
     root.style.setProperty('--txt-color', window.localStorage.getItem('selected-txt-color'));
     root.style.setProperty('--bg-color', window.localStorage.getItem('selected-bg-color'));
     root.style.setProperty('--bg-color-contrast', window.localStorage.getItem('selected-bg-color-contrast'));
@@ -88,32 +86,31 @@ ParagraphScaler.forEach((el)=>{
     or visits the site for the first time) and acts accordingly. If it has a value then it will pull that value and if it doesn't
     have a value it will set the default logo image for the website.Without the if statement, no image shows up
     */
-    if(localStorage.getItem('selected-logo-color') === null){
-        setLogoColor("icon/groud-logo-white.svg");
+    if (localStorage.getItem('selected-logo-color') === null) {
+      setLogoColor('icon/groud-logo-white.svg');
     } else {
-        setLogoColor(window.localStorage.getItem('selected-logo-color'));
+      setLogoColor(window.localStorage.getItem('selected-logo-color'));
     }
 
-
-    if(localStorage.getItem('mobile-browser-ui-color') === null){
-        setBrowserColor('rgb(124, 77, 255)');
-    }else{
-        setBrowserColor(window.localStorage.getItem('mobile-browser-ui-color'));
+    if (localStorage.getItem('mobile-browser-ui-color') === null) {
+      setBrowserColor('rgb(124, 77, 255)');
+    } else {
+      setBrowserColor(window.localStorage.getItem('mobile-browser-ui-color'));
     }
-})()
+  })();
 
-// window.addEventListener('resize', () =>{
-//     WindowWidth = innerWidth;
-//     WindowHeight = innerHeight;
-// })
+  // window.addEventListener('resize', () =>{
+  //     WindowWidth = innerWidth;
+  //     WindowHeight = innerHeight;
+  // })
 
-// LIGHT THEME SETTERS
-let setLightTheme = () =>{
+  // LIGHT THEME SETTERS
+  let setLightTheme = () => {
     root.style.setProperty('--txt-color', 'var(--txt-color-dark)');
     root.style.setProperty('--bg-color', 'var(--bg-color-light)');
     root.style.setProperty('--bg-color-contrast', 'var(--bg-color-light-contrast)');
     root.style.setProperty('--bg-color-alt', 'var(--bg-color-light-alt)');
-    root.style.setProperty('--img-frame-color','var(--img-frame-color-light)');
+    root.style.setProperty('--img-frame-color', 'var(--img-frame-color-light)');
     root.style.setProperty('--card-frame', 'var(--card-frame-light)');
     root.style.setProperty('--box-shadow-high', 'var(--box-shadow-high-light)');
     root.style.setProperty('--box-shadow-low', 'var(--box-shadow-low-light)');
@@ -121,10 +118,10 @@ let setLightTheme = () =>{
     root.style.setProperty('--border-highlight', 'var(--border-highlight-light)');
     root.style.setProperty('--nav-bg-color', 'var(--nav-bg-color-light)');
     root.style.setProperty('--nav-btn-icon-color', '#333');
-    setLogoColor("icon/groud-logo-grey.svg");
-};
+    setLogoColor('icon/groud-logo-grey.svg');
+  };
 
-let setLightThemeCookies = () =>{
+  let setLightThemeCookies = () => {
     window.localStorage.setItem('selected-txt-color', 'var(--txt-color-dark)');
     window.localStorage.setItem('selected-bg-color', 'var(--bg-color-light)');
     window.localStorage.setItem('selected-bg-color-contrast', 'var(--bg-color-light-contrast)');
@@ -138,10 +135,10 @@ let setLightThemeCookies = () =>{
     window.localStorage.setItem('selected-nav-bg-color', 'var(--nav-bg-color-light)');
     window.localStorage.setItem('selected-nav-btn-icon-color', '#333');
     window.localStorage.setItem('selected-logo-color', 'icon/groud-logo-grey.svg');
-}
+  };
 
-// DARK THEME SETTERS
-let setDarkTheme = () =>{
+  // DARK THEME SETTERS
+  let setDarkTheme = () => {
     root.style.setProperty('--txt-color', 'var(--txt-color-lighter)');
     root.style.setProperty('--bg-color', 'var(--bg-color-dark)');
     root.style.setProperty('--bg-color-contrast', 'var(--bg-color-dark-contrast)');
@@ -154,10 +151,10 @@ let setDarkTheme = () =>{
     root.style.setProperty('--border-highlight', 'var(--border-highlight-dark)');
     root.style.setProperty('--nav-bg-color', 'var(--nav-bg-color-dark)');
     root.style.setProperty('--nav-btn-icon-color', '#fff');
-    setLogoColor("icon/groud-logo-white.svg");
-};
+    setLogoColor('icon/groud-logo-white.svg');
+  };
 
-let setDarkThemeCookies = () =>{
+  let setDarkThemeCookies = () => {
     window.localStorage.setItem('selected-txt-color', 'var(--txt-color-lighter)');
     window.localStorage.setItem('selected-bg-color', 'var(--bg-color-dark)');
     window.localStorage.setItem('selected-bg-color-contrast', 'var(--bg-color-dark-contrast)');
@@ -171,10 +168,10 @@ let setDarkThemeCookies = () =>{
     window.localStorage.setItem('selected-nav-bg-color', 'var(--nav-bg-color-dark)');
     window.localStorage.setItem('selected-nav-btn-icon-color', '#fff');
     window.localStorage.setItem('selected-logo-color', 'icon/groud-logo-white.svg');
-}
+  };
 
-// AMOLED THEME SETTERS
-let setAmoledTheme = () =>{
+  // AMOLED THEME SETTERS
+  let setAmoledTheme = () => {
     root.style.setProperty('--txt-color', 'var(--txt-color-lighter)');
     root.style.setProperty('--bg-color', 'var(--bg-color-amoled)');
     root.style.setProperty('--bg-color-contrast', 'var(--bg-color-amoled-contrast)');
@@ -187,10 +184,10 @@ let setAmoledTheme = () =>{
     root.style.setProperty('--border-highlight', 'var(--border-highlight-amoled)');
     root.style.setProperty('--nav-bg-color', 'var(--nav-bg-color-dark)');
     root.style.setProperty('--nav-btn-icon-color', '#fff');
-    setLogoColor("icon/groud-logo-white.svg");
-};
+    setLogoColor('icon/groud-logo-white.svg');
+  };
 
-let setAmoledThemeCookies = () =>{
+  let setAmoledThemeCookies = () => {
     window.localStorage.setItem('selected-txt-color', 'var(--txt-color-lighter)');
     window.localStorage.setItem('selected-bg-color', 'var(--bg-color-amoled)');
     window.localStorage.setItem('selected-bg-color-contrast', 'var(--bg-color-amoled-contrast)');
@@ -204,187 +201,185 @@ let setAmoledThemeCookies = () =>{
     window.localStorage.setItem('selected-nav-bg-color', 'var(--nav-bg-color-dark)');
     window.localStorage.setItem('selected-nav-btn-icon-color', '#fff');
     window.localStorage.setItem('selected-logo-color', 'icon/groud-logo-white.svg');
-}
+  };
 
-ThemeIconLight.addEventListener('click', ()=>{
+  ThemeIconLight.addEventListener('click', () => {
     setLightTheme();
     setLightThemeCookies();
     playNotification();
-});
+  });
 
-ThemeIconDark.addEventListener('click', ()=>{
+  ThemeIconDark.addEventListener('click', () => {
     setDarkTheme();
     setDarkThemeCookies();
     playNotification();
-});
+  });
 
-ThemeIconAmoled.addEventListener('click', ()=>{
+  ThemeIconAmoled.addEventListener('click', () => {
     setAmoledTheme();
     setAmoledThemeCookies();
     playNotification();
-});
+  });
 
-var fadeInNavMenu = () => {
+  var fadeInNavMenu = () => {
     NavMenuWrapper.classList.remove('hidden');
     NavMenuWrapper.classList.remove('fade-out-nav-bar');
     NavMenuWrapper.classList.add('fade-in-nav-bar');
-}
+  };
 
-var fadeOutNavMenu = () => {
+  var fadeOutNavMenu = () => {
     NavMenuWrapper.classList.add('hidden');
     NavMenuWrapper.classList.add('fade-out-nav-bar');
     NavMenuWrapper.classList.remove('fade-in-nav-bar');
-}
+  };
 
-NavMenuBtnWrapper.addEventListener('click', () =>{
-    if(NavMenuWrapper.classList.contains('hidden')){
-        // Fades in the navigation bar
-        fadeInNavMenu();
-        addAnimation();
+  NavMenuBtnWrapper.addEventListener('click', () => {
+    if (NavMenuWrapper.classList.contains('hidden')) {
+      // Fades in the navigation bar
+      fadeInNavMenu();
+      addAnimation();
 
-        // Transitions the navigation menu lines to an X.
-        if(NavMenuBtnLineTop.classList.contains('off-state')){
-            NavMenuBtnLineTop.classList.remove('off-state');
-            NavMenuBtnLineTop.classList.add('top-nav-btn-icon-transition');
-        }
-        if(NavMenuBtnLineBottom.classList.contains('off-state')){
-            NavMenuBtnLineBottom.classList.remove('off-state');
-            NavMenuBtnLineBottom.classList.add('bottom-nav-btn-icon-transition');
-        }
-        // add transition styles for the navigation menu label
-        NavMenuLabel.style.opacity = '0';
-        NavMenuLabel.style.transform = 'translateX(-20px)';
-    } else{
-        // Fades out the navigation bar
-        fadeOutNavMenu();
-        addAnimation();
+      // Transitions the navigation menu lines to an X.
+      if (NavMenuBtnLineTop.classList.contains('off-state')) {
+        NavMenuBtnLineTop.classList.remove('off-state');
+        NavMenuBtnLineTop.classList.add('top-nav-btn-icon-transition');
+      }
+      if (NavMenuBtnLineBottom.classList.contains('off-state')) {
+        NavMenuBtnLineBottom.classList.remove('off-state');
+        NavMenuBtnLineBottom.classList.add('bottom-nav-btn-icon-transition');
+      }
+      // add transition styles for the navigation menu label
+      NavMenuLabel.style.opacity = '0';
+      NavMenuLabel.style.transform = 'translateX(-20px)';
+    } else {
+      // Fades out the navigation bar
+      fadeOutNavMenu();
+      addAnimation();
 
-        if(NavMenuBtnLineTop.classList.contains('off-state') === false){
-            NavMenuBtnLineTop.classList.add('off-state');
-            NavMenuBtnLineTop.classList.remove('top-nav-btn-icon-transition');
-        }
+      if (NavMenuBtnLineTop.classList.contains('off-state') === false) {
+        NavMenuBtnLineTop.classList.add('off-state');
+        NavMenuBtnLineTop.classList.remove('top-nav-btn-icon-transition');
+      }
 
-        if(NavMenuBtnLineBottom.classList.contains('off-state') === false){
-            NavMenuBtnLineBottom.classList.add('off-state');
-            NavMenuBtnLineBottom.classList.remove('bottom-nav-btn-icon-transition');
-        }
-        // add transition styles for the navigation menu label
-        NavMenuLabel.style.opacity = '1';
-        NavMenuLabel.style.transform = 'translateX(0px)';
+      if (NavMenuBtnLineBottom.classList.contains('off-state') === false) {
+        NavMenuBtnLineBottom.classList.add('off-state');
+        NavMenuBtnLineBottom.classList.remove('bottom-nav-btn-icon-transition');
+      }
+      // add transition styles for the navigation menu label
+      NavMenuLabel.style.opacity = '1';
+      NavMenuLabel.style.transform = 'translateX(0px)';
     }
-});
-
-colorBtn.forEach((el)=>{
-    el.addEventListener('click', () =>{
-        let styles = getComputedStyle(el);
-        let color = styles.backgroundColor;
-        window.localStorage.setItem("selected-color", color);
-        root.style.setProperty('--accent-color-primary', color);
-
-        setBrowserColor(color);
-        window.localStorage.setItem('mobile-browser-ui-color', color);
-        playNotification();
-    })
-});
- 
-for (const link of NavMenuLinks) {
-  link.addEventListener("click", clickHandler);
-}
- 
-function clickHandler(e) {
-  //e.preventDefault();
-  const href = this.getAttribute("href");
- 
-  document.querySelector(href).scrollIntoView({
-    behavior: "smooth"
   });
 
-  // Fades out the navigation bar
-  fadeOutNavMenu();
-  addAnimation();
+  colorBtn.forEach((el) => {
+    el.addEventListener('click', () => {
+      let styles = getComputedStyle(el);
+      let color = styles.backgroundColor;
+      window.localStorage.setItem('selected-color', color);
+      root.style.setProperty('--accent-color-primary', color);
 
-  if(NavMenuBtnLineTop.classList.contains('off-state') === false){
+      setBrowserColor(color);
+      window.localStorage.setItem('mobile-browser-ui-color', color);
+      playNotification();
+    });
+  });
+
+  for (const link of NavMenuLinks) {
+    link.addEventListener('click', clickHandler);
+  }
+
+  function clickHandler(e) {
+    //e.preventDefault();
+    const href = this.getAttribute('href');
+
+    document.querySelector(href).scrollIntoView({
+      behavior: 'smooth',
+    });
+
+    // Fades out the navigation bar
+    fadeOutNavMenu();
+    addAnimation();
+
+    if (NavMenuBtnLineTop.classList.contains('off-state') === false) {
       NavMenuBtnLineTop.classList.add('off-state');
       NavMenuBtnLineTop.classList.remove('top-nav-btn-icon-transition');
-  }
+    }
 
-  if(NavMenuBtnLineBottom.classList.contains('off-state') === false){
+    if (NavMenuBtnLineBottom.classList.contains('off-state') === false) {
       NavMenuBtnLineBottom.classList.add('off-state');
       NavMenuBtnLineBottom.classList.remove('bottom-nav-btn-icon-transition');
+    }
+    // add transition styles for the navigation menu label
+    NavMenuLabel.style.opacity = '1';
+    NavMenuLabel.style.transform = 'translateX(0px)';
   }
-  // add transition styles for the navigation menu label
-  NavMenuLabel.style.opacity = '1';
-  NavMenuLabel.style.transform = 'translateX(0px)';
 
-}
-
-if(FontSizeSelector != null){
-    FontSizeSelector.addEventListener('change',(event)=>{
-        let option;
-        option = event.target.value;
-        option = option.toLowerCase();
-        ParagraphScaler.forEach((el)=>{
-            switch(option){
-                case 'small':
-                    el.style.fontSize = 'small'; 
-                    window.localStorage.setItem("selected-font-size", el.style.fontSize);
-                    break;
-                case 'medium':
-                    el.style.fontSize = 'large';
-                    window.localStorage.setItem("selected-font-size", el.style.fontSize);
-                    break;
-                case 'large':
-                    el.style.fontSize = 'x-large';
-                    window.localStorage.setItem("selected-font-size", el.style.fontSize);
-                    break;
-                case 'default':
-                    el.style.fontSize = 'initial';
-                    window.localStorage.setItem("selected-font-size", el.style.fontSize);
-                    break;
-                default:
-                    console.log('This is not an option');
-            }
-        });
+  if (FontSizeSelector != null) {
+    FontSizeSelector.addEventListener('change', (event) => {
+      let option;
+      option = event.target.value;
+      option = option.toLowerCase();
+      ParagraphScaler.forEach((el) => {
+        switch (option) {
+          case 'small':
+            el.style.fontSize = 'small';
+            window.localStorage.setItem('selected-font-size', el.style.fontSize);
+            break;
+          case 'medium':
+            el.style.fontSize = 'large';
+            window.localStorage.setItem('selected-font-size', el.style.fontSize);
+            break;
+          case 'large':
+            el.style.fontSize = 'x-large';
+            window.localStorage.setItem('selected-font-size', el.style.fontSize);
+            break;
+          case 'default':
+            el.style.fontSize = 'initial';
+            window.localStorage.setItem('selected-font-size', el.style.fontSize);
+            break;
+          default:
+            console.log('This is not an option');
+        }
+      });
     });
-}else{
+  } else {
     console.log('FontSizeSelector ' + NodeCheckerErrorMessage);
-}
+  }
 
-// var isInViewport = (target) => {
-//     var bounding = target.getBoundingClientRect();
-//     return (
-//         bounding.top >= 0 &&
-//         bounding.left >= 0 &&
-//         bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-//         bounding.right <= (window.innerWidth || document.documentElement.clientWidth)
-//     );
-// };
+  // var isInViewport = (target) => {
+  //     var bounding = target.getBoundingClientRect();
+  //     return (
+  //         bounding.top >= 0 &&
+  //         bounding.left >= 0 &&
+  //         bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+  //         bounding.right <= (window.innerWidth || document.documentElement.clientWidth)
+  //     );
+  // };
 
-// if((mobileUserAgent == true) && (window.innerHeight < window.innerWidth)){
-//     WorkCanvasImg.forEach((img) =>{
-//         img.style.setProperty("filter", "none");
-//     });
-// } else if((mobileUserAgent == false) || ((mobileUserAgent == true) && (window.innerHeight > window.innerWidth))){
-//     window.addEventListener('scroll', () =>{
-//         WorkCanvasImg.forEach(img =>{
-//             if(isInViewport(img)){
-//                 img.classList.remove('animate-img-out');
-//                 img.classList.add('animate-img-in');
-//             }else{
-//                 img.classList.remove('animate-img-in');
-//                 img.classList.add('animate-img-out');
-//             }
-//         });
-//     });
-// }
+  // if((mobileUserAgent == true) && (window.innerHeight < window.innerWidth)){
+  //     WorkCanvasImg.forEach((img) =>{
+  //         img.style.setProperty("filter", "none");
+  //     });
+  // } else if((mobileUserAgent == false) || ((mobileUserAgent == true) && (window.innerHeight > window.innerWidth))){
+  //     window.addEventListener('scroll', () =>{
+  //         WorkCanvasImg.forEach(img =>{
+  //             if(isInViewport(img)){
+  //                 img.classList.remove('animate-img-out');
+  //                 img.classList.add('animate-img-in');
+  //             }else{
+  //                 img.classList.remove('animate-img-in');
+  //                 img.classList.add('animate-img-out');
+  //             }
+  //         });
+  //     });
+  // }
 
-// window.addEventListener('resize', function(){
-//     if((mobileUserAgent == true) && (window.innerHeight < window.innerWidth)){
-//         WorkCanvasImg.forEach((img) =>{
-//             img.style.setProperty("filter", "none");
-//             console.log("landscape");
-//         });
-//     }  
-// });
-
+  // window.addEventListener('resize', function(){
+  //     if((mobileUserAgent == true) && (window.innerHeight < window.innerWidth)){
+  //         WorkCanvasImg.forEach((img) =>{
+  //             img.style.setProperty("filter", "none");
+  //             console.log("landscape");
+  //         });
+  //     }
+  // });
 }); //document
