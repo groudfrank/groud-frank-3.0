@@ -626,7 +626,7 @@ and (orientation: portrait){
 and (max-width: 400px) 
 and (orientation: portrait) {
     .customizations-btn-wrapper{
-        width: 86%;
+        width: 95%;
         padding-left: 0.5rem;
         padding-right: 0.5rem;
         margin-left: 0.5rem;
