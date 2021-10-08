@@ -71,8 +71,10 @@ body {
   --box-shadow-high-light: 0 5.2rem 7.4rem hsla(0, 0%, 0%, 0.125);
   --box-shadow-high-amoled: none;
   --box-shadow-high: var(--box-shadow-high-dark);
-  --box-shadow-low-dark: 0 10px 25px -10px rgb(0 0 0 / 100%);
-  --box-shadow-low-light: 0 10px 25px -10px rgb(0 0 0 / 43%);
+  /* --box-shadow-low-dark: 0 10px 25px -10px rgb(0 0 0 / 100%); */
+  --box-shadow-low-dark: 0 2px 5px 1px rgb(0 0 0 / 25%);
+  /* --box-shadow-low-light: 0 10px 25px -10px rgb(0 0 0 / 43%); */
+  --box-shadow-low-light: 0 2px 5px 1px rgb(64 60 67 / 16%);
   --box-shadow-low-amoled: none;
   --box-shadow-low: var(--box-shadow-low-dark);
   --border-radius-m: 2rem;
