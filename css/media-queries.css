@@ -623,10 +623,10 @@ and (orientation: portrait){
 
 /* PORTRAIT: HD + QHD Phablet(should cover tall aspect ratios also) */
 @media only screen 
-and (max-width: 400px) 
+and (max-width: 500px) 
 and (orientation: portrait) {
     .customizations-btn-wrapper{
-        width: 95%;
+        width: 90vw;
         padding-left: 0.5rem;
         padding-right: 0.5rem;
         margin-left: 0.5rem;
